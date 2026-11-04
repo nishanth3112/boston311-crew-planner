@@ -65,7 +65,7 @@ uv sync
 | Member | GitHub | Focus |
 |---|---|---|
 | Nishanth Manoharan | [@nishanth3112](https://github.com/nishanth3112) | to be assigned |
-| _name_ | [@ramg-0903] (https://github.com/ramg-0903) | to be assigned |
-| _name_ | [@Aryan16d] (https://github.com/Aryan16d) | to be assigned |
+| Ramgopal Reddy Alumalla | [@ramg-0903](https://github.com/ramg-0903) | to be assigned |
+| Aryan Patil | [@Aryan16d](https://github.com/Aryan16d) | to be assigned |
 
 Each member's contributions will be listed here before submission.
