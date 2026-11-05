@@ -1,0 +1,36 @@
+{
+  "requests": [
+    {
+      "request_type": "Missed Trash/Recycling/Yard Waste/Bulk Item",
+      "department": "PWDx",
+      "queue": "PWDx_Missed Trash Pickup",
+      "location": "Adams St, Dorchester",
+      "details": "Trash was not picked up on the scheduled day.",
+      "typical_days_to_close": 2.0
+    },
+    {
+      "request_type": "Rodent Activity",
+      "department": "ISD",
+      "queue": "ISD_Environmental Services",
+      "location": "Adams St, Dorchester",
+      "details": "Dead rat next to the trash bins.",
+      "typical_days_to_close": 6.0
+    }
+  ],
+  "follow_up_question": null,
+  "out_of_scope": false,
+  "reply": "Thanks. I filed two requests: a missed trash pickup for Public Works and rodent activity for Inspectional Services.",
+  "trace": [
+    {
+      "tool": "search_request_types",
+      "args": {"queries": ["trash not picked up", "dead rat by bins"]},
+      "summary": "Searched request types for 2 problems"
+    },
+    {
+      "tool": "get_request_types",
+      "args": {"request_types": ["Missed Trash/Recycling/Yard Waste/Bulk Item", "Rodent Activity"], "neighborhood": "Dorchester"},
+      "summary": "Looked up 2 request types in Dorchester"
+    }
+  ],
+  "fallback_used": false
+}

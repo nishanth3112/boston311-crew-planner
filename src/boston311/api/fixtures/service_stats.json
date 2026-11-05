@@ -1,0 +1,5 @@
+[
+  {"neighborhood": "Dorchester", "median_days_to_close": 4.2},
+  {"neighborhood": "Roxbury", "median_days_to_close": 3.9},
+  {"neighborhood": "East Boston", "median_days_to_close": 3.1}
+]

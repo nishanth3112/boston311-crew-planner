@@ -1,0 +1,17 @@
+{
+  "answer": "With demand 20% higher, Transportation needs 22 crews from March instead of 18, and the plan's total cost rises to $12,400,000.",
+  "trace": [
+    {
+      "tool": "get_plan",
+      "args": {"scenario": "base", "departments": ["BTDT"]},
+      "summary": "Read the base plan for Transportation"
+    },
+    {
+      "tool": "run_what_if",
+      "args": {"demand_multiplier": 1.2, "shock": "none", "on_time_target": 0.9},
+      "summary": "Re-ran the plan with demand +20%"
+    }
+  ],
+  "what_if": {"demand_multiplier": 1.2, "shock": "none", "on_time_target": 0.9},
+  "unverified_numbers": ["$12,400,000"]
+}

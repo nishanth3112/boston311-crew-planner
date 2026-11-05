@@ -1,0 +1,316 @@
+{
+  "departments": [
+    {
+      "department": "PWDx",
+      "backtest_mape": null,
+      "months": [
+        {
+          "month": "2025-01",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-02",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-03",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-04",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-05",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-06",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-07",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-08",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-09",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-10",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-11",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        },
+        {
+          "month": "2025-12",
+          "forecast": 13134,
+          "lower": 11821,
+          "upper": 14447
+        }
+      ]
+    },
+    {
+      "department": "BTDT",
+      "backtest_mape": null,
+      "months": [
+        {
+          "month": "2025-01",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-02",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-03",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-04",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-05",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-06",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-07",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-08",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-09",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-10",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-11",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        },
+        {
+          "month": "2025-12",
+          "forecast": 6787,
+          "lower": 6108,
+          "upper": 7466
+        }
+      ]
+    },
+    {
+      "department": "PARK",
+      "backtest_mape": null,
+      "months": [
+        {
+          "month": "2025-01",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-02",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-03",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-04",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-05",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-06",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-07",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-08",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-09",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-10",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-11",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        },
+        {
+          "month": "2025-12",
+          "forecast": 1561,
+          "lower": 1405,
+          "upper": 1717
+        }
+      ]
+    },
+    {
+      "department": "ISD",
+      "backtest_mape": null,
+      "months": [
+        {
+          "month": "2025-01",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-02",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-03",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-04",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-05",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-06",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-07",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-08",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-09",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-10",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-11",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        },
+        {
+          "month": "2025-12",
+          "forecast": 1552,
+          "lower": 1397,
+          "upper": 1707
+        }
+      ]
+    }
+  ]
+}
