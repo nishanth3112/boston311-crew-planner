@@ -10,12 +10,18 @@ __pycache__/
 # Data (raw files are too large for GitHub)
 data/raw/
 data/interim/
+data/cache/
+
+# Web
+web/node_modules/
+web/dist/
 
 # Claude Code (local only)
 .claude/
 CLAUDE.md
 CLAUDE.local.md
 .mcp.json
+.handoff/
 
 # macOS
 .DS_Store
