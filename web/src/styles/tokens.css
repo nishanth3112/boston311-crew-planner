@@ -1,15 +1,5 @@
 /* web/src/styles/tokens.css
-   The only place colors and type are defined.
-   Import order in src/index.css:
-     @import "tailwindcss";
-     @import "./styles/tokens.css";
-   Fonts (npm i @fontsource/overpass @fontsource/atkinson-hyperlegible), in main.tsx:
-     import "@fontsource/overpass/400.css";
-     import "@fontsource/overpass/600.css";
-     import "@fontsource/overpass/700.css";
-     import "@fontsource/atkinson-hyperlegible/400.css";
-     import "@fontsource/atkinson-hyperlegible/700.css";
-*/
+   The only place colors and type are defined. */
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -23,8 +13,8 @@
   --seam: #c9cbc6;          /* borders and dividers */
   --guide-green: #006b3f;   /* white text on it: 6.6:1 */
   --guide-green-lit: #4cc38a; /* dark theme primary, asphalt text on it */
-  --cone-orange: #f26a21;   /* fills and markers only, never small text on white */
-  --lane-yellow: #f5c400;   /* hires and seasonal; on asphalt or as markers */
+  --cone-orange: #f26a21;   /* fills and markers only; 2.5:1 on concrete, so pair every marker with an asphalt outline or a text label */
+  --lane-yellow: #f5c400;   /* hires and seasonal; 1.4:1 on concrete, so on light backgrounds always outline with --change-ink or add a text label */
   --signal-red: #b3261e;    /* errors as text */
 }
 
