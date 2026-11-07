@@ -8,7 +8,7 @@ import pandas as pd
 from boston311.config import PROCESSED_DIR
 
 Metric = Literal["request_count", "on_time_rate", "median_days_to_close"]
-GroupBy = Literal["neighborhood", "request_type", "source", "month"]
+GroupBy = Literal["department", "neighborhood", "request_type", "source", "month"]
 
 SERVICE_STATS = PROCESSED_DIR / "service_stats.parquet"
 RESIDENT_SOURCES = {"Citizens Connect App", "Constituent Call", "Self Service"}

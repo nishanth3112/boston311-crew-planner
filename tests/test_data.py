@@ -77,6 +77,11 @@ def test_on_time_rate_excludes_requests_without_a_target(tmp_path, monkeypatch):
     assert query_service_stats("median_days_to_close", *args) == [
         {"neighborhood": "Dorchester", "median_days_to_close": 2.3}
     ]
+    # by department, worst last: PARK 1 of 1 on time; PWDx 2 of the 4 with a target
+    assert query_service_stats("on_time_rate", "department", {"year": 2024}) == [
+        {"department": "PARK", "on_time_rate": 1.0},
+        {"department": "PWDx", "on_time_rate": 0.5},
+    ]
 
 
 def test_request_type_median_falls_back_to_all_sources():
