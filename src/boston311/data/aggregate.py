@@ -98,8 +98,9 @@ def query_service_stats(
     """Rows of {group_by: value, metric: value} from the service-stats table, sorted.
 
     filters keys: department, request_type, neighborhood, source, year.
-    Months come back in calendar order, everything else largest first. Requests with no
-    value for group_by (e.g. no neighborhood) are left out.
+    Months come back in calendar order and are never cut by limit (there are at most 24);
+    everything else comes largest first, up to limit. Requests with no value for group_by
+    (e.g. no neighborhood) are left out.
     """
     filters = filters or {}
     # metric, group_by and filter keys are pasted into the SQL, so only known names pass
@@ -123,6 +124,7 @@ def query_service_stats(
             ORDER BY {order}
             LIMIT ?
             """,
-            [str(SERVICE_STATS), *filters.values(), limit],
+            # LIMIT NULL is no limit in DuckDB
+            [str(SERVICE_STATS), *filters.values(), None if group_by == "month" else limit],
         ).fetchall()
     return [dict(zip((group_by, metric), row, strict=True)) for row in rows]

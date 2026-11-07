@@ -84,6 +84,30 @@ def test_on_time_rate_excludes_requests_without_a_target(tmp_path, monkeypatch):
     ]
 
 
+def test_month_query_returns_every_month_of_the_year(tmp_path, monkeypatch):
+    # one request in each month of 2024, plus three in 2023 that the year filter must drop
+    months = [f"2024-{m:02d}" for m in range(1, 13)] + ["2023-10", "2023-11", "2023-12"]
+    n = len(months)
+    rows = pd.DataFrame(
+        {
+            "month": months,
+            "department": ["BTDT"] * n,
+            "request_type": ["Parking Enforcement"] * n,
+            "neighborhood": ["Back Bay"] * n,
+            "source": ["Constituent Call"] * n,
+            "on_time": ["ONTIME"] * n,
+            "target_days": [1.0] * n,
+            "close_days": [0.5] * n,
+        }
+    )
+    path = tmp_path / "service_stats.parquet"
+    service_stats(rows).to_parquet(path)
+    monkeypatch.setattr(aggregate, "SERVICE_STATS", path)
+
+    result = query_service_stats("request_count", "month", {"year": 2024})  # default limit 10
+    assert [r["month"] for r in result] == months[:12]
+
+
 def test_request_type_median_falls_back_to_all_sources():
     # Pothole: 30 resident requests closed in 1 day, 40 employee ones in 5 -> residents: 1.0.
     # Signs: 29 resident requests in 1 day, 40 employee ones in 5 -> too few, all sources: 5.0.

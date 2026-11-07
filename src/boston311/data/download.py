@@ -9,8 +9,8 @@ from boston311.config import RAW_DIR
 
 RESOURCE_SHOW = "https://data.boston.gov/api/3/action/resource_show?id="
 
-# Old-system yearly files. 2025 covers January to September: the city moved to a new
-# system with different columns in October 2025, and that file is not used.
+# Old-system yearly files. The old-system 2025 file runs to December, but October onward
+# is partial (new system); build_processed.py cuts it at 2025-09.
 RESOURCES = {
     2023: "e6013a93-1321-4f2a-bf91-8d8a02f1e62f",
     2024: "dff4d804-5031-443a-8409-8344efd0e5c8",
