@@ -79,15 +79,15 @@ Illegal Occupancy,ISD,ISD_Building (INTERNAL),116,44.6
 Exceeding Terms of Permit,ISD,ISD_Building (INTERNAL),113,18.4
 Request for Litter Basket Installation,PWDx,PWDx_Request for Litter Basket Installation,104,1.6
 Illegal Rooming House,ISD,ISD_Building (INTERNAL),102,97.0
-Knockdown Replacement,PWDx,PWDx_Street Light Knockdown Replacement,97,1.8
 Cross Metering - Sub-Metering,ISD,ISD_Housing (INTERNAL),97,97.4
+Knockdown Replacement,PWDx,PWDx_Street Light Knockdown Replacement,97,1.8
 Overflowing or Un-kept Dumpster,PWDx,PWDx_Code Enforcement,95,0.8
 Student Move-in Issues,PWDx,PWDx_Code Enforcement,95,0.2
 Egress,ISD,ISD_Building (INTERNAL),80,36.2
 Abandoned Building,ISD,ISD_Building (INTERNAL),79,2.9
 Bed Bugs,ISD,ISD_Housing (INTERNAL),78,91.7
-Squalid Living Conditions,ISD,ISD_Housing (INTERNAL),75,36.0
 Litter Basket Maintenance,PWDx,PWDx_Litter Basket Maintenance,75,0.1
+Squalid Living Conditions,ISD,ISD_Housing (INTERNAL),75,36.0
 No Utilities Residential - Water,ISD,ISD_Housing (INTERNAL),73,3.0
 No-Tow Complaint Confirmation,PWDx,PWDx_District 10B: Roxbury,63,0.4
 Trash on Vacant Lot,PWDx,PWDx_Code Enforcement,60,1.0
@@ -103,56 +103,56 @@ Utility Casting Repair,PWDx,PWDx_Utility Casting Repair,34,0.1
 Fire in Food Establishment,ISD,ISD_Health (INTERNAL),32,1.5
 Zoning,ISD,ISD_Building (INTERNAL),31,16.8
 Cemetery Maintenance Request,PARK,PARK_Cemetery Maintenance Request,30,11.8
-Request for Snow Plowing (Emergency Responder),PWDx,PWDx_District 03: North Dorchester,30,0.1
 Pole Compliance,PWDx,PWDx_STRL Pole Compliance,30,10.2
+Request for Snow Plowing (Emergency Responder),PWDx,PWDx_District 03: North Dorchester,30,0.1
 Parking Meter Repairs,BTDT,BTDT_Broken Meter Complaints,28,0.9
 Upgrade Existing Lighting,PWDx,PWDx_Street Light_Upgrade Existing Lighting,26,93.0
-Rat Bite,ISD,ISD_Environmental Services (INTERNAL),23,0.7
 Overcrowding,ISD,ISD_Housing (INTERNAL),23,28.3
+Rat Bite,ISD,ISD_Environmental Services (INTERNAL),23,0.7
 Sidewalk Repair,PWDx,PWDx_Highway Construction,21,
-Poor Ventilation,ISD,ISD_Housing (INTERNAL),20,228.3
 Install New Lighting,PWDx,PWDx_Street Light_Install New Lighting,20,82.9
+Poor Ventilation,ISD,ISD_Housing (INTERNAL),20,228.3
 Misc. Snow Complaint,PWDx,PWDx_Snow Cases,15,2.2
 Municipal Parking Lot Complaints,BTDT,BTDT_Parking Lot_Municipal Parking Lot Complaints,15,2.5
 Scanning Overcharge,ISD,ISD_Weights and Measures (INTERNAL),15,1.0
 No Utilities Residential - Gas,ISD,ISD_Housing (INTERNAL),13,2.0
-Rental Unit Delivery Conditions,ISD,ISD_Housing (INTERNAL),12,372.0
 Bridge Maintenance,PWDx,PWDx_Bridge Maintenance,12,0.3
 Graffiti Removal,PARK,PARK_Graffiti,12,76.3
+Rental Unit Delivery Conditions,ISD,ISD_Housing (INTERNAL),12,372.0
+Animal Generic Request,PWDx,PWDx_District 05: South Boston,10,0.6
 Pigeon Infestation,ISD,ISD_Environmental Services (INTERNAL),10,0.7
 Planting,PARK,PARK_Maintenance_Horticulture,10,0.7
-Animal Generic Request,PWDx,PWDx_District 05: South Boston,10,0.6
 Mechanical,ISD,ISD_Building (INTERNAL),9,250.9
 Needle Pickup,PWDx,PWDx_Code Enforcement,9,0.8
 Occupying W/Out A Valid CO/CI,ISD,ISD_Building (INTERNAL),9,59.0
-Phone Bank Service Inquiry,BTDT,BTDT_OPC_Phone Bank Service,8,2.9
-Mosquitoes (West Nile),ISD,ISD_Environmental Services (INTERNAL),8,2.2
 Catchbasin,PWDx,PWDx_District 02: Jamaica Plain,8,9.2
+Mosquitoes (West Nile),ISD,ISD_Environmental Services (INTERNAL),8,2.2
+Phone Bank Service Inquiry,BTDT,BTDT_OPC_Phone Bank Service,8,2.9
 Sidewalk Cover / Manhole,PWDx,PWDx_Street Light_General Lighting Request,8,2.4
-Valet Parking Problems,BTDT,BTDT_Parking Lot_Valet Parking Problems,7,
-Unit Pricing Wrong/Missing,ISD,ISD_Weights and Measures (INTERNAL),7,1.2
 Item Price Missing,ISD,ISD_Weights and Measures (INTERNAL),7,1.8
 No Utilities - Food Establishment - Water,ISD,ISD_Health (INTERNAL),7,1.8
+Unit Pricing Wrong/Missing,ISD,ISD_Weights and Measures (INTERNAL),7,1.2
+Valet Parking Problems,BTDT,BTDT_Parking Lot_Valet Parking Problems,7,
 BWSC General Request,PWDx,PWDx_Sidewalk Repair,6,122.2
 Carbon Monoxide,ISD,ISD_Housing (INTERNAL),6,522.9
 No Price on Gas/Wrong Price,ISD,ISD_Weights and Measures (INTERNAL),6,2.0
 Pickup/Clear Conduit,PWDx,PWDx_Street Light_Pickup_Clear Conduit,6,0.2
-No Utilities - Food Establishment - Sewer,ISD,ISD_Health (INTERNAL),5,3.0
 Lead,ISD,ISD_Housing (INTERNAL),5,121.1
-Requests for Directional or Roadway Changes,BTDT,BTDT_Engineering_Request for Traffic Signal Study or Review,5,1.2
+No Utilities - Food Establishment - Sewer,ISD,ISD_Health (INTERNAL),5,3.0
 Private Parking Lot Complaints,BTDT,BTDT_Parking Lot_PrivateParkingLotComplaints,5,2.0
+Requests for Directional or Roadway Changes,BTDT,BTDT_Engineering_Request for Traffic Signal Study or Review,5,1.2
 No Utilities - Food Establishment - Flood,ISD,ISD_Health (INTERNAL),4,1.6
-Student Overcrowding,ISD,ISD_Housing (INTERNAL),3,28.0
 Big Buildings Recycling (INTERNAL),PWDx,PWDx_WM_Mattress_Pickup,3,0.3
+Student Overcrowding,ISD,ISD_Housing (INTERNAL),3,28.0
 Capital Improvement Long Term,PARK,PARK_Park Improvement Requests,2,174.1
-Walk-In Service Inquiry,BTDT,BTDT_OPC_Walk-In Service,2,0.5
-Short Measure - Gas,ISD,ISD_Weights and Measures (INTERNAL),2,3.0
 News Boxes,PWDx,PWDx_News Boxes,2,71.3
 No Utilities - Food Establishment - Electricity,ISD,ISD_Health (INTERNAL),2,2.9
-Scale Not Visible,ISD,ISD_Weights and Measures (INTERNAL),2,3.8
 Product Short Measure,ISD,ISD_Weights and Measures (INTERNAL),2,4.4
-Follow-Up,ISD,ISD_Administrative,1,0.0
+Scale Not Visible,ISD,ISD_Weights and Measures (INTERNAL),2,3.8
+Short Measure - Gas,ISD,ISD_Weights and Measures (INTERNAL),2,3.0
+Walk-In Service Inquiry,BTDT,BTDT_OPC_Walk-In Service,2,0.5
 City/State Snow Issues,PWDx,PWDx_District 06: West Roxbury and Roslindale,1,0.0
+Follow-Up,ISD,ISD_Administrative,1,0.0
 Pavement Marking Maintenance,BTDT,BTDT_Sign Shop_Sign Installation,1,447.1
 Snow/Ice Control,PWDx,PWDx_District 03: North Dorchester,1,0.0
 Utility Call-In,PWDx,PWDx_Utility Call-In,1,0.0

@@ -38,6 +38,8 @@ def clean(path: Path) -> pd.DataFrame:
                 / {SECONDS_PER_DAY} AS close_days
         FROM read_csv(?, all_varchar = true)
         WHERE department IN (SELECT unnest(?))
+        -- duckdb reads the CSV in parallel, so fix the order for reproducible outputs
+        ORDER BY case_enquiry_id
         """,
         [str(path), list(DEPARTMENTS)],
     ).df()

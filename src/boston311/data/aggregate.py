@@ -86,7 +86,9 @@ def request_types(df: pd.DataFrame) -> pd.DataFrame:
                 "median_days_to_close": round(basis["close_days"].median(), 1),
             }
         )
-    return pd.DataFrame(rows).sort_values("requests", ascending=False)
+    return pd.DataFrame(rows).sort_values(
+        ["requests", "request_type"], ascending=[False, True], ignore_index=True
+    )
 
 
 def query_service_stats(
