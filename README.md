@@ -36,7 +36,7 @@ Request counts and on-time rates come from the real data. Crew capacities, costs
 3. **Queue simulator:** replays a year of requests day by day to measure the on-time rate and overdue cost of any plan.
 4. **Sensitivity analysis:** demand 20% above and below forecast, a snowstorm and a heat wave, each tested with a re-optimized plan and with the base plan held fixed.
 5. **311 intake assistant:** retrieves the closest real request types for a resident's message and returns type, department and queue as structured output, asking a follow-up question when the message is unclear. Accuracy is measured on a hand-written test set.
-6. **Streamlit app:** the intake assistant, staffing plan and scenario explorer in one place.
+6. **Web app:** a React + Vite + TypeScript app with four screens (intake, crew plan, scenarios and "ask the plan"), served by a FastAPI backend.
 
 ## Data
 
@@ -44,7 +44,7 @@ Public 311 service requests from [Analyze Boston](https://data.boston.gov/datase
 
 ## Tech stack (planned)
 
-Python 3.12, uv, DuckDB, PuLP (CBC), statsmodels, LangChain, Pydantic, Streamlit, pytest, ruff, GitHub Actions.
+Backend: Python 3.12, uv, FastAPI, DuckDB, PuLP (CBC), statsmodels, LangChain, Pydantic, pytest, ruff. Frontend: React + Vite + TypeScript. CI: GitHub Actions.
 
 ## Getting started
 
@@ -57,7 +57,7 @@ uv sync
 ## How we work
 
 - `main` is protected: every change goes through a pull request, gets one approving review from a teammate, and is squash-merged.
-- Branch names follow `feat/<area>-<topic>`, `fix/...`, `docs/...` or `chore/...`, where the area is `data`, `plan`, `genai` or `app`.
+- Branch names are short and plain, one per ticket, such as `backend-setup` or `intake-agent`.
 - Raw data, `.env` files and API keys are never committed.
 
 ## Team
