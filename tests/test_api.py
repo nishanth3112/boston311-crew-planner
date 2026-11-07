@@ -3,7 +3,8 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from boston311.api import schemas
+from boston311.api import routes, schemas
+from boston311.api.fixtures import load_fixture
 from boston311.api.main import app
 from boston311.config import ROOT
 
@@ -22,7 +23,10 @@ MESSAGES = {"messages": [{"role": "user", "content": "Trash wasn't picked up on 
         ("post", "/api/ask", MESSAGES, schemas.AskResponse),
     ],
 )
-def test_route_returns_valid_response(method, path, body, model):
+def test_route_returns_valid_response(method, path, body, model, monkeypatch):
+    # the real intake calls Groq; this test checks the route's shape, so CI needs no key
+    fixture = load_fixture("intake", schemas.IntakeResponse)
+    monkeypatch.setattr(routes, "run_intake", lambda messages: fixture)
     response = client.request(method, path, json=body)
     assert response.status_code == 200
     model.model_validate(response.json())
