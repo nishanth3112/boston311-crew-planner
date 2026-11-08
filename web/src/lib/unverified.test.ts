@@ -38,3 +38,8 @@ test('a flagged number does not mark the same digits as money, a percentage or m
   expect(marked('92.1% on time, not 92.6%.', ['92.6%'])).toEqual(['92.6%'])
   expect(marked('It costs $22M, not $21M.', ['$22M'])).toEqual(['$22M'])
 })
+
+test('a flagged number does not mark the same digits in points, percent or billions', () => {
+  const text = 'hires 9 crews, on time rises 9 percentage points, 9 pp, 9 points, 9 percent, $9bn'
+  expect(marked(text, ['9'])).toEqual(['9'])
+})

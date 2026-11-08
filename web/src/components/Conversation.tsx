@@ -69,7 +69,7 @@ export function Conversation<R>(props: Props<R>) {
   }
 
   function retry(question: string) {
-    send(question)
+    send(draft.trim() || question) // the box may hold an edited version of the question
     setDraft('')
     input.current?.focus() // the Try again button goes away
   }
