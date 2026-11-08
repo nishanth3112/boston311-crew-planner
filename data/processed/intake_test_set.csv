@@ -1,0 +1,46 @@
+id,category,message,expected_request_types,expected_department,expected_queue,expects_follow_up,n_requests
+T01,clear,"There's a big pothole on Centre St right by the Green St T stop, my tire almost blew out",Request for Pothole Repair,PWDx,PWDx_Roadway Repair_ARP_Resurfacing,no,1
+T02,clear,"Trash wasn't picked up on Adams St in Dorchester this morning, every other street got theirs",Missed Trash/Recycling/Yard Waste/Bulk Item,PWDx,PWDx_Missed Trash\Recycling\Yard Waste\Bulk Item,no,1
+T03,clear,"The streetlight in front of 42 Bowdoin St has been out for a week, it's really dark at night",Street Light Outages,PWDx,PWDx_Street Light Outages,no,1
+T04,clear,Someone spray painted graffiti all over the mailbox and the wall at the corner of Hyde Park Ave and Cleary Sq,PWD Graffiti,PWDx,PWDx_Graffiti,no,1
+T05,clear,A car is parked in the bike lane on Mass Ave outside the Christian Science Center again,Parking Enforcement,BTDT,BTDT_Parking Enforcement,no,1
+T06,clear,"Car blocking my driveway at 18 Sedgwick St Jamaica Plain, been here 2 hours",Parking Enforcement,BTDT,BTDT_Parking Enforcement,no,1
+T07,clear,The traffic signal at Washington St and Columbus Ave is stuck on red in all directions,Traffic Signal Inspection|Traffic Signal Repair,BTDT|BTDT,BTDT_Traffic Signal_Repair|BTDT_Traffic Signal_Graffiti,no,1
+T08,clear,"Big branch hanging off a street tree over the sidewalk on Beacon St near Kenmore, looks like it could fall",Tree Emergencies|Tree Maintenance Requests,PARK|PARK,PARK_Tree Emergencies|PARK_Tree Maintenance Request,no,1
+T09,clear,"The swings at Ringer Playground are broken, chain snapped on one of them",Equipment Repair,PARK,PARK_Maintenance_Trades,no,1
+T10,clear,I'm seeing rats every night in the alley behind 300 Hanover St in the North End,Rodent Activity,ISD,ISD_Environmental Services (INTERNAL),no,1
+T11,clear,My landlord hasn't fixed the heat in my apartment on Blue Hill Ave and it's 50 degrees inside,Heat - Excessive  Insufficient,ISD,ISD_Housing (INTERNAL),no,1
+T12,clear,"Sidewalk on Tremont St near Roxbury Crossing is cracked and lifted, people keep tripping on it",Sidewalk Repair (Make Safe),PWDx,PWDx_Sidewalk Repair,no,1
+T13,clear,There's a mattress and a couch dumped on the sidewalk on Dudley St,Illegal Dumping,PWDx,PWDx_Code Enforcement,no,1
+T14,clear,Please schedule a bulk item pickup for an old dresser at 75 Savin Hill Ave,Schedule a Bulk Item Pickup,PWDx,PWDx_Schedule a Bulk Item Pickup,no,1
+T15,clear,Street sweeping didn't happen on Marlborough St today even though the signs say it should,Requests for Street Cleaning,PWDx,PWDx_District 1C: Downtown,no,1
+T16,clear,The stop sign at Walk Hill St and Wachusett St got knocked over,Sign Repair,BTDT,BTDT_Sign Shop_Sign Installation,no,1
+T17,clear,Truck double parked on Newbury St blocking the whole lane for 30 minutes,Parking Enforcement,BTDT,BTDT_Parking Enforcement,no,1
+T18,clear,"Overflowing public trash can at the corner of Boylston and Arlington, garbage all over the ground",Empty Litter Basket,PWDx,PWDx_District 1C: Downtown,no,1
+T19,clear,There's a dead raccoon in the middle of Morton St near Forest Hills,Pick up Dead Animal,PWDx,PWDx_District 04: Allston/Brighton,no,1
+T20,clear,"Construction going on at 12 Pleasant St in Charlestown with no permit posted, they're taking down a wall",Work w/out Permit,ISD,ISD_Building (INTERNAL),no,1
+T21,clear,The grass and weeds at the Franklin Park playground are like 3 feet tall,Ground Maintenance,PARK,PARK_Maintenance_Region 1,no,1
+T22,clear,"The tree in front of 1800 Centre St in West Roxbury looks dead, can someone prune or remove it",Tree Maintenance Requests,PARK,PARK_Tree Maintenance Request,no,1
+T23,clear,Car with an expired meter has been at the same meter on Charles St all day,Parking Enforcement,BTDT,BTDT_Parking Enforcement,no,1
+T24,clear,Restaurant on Hanover St is leaving open garbage bags out back and it smells terrible,Unsanitary Conditions - Establishment,ISD,ISD_Health (INTERNAL),no,1
+T25,clear,The crosswalk lines at Centre St and South Huntington are completely faded,Pavement Marking Inspection|Pavement Marking Maintenance,BTDT|BTDT,BTDT_Sign Shop_Sign Installation|BTDT_Sign Shop_Sign Installation,no,1
+T26,ambiguous,The light on my street is out,Street Light Outages,PWDx,PWDx_Street Light Outages,yes,1
+T27,ambiguous,There's a car that's been sitting on our block forever,Abandoned Vehicles,BTDT,BTDT_AVRS Interface Queue,yes,1
+T28,ambiguous,Trash everywhere on Blue Hill Ave,Requests for Street Cleaning,PWDx,PWDx_District 1C: Downtown,yes,1
+T29,ambiguous,Something is wrong with the sidewalk near my house in Roslindale,Sidewalk Repair (Make Safe),PWDx,PWDx_Sidewalk Repair,yes,1
+T30,ambiguous,There's a tree problem on Comm Ave,Tree Maintenance Requests,PARK,PARK_Tree Maintenance Request,yes,1
+T31,ambiguous,Rats,Rodent Activity,ISD,ISD_Environmental Services (INTERNAL),yes,1
+T32,ambiguous,The sign at the corner is down,Sign Repair,BTDT,BTDT_Sign Shop_Sign Installation,yes,1
+T33,ambiguous,There's a big mess at the park on Columbia Road,Ground Maintenance|Illegal Dumping|Empty Litter Basket,PARK|PWDx|PWDx,PARK_Maintenance_Region 1|PWDx_Code Enforcement|PWDx_District 1C: Downtown,yes,1
+T34,multi,Trash wasn't picked up on Adams St and there's a dead rat by the bins,Missed Trash/Recycling/Yard Waste/Bulk Item;Pick up Dead Animal|Rodent Activity,PWDx;PWDx|ISD,PWDx_Missed Trash\Recycling\Yard Waste\Bulk Item;PWDx_District 04: Allston/Brighton|ISD_Environmental Services (INTERNAL),no,2
+T35,multi,Pothole on Dot Ave by Fields Corner and the streetlight right next to it is also out,Request for Pothole Repair;Street Light Outages,PWDx;PWDx,PWDx_Roadway Repair_ARP_Resurfacing;PWDx_Street Light Outages,no,2
+T36,multi,Someone dumped tires behind the Cleveland Circle park and the basketball hoop there is broken,Illegal Dumping;Equipment Repair,PWDx;PARK,PWDx_Code Enforcement;PARK_Maintenance_Trades,no,2
+T37,multi,"My apartment on Seaver St has mice and no hot water, and cars keep parking on the sidewalk out front",Mice Infestation - Residential;Unsatisfactory Utilities - Electrical  Plumbing;Parking Enforcement,ISD;ISD;BTDT,ISD_Housing (INTERNAL);ISD_Housing (INTERNAL);BTDT_Parking Enforcement,no,3
+T38,multi,"There's graffiti all over the wall at Mass Ave and Columbus Ave, and the pedestrian signal there doesn't work",PWD Graffiti;Traffic Signal Inspection|Traffic Signal Repair,PWDx;BTDT|BTDT,PWDx_Graffiti;BTDT_Traffic Signal_Repair|BTDT_Traffic Signal_Graffiti,no,2
+T39,multi,On Hyde Park Ave a tree fell across the sidewalk and knocked down the street sign,Tree Emergencies;Sign Repair,PARK;BTDT,PARK_Tree Emergencies;BTDT_Sign Shop_Sign Installation,no,2
+T40,out_of_scope,My neighbors are having a really loud party at 2am on Gainsborough St,,,,no,0
+T41,out_of_scope,"Water main burst on Washington St, water shooting up from the road",,,,no,0
+T42,out_of_scope,The 28 bus hasn't come in 40 minutes,,,,no,0
+T43,messy,POTHOLE!!!!! huge one on river st mattapan by the bridge FIX IT,Request for Pothole Repair,PWDx,PWDx_Roadway Repair_ARP_Resurfacing,no,1
+T44,messy,hay un hoyo grande en la calle Centre cerca de Hyde Square,Request for Pothole Repair,PWDx,PWDx_Roadway Repair_ARP_Resurfacing,no,1
+T45,messy,streetlite out on washinton st by egelston sq been like 2 wks,Street Light Outages,PWDx,PWDx_Street Light Outages,no,1
