@@ -24,9 +24,12 @@ MESSAGES = {"messages": [{"role": "user", "content": "Trash wasn't picked up on 
     ],
 )
 def test_route_returns_valid_response(method, path, body, model, monkeypatch):
-    # the real intake calls Groq; this test checks the route's shape, so CI needs no key
+    # the real intake and analyst agents call Groq; this test checks the route's shape, so CI
+    # needs no key
     fixture = load_fixture("intake", schemas.IntakeResponse)
     monkeypatch.setattr(routes, "run_intake", lambda messages: fixture)
+    ask_fixture = load_fixture("ask", schemas.AskResponse)
+    monkeypatch.setattr(routes, "run_ask", lambda messages: ask_fixture)
     response = client.request(method, path, json=body)
     assert response.status_code == 200
     model.model_validate(response.json())
