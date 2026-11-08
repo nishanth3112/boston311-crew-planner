@@ -35,7 +35,7 @@ from boston311.forecast.models import FORECAST_PATH, load_forecast
 from boston311.genai import llm
 from boston311.genai.intake_pipeline import to_langchain
 from boston311.planning.optimizer import solve_plan
-from boston311.planning.scenarios import load_plan
+from boston311.planning.scenarios import SCENARIOS, load_plan
 
 logger = logging.getLogger(__name__)
 
@@ -56,12 +56,12 @@ Tools:
 - get_plan: a precomputed 2025 plan. Scenarios: base (90% on-time target), hold_flat (January \
 crews all year, the baseline), demand_plus_20, demand_minus_20, snowstorm, heat_wave. Monthly \
 crews, hires, releases, Parks seasonal crews, capacity, forecast, simulated on-time rate and cost, \
-yearly totals per department, and plan-wide KPIs including the saving and on-time gain against \
-holding January crews flat.
+yearly totals per department, and all_departments: the KPIs of all four departments together, \
+including the saving and on-time gain against holding January crews flat.
 - run_what_if: re-solves the plan for a demand multiplier (0.5 to 1.5), a shock (none, snowstorm, \
-heat_wave) and an on-time target (0.5 to 0.99). Returns KPIs, target_met (true only when every \
-department reaches the target) and the change from the base plan. Use get_plan instead when a \
-named scenario matches the question.
+heat_wave) and an on-time target (0.5 to 0.99). Returns the same plan data, target_met (true only \
+when every department reaches the target) and the change from the base plan, for all departments \
+and per department. Use get_plan instead when a named scenario matches the question.
 - get_forecast: the monthly 2025 forecast with its 80% interval, the method, the backtest error \
 and the 2024 total for comparison.
 - query_service_stats: the 2023 or 2024 311 history: request counts (with shares), on-time rate \
@@ -72,12 +72,15 @@ add, subtract or divide numbers yourself; use the totals, shares and changes the
 2. Rates and shares come as fractions (0.921): write them as percentages (92.1%). Money can be \
 written in millions ($15.91M).
 3. Pass departments to keep results small. Use at most 4 tool calls.
-4. If target_met is false, say the plan could not reach the on-time target and name the \
+4. all_departments figures are for the four departments together. When the question is about one \
+department, use that department's totals and monthly figures, and say "the whole plan" for any \
+all_departments figure you also give.
+5. If target_met is false, say the plan could not reach the on-time target and name the \
 departments_below_target.
-5. Answer in 2 to 5 plain sentences, without tables or headings, and say which plan or data each \
+6. Answer in 2 to 5 plain sentences, without tables or headings, and say which plan or data each \
 number comes from.
-6. If a result has no rows and lists closest_names, call the tool again with one of those names.
-7. If the question is not about the plan, the forecast or the 311 history, say that is all you \
+7. If a result has no rows and lists closest_names, call the tool again with one of those names.
+8. If the question is not about the plan, the forecast or the 311 history, say that is all you \
 can answer."""
 
 TOOL_CALL_HINT = HumanMessage(
@@ -139,7 +142,10 @@ def query_service_stats(
     """311 history (2023 or 2024): request_count, on_time_rate (a fraction) or
     median_days_to_close, grouped by department, neighborhood, request_type, source or month and
     sorted largest first (months in order). One result per department given, or all four
-    departments together when none given. request_count rows include each group's share."""
+    departments together when none given. request_count rows include each group's share.
+    When the question is about one kind of request (potholes, rodents, street lights), pass
+    request_type, e.g. "Request for Pothole Repair"; a partial name returns closest_names.
+    neighborhood and source filter the same way."""
     if year not in STATS_YEARS:
         return _error(f"year must be one of {list(STATS_YEARS)}")
     limit = max(1, min(int(limit), MAX_ROWS))
@@ -169,7 +175,10 @@ def get_plan(scenario: Scenario = "base", departments: list[Department] | None =
     """A precomputed 2025 crew plan: KPIs for all departments, and monthly crews, hires,
     releases, seasonal crews, capacity, forecast, on-time rate and cost with yearly totals for
     the departments asked (all when none given)."""
-    return _dump(_plan_summary(load_plan(scenario), departments))
+    summary = _plan_summary(load_plan(scenario), departments)
+    if scenario != "hold_flat":  # the baseline isn't planned to a target
+        summary["on_time_target"] = SCENARIOS[scenario].on_time_target
+    return _dump(summary)
 
 
 @tool
@@ -197,8 +206,8 @@ def run_what_if(
     below = [d.department for d in plan.departments if _on_time(d) < request.on_time_target]
     summary["target_met"] = not below
     summary["departments_below_target"] = below
-    summary["change_from_base"] = {
-        k: round(summary["kpis"][k] - base["kpis"][k], 4)
+    summary["all_departments"]["change_from_base"] = {
+        k: round(summary["all_departments"][k] - base["all_departments"][k], 4)
         for k in ("total_cost", "overdue_cost", "on_time_pct")
     }
     for dept, base_dept in zip(summary["departments"], base["departments"], strict=True):
@@ -271,7 +280,9 @@ def _plan_summary(plan: PlanResult, departments: list[str] | None) -> dict:
                 },
             }
         )
-    return {"scenario": plan.scenario, "kpis": kpis, "departments": out}
+    # plan-wide figures sit under all_departments, so a department's own figures (its totals)
+    # can't be mistaken for them
+    return {"scenario": plan.scenario, "all_departments": kpis, "departments": out}
 
 
 @cache
@@ -312,8 +323,10 @@ def _closest(request_type: str | None, neighborhood: str | None) -> dict:
 NUMBER = re.compile(
     # not inside a word or a longer number, nor the second half of 2025-03 or 3/4
     r"(?<![\w.$])(?<!\d[-/])(-?)(\$?)((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?)"
-    r"(\s?(?:%|percent\b|million\b|[mM]\b|billion\b|bn\b|thousand\b|[kK]\b))?"
+    r"(\s?(?:%|percent(?:age points?)?\b|points?\b|pp\b|million\b|[mM]\b|billion\b|bn\b|"
+    r"thousand\b|[kK]\b))?"
 )
+CITATION = re.compile(r"\s*【[^】]*】")
 SCALES = {"m": 1e6, "million": 1e6, "bn": 1e9, "billion": 1e9, "k": 1e3, "thousand": 1e3}
 
 
@@ -325,7 +338,8 @@ def _numbers(text: str) -> list[tuple[str, float, int, str]]:
     for match in NUMBER.finditer(text):
         _, dollar, digits, unit = match.groups()
         unit = (unit or "").strip().lower()
-        unit = "%" if unit in ("%", "percent") else unit
+        # percentage points compare like percentages: tools give rate changes as fractions
+        unit = "%" if unit in ("%", "percent", "pp") or "point" in unit else unit
         plain = digits.replace(",", "")
         if "." in plain:
             decimals = len(plain.split(".")[1])
@@ -492,7 +506,8 @@ def run_ask_with_stats(messages: list[ChatMessage]) -> tuple[AskResponse, dict]:
     ai = [m for m in new if isinstance(m, AIMessage)][: -1 if capped else None]
     calls = [c for m in ai for c in m.tool_calls if c["id"] in ran and c["name"] in TOOL_NAMES]
     final = ai[-1] if ai and not ai[-1].tool_calls and not capped else None
-    answer = final.text.strip() if final else ""
+    # gpt-oss sometimes appends citation marks like 【run_what_if†result】; drop them
+    answer = CITATION.sub("", final.text).strip() if final else ""
     tool_results = [m.content for m in results if m.status == "success"]
     user_texts = [m.content for m in messages if m.role == "user"]
     unverified = unverified_numbers(answer, known_values(tool_results, user_texts))
@@ -515,7 +530,7 @@ def run_ask_with_stats(messages: list[ChatMessage]) -> tuple[AskResponse, dict]:
         "llm_calls": len(ai),
         "uncached_tokens": llm.uncached_tokens(ai),
         "numbers": len(
-            {n[0] for n in _numbers(final.text if final else "") if not _is_year(*n[1:], n[0])}
+            {n[0] for n in _numbers(answer if final else "") if not _is_year(*n[1:], n[0])}
         ),
         "unverified": len(unverified),
     }

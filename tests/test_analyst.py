@@ -59,8 +59,8 @@ def test_numbers_the_model_computes_itself_are_flagged_once():
 
 def test_negative_changes_match_by_size():
     k = known({"change_from_base": {"on_time_pct": -0.0145}})
-    assert unverified_numbers("On-time falls by 1.45 points (1.4%).", k) == ["1.45"]
-    assert unverified_numbers("On-time falls by 1.4%.", k) == []
+    assert unverified_numbers("On-time falls by 1.45 points (1.4%).", k) == []
+    assert unverified_numbers("On-time falls by 1.6%.", k) == ["1.6%"]
 
 
 # ---------- tools ----------
@@ -121,19 +121,23 @@ def test_get_plan_filters_departments_and_totals_them():
     (park,) = out["departments"]
     assert park["totals"]["hires"] == sum(park["hires"])
     assert park["totals"]["seasonal_crew_months"] == sum(park["seasonal"])
-    assert set(out["kpis"]) >= {"total_cost", "on_time_pct", "baseline_on_time_pct"}
+    assert set(out["all_departments"]) >= {"total_cost", "on_time_pct", "baseline_on_time_pct"}
 
 
 def test_what_if_with_base_settings_shows_no_change():
     out = load(analyst_agent.run_what_if, departments=["ISD"])
     assert out["target_met"] is True
-    assert out["change_from_base"] == {"total_cost": 0, "overdue_cost": 0, "on_time_pct": 0}
+    assert out["all_departments"]["change_from_base"] == {
+        "total_cost": 0,
+        "overdue_cost": 0,
+        "on_time_pct": 0,
+    }
     assert set(out["departments"][0]["change_from_base"].values()) == {0}
 
 
 def test_what_if_reports_an_unreachable_target_and_bad_input():
     out = load(analyst_agent.run_what_if, on_time_target=0.99, departments=["BTDT"])
-    assert out["target_met"] is False and out["kpis"]["on_time_pct"] < 0.99
+    assert out["target_met"] is False and out["all_departments"]["on_time_pct"] < 0.99
     assert load(analyst_agent.run_what_if, demand_multiplier=3) == {
         "error": "demand_multiplier: Input should be less than or equal to 1.5"
     }
@@ -393,7 +397,7 @@ def test_dev_set_loads():
 def test_target_met_needs_every_department_at_the_target():
     # plan-wide 94.3% passes 0.94, but Public Works and Transportation fall short
     out = load(analyst_agent.run_what_if, on_time_target=0.94)
-    assert out["kpis"]["on_time_pct"] >= 0.94
+    assert out["all_departments"]["on_time_pct"] >= 0.94
     assert out["target_met"] is False
     assert out["departments_below_target"] == ["PWDx", "BTDT"]
 
@@ -474,3 +478,32 @@ def test_eval_records_errors_with_empty_messages(monkeypatch, error):
     ).assign(expected_facts="")
     records = analyst_eval.run(questions)  # the run carries on past the bad question
     assert [r["error"] for r in records] == [f"{type(error).__name__}: "] * 2
+
+
+def test_plan_wide_figures_are_labelled_all_departments():
+    out = load(analyst_agent.run_what_if, demand_multiplier=1.2, departments=["BTDT"])
+    assert "kpis" not in out and "change_from_base" not in out
+    assert set(out["all_departments"]) >= {"total_cost", "on_time_pct", "change_from_base"}
+    (btdt,) = out["departments"]
+    # Transportation's own figures differ from the whole plan's, which the answer mixed up
+    assert btdt["totals"]["cost"] < out["all_departments"]["total_cost"]
+    assert btdt["totals"]["on_time_pct"] != out["all_departments"]["on_time_pct"]
+
+
+def test_get_plan_states_the_target_it_was_planned_to():
+    assert load(analyst_agent.get_plan, scenario="base")["on_time_target"] == 0.9
+    assert "on_time_target" not in load(analyst_agent.get_plan, scenario="hold_flat")
+    k = known_values([analyst_agent.get_plan.invoke({"scenario": "demand_plus_20"})], [])
+    assert unverified_numbers("Parks still meets the 90% target.", k) == []
+
+
+def test_percentage_points_compare_with_fraction_changes():
+    k = known({"change_from_base": {"on_time_pct": -0.0193}})
+    for text in ("falls by 1.9 percentage points", "falls 1.9 points", "down 1.9 pp"):
+        assert unverified_numbers(text, k) == [], text
+    assert unverified_numbers("falls by 2.4 points", k) == ["2.4 points"]
+
+
+def test_citation_marks_are_removed_from_the_answer(script):
+    script(AIMessage("The plan meets its target【run_what_if†result】."))
+    assert analyst_agent.run_ask(ask("q")).answer == "The plan meets its target."
