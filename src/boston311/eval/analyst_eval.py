@@ -132,11 +132,14 @@ def score(row, response) -> dict:
 
 
 def ask(question: str):
-    """One question; on Groq's per-minute rate limit, wait a minute and try once more."""
+    """One question; on Groq's per-minute rate limit (not the daily one), wait a minute and
+    try once more."""
     messages = [ChatMessage(role="user", content=question)]
     try:
         return run_ask_with_stats(messages)
-    except RateLimitError:
+    except RateLimitError as error:
+        if "per minute" not in str(error):  # the daily limit won't clear in a minute
+            raise
         time.sleep(RATE_LIMIT_WAIT)
         return run_ask_with_stats(messages)
 
@@ -154,8 +157,8 @@ def run(questions: pd.DataFrame) -> list[dict]:
                 "unverified_list": ", ".join(response.unverified_numbers),
             }
         except Exception as error:  # counted and printed, so one bad question doesn't stop the run
-            # the first line only: Groq's messages go on to name the account
-            record["error"] = f"{type(error).__name__}: {str(error).splitlines()[0]}"[:80]
+            # keep only the start: Groq's 429 names the account partway through its first line
+            record["error"] = f"{type(error).__name__}: {str(error).partition('\n')[0]}"[:80]
         records.append(record)
     return records
 

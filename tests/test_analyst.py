@@ -427,19 +427,50 @@ def test_a_tool_that_returns_an_error_stays_out_of_the_trace(script):
     assert stats["tool_calls"] == 0
 
 
-def test_eval_waits_out_one_rate_limit(monkeypatch):
+def rate_limited(message, fail_times):
+    """Stands in for run_ask_with_stats: raises Groq's 429 with message, then answers."""
     from groq import RateLimitError
 
     calls = []
 
-    def flaky(messages):
+    def run(messages):
         calls.append(messages)
-        if len(calls) == 1:
+        if len(calls) <= fail_times:
             request = httpx.Request("POST", "https://api.groq.com")
-            raise RateLimitError("429", response=httpx.Response(429, request=request), body=None)
+            response = httpx.Response(429, request=request)
+            raise RateLimitError(message, response=response, body=None)
         return traced(), {}
 
-    monkeypatch.setattr(analyst_eval, "run_ask_with_stats", flaky)
+    return run, calls
+
+
+def test_eval_waits_out_one_per_minute_rate_limit(monkeypatch):
+    run, calls = rate_limited("Rate limit reached ... on tokens per minute (TPM)", 1)
+    monkeypatch.setattr(analyst_eval, "run_ask_with_stats", run)
     monkeypatch.setattr(analyst_eval, "RATE_LIMIT_WAIT", 0)
     response, _ = analyst_eval.ask("q")
     assert len(calls) == 2 and response.trace == []
+
+
+def test_eval_does_not_wait_on_the_daily_limit(monkeypatch):
+    from groq import RateLimitError
+
+    run, calls = rate_limited("Rate limit reached ... on tokens per day (TPD): Limit 200000", 1)
+    monkeypatch.setattr(analyst_eval, "run_ask_with_stats", run)
+    monkeypatch.setattr(analyst_eval, "RATE_LIMIT_WAIT", 3600)  # a wait would hang the test
+    with pytest.raises(RateLimitError):
+        analyst_eval.ask("q")
+    assert len(calls) == 1
+
+
+@pytest.mark.parametrize("error", [KeyError(), TimeoutError(), AssertionError()])
+def test_eval_records_errors_with_empty_messages(monkeypatch, error):
+    def fail(question):
+        raise error
+
+    monkeypatch.setattr(analyst_eval, "ask", fail)
+    questions = pd.DataFrame(
+        [{"id": "X", "question": "q", "expected_tools": "get_plan", "expected_arguments": "{}"}] * 2
+    ).assign(expected_facts="")
+    records = analyst_eval.run(questions)  # the run carries on past the bad question
+    assert [r["error"] for r in records] == [f"{type(error).__name__}: "] * 2
