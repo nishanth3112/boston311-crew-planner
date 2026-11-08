@@ -1,13 +1,13 @@
-id,message,expected_types,expects_follow_up
-1,There's a huge pothole on Centre St in Jamaica Plain that almost blew out my tire,Request for Pothole Repair,0
-2,The streetlight outside 45 Bowdoin St has been dark for a week now,Street Light Outages,0
-3,Someone spray painted tags all over the wall at the corner of Tremont and Mass Ave,PWD Graffiti,0
-4,A car with no plates and flat tires has been sitting on my street in Roslindale for over a month,Abandoned Vehicles,0
-5,No heat in my apartment since Friday and the landlord isn't answering,Heat - Excessive  Insufficient,0
-6,Somebody dumped a mattress and a pile of old tires in the alley behind our building,Illegal Dumping,0
-7,Trash wasn't collected on Adams St this week and now rats are all over the bins,Missed Trash/Recycling/Yard Waste/Bulk Item|Rodent Activity,0
-8,The pothole in front of 12 Elm St keeps getting worse and the streetlight on that corner is out too,Request for Pothole Repair|Street Light Outages,0
-9,There's a problem with the sign near my kid's school,,1
-10,Can someone come take care of the tree on my street?,,1
-11,How do I renew my passport?,,0
-12,The MBTA bus was 40 minutes late again this morning,,0
+id,category,message,expected_request_types,expected_department,expected_queue,expects_follow_up,n_requests
+1,clear,There's a huge pothole on Centre St in Jamaica Plain that almost blew out my tire,Request for Pothole Repair,PWDx,PWDx_Roadway Repair_ARP_Resurfacing,0,1
+2,clear,The streetlight outside 45 Bowdoin St has been dark for a week now,Street Light Outages,PWDx,PWDx_Street Light Outages,0,1
+3,clear,Someone spray painted tags all over the wall at the corner of Tremont and Mass Ave,PWD Graffiti,PWDx,PWDx_Graffiti,0,1
+4,clear,A car with no plates and flat tires has been sitting on my street in Roslindale for over a month,Abandoned Vehicles,BTDT,BTDT_AVRS Interface Queue,0,1
+5,clear,No heat in my apartment since Friday and the landlord isn't answering,Heat - Excessive  Insufficient,ISD,ISD_Housing (INTERNAL),0,1
+6,clear,Somebody dumped a mattress and a pile of old tires in the alley behind our building,Illegal Dumping,PWDx,PWDx_Code Enforcement,0,1
+7,multi,Trash wasn't collected on Adams St this week and now rats are all over the bins,Missed Trash/Recycling/Yard Waste/Bulk Item; Rodent Activity,PWDx; ISD,PWDx_Missed Trash\Recycling\Yard Waste\Bulk Item; ISD_Environmental Services (INTERNAL),0,2
+8,multi,The pothole in front of 12 Elm St keeps getting worse and the streetlight on that corner is out too,Request for Pothole Repair; Street Light Outages,PWDx; PWDx,PWDx_Roadway Repair_ARP_Resurfacing; PWDx_Street Light Outages,0,2
+9,ambiguous,There's a problem with the sign near my kid's school,,,,1,1
+10,ambiguous,Can someone come take care of the tree on my street?,,,,1,1
+11,out_of_scope,How do I renew my passport?,,,,0,0
+12,out_of_scope,The MBTA bus was 40 minutes late again this morning,,,,0,0

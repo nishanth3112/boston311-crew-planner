@@ -2,15 +2,17 @@
 
     uv run python -m boston311.eval.intake_eval data/processed/intake_dev_set.csv
 
-The CSV has columns id, message, expected_types ("|"-separated, empty when out of scope)
-and expects_follow_up (0/1). Messages that expect a follow-up are scored on the follow-up
-only. A path that raises on a message counts as an error for that message.
+The CSV needs columns id, message, expected_request_types and expects_follow_up (0/1).
+expected_request_types separates problems with ";" and accepted alternatives for one problem
+with "|"; it is empty when the message is out of scope. A problem is right if a prediction
+matches any of its alternatives; department and queue come from the lookup table, as in the
+app. Messages that expect a follow-up are scored on the follow-up only. A path that raises on
+a message counts as an error for that message.
 Agent cost excludes calls Groq rejected (retried) and a failed agent run before a
 fallback, whose message reports the pipeline's cost; real usage is somewhat higher.
 """
 
 import sys
-from collections import Counter
 
 import pandas as pd
 
@@ -23,12 +25,32 @@ from boston311.genai.kb import request_type_table
 PATHS = {"pipeline": run_pipeline, "agent": run_intake_with_stats}
 
 
+def parse_problems(cell: str) -> list[list[str]]:
+    """ "A ; B|C" -> [["A"], ["B", "C"]]: one list of accepted types per problem."""
+    problems = [[t.strip() for t in p.split("|") if t.strip()] for p in cell.split(";")]
+    return [p for p in problems if p]
+
+
+def matched(problems: list[list[str]], predicted: list[str], key) -> int:
+    """Problems matched by distinct predictions (compared through key). Problems with the fewest
+    alternatives go first, so a prediction several problems accept isn't spent on the wrong one."""
+    left = [key(p) for p in predicted]
+    hits = 0
+    for alternatives in sorted(problems, key=len):
+        accepted = {key(a) for a in alternatives}
+        hit = next((i for i, p in enumerate(left) if p in accepted), None)
+        if hit is not None:
+            del left[hit]
+            hits += 1
+    return hits
+
+
 def run_path(run, dev: pd.DataFrame) -> list[dict]:
     records = []
     for row in dev.itertuples():
         record = {
             "id": row.id,
-            "expected": [t for t in row.expected_types.split("|") if t],
+            "problems": parse_problems(row.expected_request_types),
             "follow_up_expected": bool(int(row.expects_follow_up)),
         }
         try:
@@ -46,27 +68,28 @@ def run_path(run, dev: pd.DataFrame) -> list[dict]:
 
 
 def summarize(records: list[dict]) -> dict:
-    dept = request_type_table()["department"]
+    table = request_type_table()
     ok = [r for r in records if "error" not in r]
     scored = [r for r in ok if not r["follow_up_expected"]]
-    multi = [r for r in scored if len(r["expected"]) > 1]
-    oos = [r for r in scored if not r["expected"]]
+    multi = [r for r in scored if len(r["problems"]) > 1]
+    oos = [r for r in scored if not r["problems"]]
     asked = [r for r in ok if r["asked"]]
     wanted = [r for r in ok if r["follow_up_expected"]]
+    expected = sum(len(r["problems"]) for r in scored)
 
-    def matched(r, key=lambda t: t):
-        return sum((Counter(map(key, r["expected"])) & Counter(map(key, r["predicted"]))).values())
+    def correct(key=lambda t: t):
+        return f"{sum(matched(r['problems'], r['predicted'], key) for r in scored)}/{expected}"
 
     def avg(key):
         return round(sum(r[key] for r in ok) / len(ok), 1) if ok else 0
 
-    expected = sum(len(r["expected"]) for r in scored)
     return {
         "messages": len(records),
         "errors": len(records) - len(ok),
-        "type correct": f"{sum(matched(r) for r in scored)}/{expected}",
-        "department correct": f"{sum(matched(r, dept.get) for r in scored)}/{expected}",
-        "split correct": f"{sum(len(r['predicted']) == len(r['expected']) for r in multi)}"
+        "type correct": correct(),
+        "department correct": correct(table["department"].get),
+        "queue correct": correct(table["queue"].get),
+        "split correct": f"{sum(len(r['predicted']) == len(r['problems']) for r in multi)}"
         f"/{len(multi)}",
         "follow-up precision": f"{sum(r['follow_up_expected'] for r in asked)}/{len(asked)}",
         "follow-up recall": f"{sum(r['asked'] for r in wanted)}/{len(wanted)}",
@@ -99,7 +122,10 @@ def main(path: str) -> None:
         {
             "id": r["id"],
             "path": name,
-            "expected": label({"follow_up_expected": r["follow_up_expected"]}, r["expected"]),
+            "expected": label(
+                {"follow_up_expected": r["follow_up_expected"]},
+                [" or ".join(alternatives) for alternatives in r["problems"]],
+            ),
             "got": r.get("error") or label(r, r["predicted"]),
         }
         for name, records in results.items()

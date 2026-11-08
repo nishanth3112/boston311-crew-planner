@@ -12,7 +12,7 @@ from pydantic import ValidationError
 
 from boston311.api.schemas import ChatMessage
 from boston311.config import PROCESSED_DIR
-from boston311.eval.intake_eval import summarize
+from boston311.eval.intake_eval import parse_problems, summarize
 from boston311.genai import intake_agent, intake_pipeline, kb, llm
 from boston311.genai.kb import request_type_table
 from boston311.genai.llm import CountingCache, uncached_tokens
@@ -94,10 +94,20 @@ def test_build_kb_asks_again_for_types_the_model_skipped(monkeypatch):
         [kb_reply("Request for Pothole Repair", "Rodent Activity"), kb_reply("Sidewalk Repair")]
     )
     monkeypatch.setattr(kb.llm, "structured", fake)
-    entries = kb.build_kb(TYPES, {"Request for Pothole Repair": ["SINKHOLE"]}, model=None)
+    entries = kb.build_kb(
+        TYPES, {"Request for Pothole Repair": ["SINKHOLE"]}, None, frozenset({"Sidewalk Repair"})
+    )
     assert [e["request_type"] for e in entries] == sorted(TYPES["request_type"])
     assert len(fake.calls) == 2
     assert "SINKHOLE" in fake.calls[0][-1].content
+    assert (
+        "Sidewalk Repair (department: Public Works, queue: PWDx_Highway Maintenance, staff only)"
+        in (fake.calls[0][-1].content)
+    )
+    assert (
+        "Rodent Activity (department: Inspectional Services, queue: ISD_Environmental Services)"
+        in (fake.calls[0][-1].content)
+    )
 
 
 def test_build_kb_fails_when_a_type_never_comes_back(monkeypatch):
@@ -248,12 +258,20 @@ def test_misspelled_neighborhood_suggests_the_closest_names():
     assert out["request_types"][1]["error"] == "unknown request type"
 
 
+def test_parse_problems_splits_problems_then_alternatives():
+    assert parse_problems(f"{TRASH} ; {RAT}|Pick up Dead Animal") == [
+        [TRASH],
+        [RAT, "Pick up Dead Animal"],
+    ]
+    assert parse_problems("") == []
+
+
 def test_eval_summary_counts():
-    def rec(expected, predicted, follow=False, asked=False, oos=False, **extra):
+    def rec(problems, predicted, follow=False, asked=False, oos=False, **extra):
         stats = {"tool_calls": 2, "llm_calls": 3, "uncached_tokens": 1000, "fallback": False}
         return (
             {
-                "expected": expected,
+                "problems": problems,
                 "predicted": predicted,
                 "follow_up_expected": follow,
                 "asked": asked,
@@ -263,17 +281,21 @@ def test_eval_summary_counts():
             | extra
         )
 
+    dead = "Pick up Dead Animal"
     records = [
-        rec([TRASH, RAT], [TRASH, "Pick up Dead Animal"]),  # 1 of 2 types, split right
+        rec([[TRASH], [RAT]], [TRASH, dead]),  # 1 of 2 types, split right
+        rec([[RAT, dead]], [dead]),  # an accepted alternative counts as correct
+        rec([[RAT, dead], [RAT]], [RAT, dead]),  # needs RAT for the 2nd problem, dead for the 1st
         rec([], [], oos=True),  # out of scope, handled
         rec([], [], follow=True, asked=True),  # wanted follow-up, got it
-        rec([RAT], [RAT], asked=True),  # an unneeded follow-up
-        {"expected": [RAT], "follow_up_expected": False, "error": "BadRequestError"},
+        rec([[RAT]], [RAT], asked=True),  # an unneeded follow-up
+        {"problems": [[RAT]], "follow_up_expected": False, "error": "BadRequestError"},
     ]
     s = summarize(records)
-    assert s["type correct"] == "2/3"
-    assert s["department correct"] == "2/3"  # the dead-animal type is PWDx, not ISD
-    assert s["split correct"] == "1/1"
+    assert s["type correct"] == "5/6"
+    assert s["department correct"] == "5/6"  # the dead-animal type is PWDx, not ISD
+    assert s["queue correct"] == "5/6"
+    assert s["split correct"] == "2/2"
     assert (s["follow-up precision"], s["follow-up recall"]) == ("1/2", "1/1")
     assert (s["out of scope correct"], s["errors"]) == ("1/1", 1)
     assert s["uncached tokens / msg"] == 1000
@@ -311,3 +333,13 @@ def test_dev_set_messages_are_not_in_the_retrieval_corpus():
     dev = pd.read_csv(PROCESSED_DIR / "intake_dev_set.csv")
     phrasings = {p.strip().lower() for e in kb.load_kb() for p in e["phrasings"]}
     assert not {m.strip().lower() for m in dev["message"]} & phrasings
+
+
+def test_trace_names_only_known_neighborhoods():
+    lookup = {"request_types": [RAT], "neighborhood": "Southie"}
+    assert intake_agent._summary("get_request_types", lookup) == "Looked up 1 request type"
+    lookup["neighborhood"] = "dorchester"
+    assert (
+        intake_agent._summary("get_request_types", lookup)
+        == "Looked up 1 request type in dorchester"
+    )
