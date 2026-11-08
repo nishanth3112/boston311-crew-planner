@@ -9,8 +9,12 @@ export function markUnverified(text: string, numbers: string[]): Segment[] {
     .sort((a, b) => b.length - a.length)
     .map(escape)
   if (alternatives.length === 0) return [{ text, unverified: false }]
-  // the lookarounds stop a match inside a longer number, e.g. 12,400 inside 12,400,000
-  const pattern = new RegExp(`(?<!\\d[.,]?)(${alternatives.join('|')})(?![.,]?\\d)`)
+  // the lookarounds stop a match inside a longer number (12,400 inside 12,400,000) or a
+  // different quantity: a flagged 9 is not the 9 in $9, 9%, 9 points or 9M (the same units
+  // the backend's number check reads)
+  const pattern = new RegExp(
+    `(?<![\\d$][.,]?)(${alternatives.join('|')})(?![.,]?\\d|\\s?(?:%|percent|points?\\b|pp\\b|[MKmk]\\b|bn\\b|million|thousand|billion))`,
+  )
   return text
     .split(pattern)
     .map((part, i) => ({ text: part, unverified: i % 2 === 1 }))

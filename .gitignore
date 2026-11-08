@@ -25,3 +25,7 @@ CLAUDE.local.md
 
 # macOS
 .DS_Store
+
+# Local agent skills (npx skills add ...)
+.agents/
+skills-lock.json

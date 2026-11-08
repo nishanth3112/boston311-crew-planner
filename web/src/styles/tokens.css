@@ -37,7 +37,7 @@
   --accent-foreground: var(--asphalt);
   --destructive: var(--signal-red);
   --border: var(--seam);
-  --input: var(--seam);
+  --input: var(--curb);      /* form field edges need 3:1 (WCAG 1.4.11): 6.2:1 on card */
   --ring: var(--guide-green);
 
   /* Crew Board */
@@ -69,7 +69,7 @@
   --accent-foreground: var(--concrete);
   --destructive: #ff8a80;
   --border: #464c52;
-  --input: #464c52;
+  --input: #a9aeb2;          /* 5.4:1 on the dark card, same gray as dark muted text */
   --ring: var(--guide-green-lit);
   --capacity: var(--guide-green-lit);
   --change-ink: var(--asphalt);

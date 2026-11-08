@@ -32,3 +32,14 @@ test('does not mark a number inside a longer one', () => {
 test('leaves text alone when nothing is unverified', () => {
   expect(markUnverified('All good.', [])).toEqual([{ text: 'All good.', unverified: false }])
 })
+
+test('a flagged number does not mark the same digits as money, a percentage or millions', () => {
+  expect(marked('9 crews, 9% on time, $9 per request and $9M in all.', ['9'])).toEqual(['9'])
+  expect(marked('92.1% on time, not 92.6%.', ['92.6%'])).toEqual(['92.6%'])
+  expect(marked('It costs $22M, not $21M.', ['$22M'])).toEqual(['$22M'])
+})
+
+test('a flagged number does not mark the same digits in points, percent or billions', () => {
+  const text = 'hires 9 crews, on time rises 9 percentage points, 9 pp, 9 points, 9 percent, $9bn'
+  expect(marked(text, ['9'])).toEqual(['9'])
+})
