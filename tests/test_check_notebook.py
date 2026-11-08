@@ -58,3 +58,28 @@ def test_placeholders_fail_unless_draft():
     note = markdown("> AI use: to be confirmed with the team.")
     assert problems(note) == ["the notebook still has the AI-use note to be confirmed"]
     assert problems(note, draft=True) == []
+
+
+@pytest.mark.parametrize(
+    ("text", "name"),
+    [
+        ("TODO: write this", "a TODO"),
+        (
+            "_The held-out result is added here once the set is ready._",
+            "the held-out analyst eval slot",
+        ),
+        ("_Added in BOS-11: the staffing plan._", "an unfilled section"),
+    ],
+)
+def test_each_placeholder_is_caught(text, name):
+    assert problems(markdown(text)) == [f"the notebook still has {name}"]
+
+
+def test_a_blank_code_cell_that_ran_keeps_the_order():
+    assert problems(ran("x = 1", 1), ran("", 2), ran("x", 3, stream("1"))) == []
+
+
+def test_placeholders_in_the_report_are_caught():
+    assert check["placeholders"](
+        "Wording: to be confirmed with the team.", "the analysis report"
+    ) == ["the analysis report still has the AI-use note to be confirmed"]
