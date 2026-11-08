@@ -58,6 +58,17 @@ def to_langchain(messages: list[ChatMessage]) -> list:
     return [HumanMessage(m.content) if m.role == "user" else AIMessage(m.content) for m in messages]
 
 
+# words the model sometimes writes instead of leaving follow_up_question empty
+NO_QUESTION = {"", "null", "none", "n/a", "na"}
+
+
+def _question(text: str | None) -> str | None:
+    """The follow-up question, or None when the model wrote "null" or the like as text."""
+    if text is None or text.strip().lower() in NO_QUESTION:
+        return None
+    return text.strip()
+
+
 def to_response(draft, trace: list[ToolTraceStep], fallback_used: bool = False) -> IntakeResponse:
     """Department, queue and typical days come from the lookup table, never from the model."""
     table = request_type_table()
@@ -77,10 +88,11 @@ def to_response(draft, trace: list[ToolTraceStep], fallback_used: bool = False) 
                 typical_days_to_close=None if days != days else float(days),  # NaN: none closed
             )
         )
+    question = _question(draft.follow_up_question)
     return IntakeResponse(
         requests=routed,
-        follow_up_question=draft.follow_up_question,
-        out_of_scope=not routed and draft.follow_up_question is None,
+        follow_up_question=question,
+        out_of_scope=not routed and question is None,
         reply=draft.reply,
         trace=trace,
         fallback_used=fallback_used,

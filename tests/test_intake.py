@@ -175,6 +175,25 @@ def test_follow_up_is_not_out_of_scope(offline, monkeypatch):
     assert not response.out_of_scope and response.follow_up_question
 
 
+@pytest.mark.parametrize("written", ["null", "None", "", "  ", "N/A"])
+def test_null_like_follow_up_text_means_no_question(offline, monkeypatch, written):
+    # gpt-oss sometimes writes "null" as text instead of leaving the field empty
+    monkeypatch.setattr(llm, "structured", ScriptedStructured([draft(TRASH, follow_up=written)]))
+    response, _ = intake_pipeline.run_pipeline(USER)
+    assert response.follow_up_question is None and not response.out_of_scope
+
+    monkeypatch.setattr(llm, "structured", ScriptedStructured([draft(follow_up=written)]))
+    response, _ = intake_pipeline.run_pipeline(USER)
+    assert response.follow_up_question is None and response.out_of_scope  # nothing filed
+
+
+def test_a_real_follow_up_question_is_kept_and_trimmed(offline, monkeypatch):
+    fake = ScriptedStructured([draft(follow_up="  Is the rat inside or outside?  ")])
+    monkeypatch.setattr(llm, "structured", fake)
+    response, _ = intake_pipeline.run_pipeline(USER)
+    assert response.follow_up_question == "Is the rat inside or outside?"
+
+
 class FakeToolModel(GenericFakeChatModel):
     """Scripted chat model that accepts tools, for driving create_agent offline."""
 
