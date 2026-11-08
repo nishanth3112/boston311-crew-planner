@@ -385,3 +385,61 @@ def test_load_set_rejects_duplicate_ids_and_invalid_values(tmp_path):
 
 def test_dev_set_loads():
     assert len(load_set("data/processed/analyst_dev_set.csv")) == 10
+
+
+# ---------- PR #9 review ----------
+
+
+def test_target_met_needs_every_department_at_the_target():
+    # plan-wide 94.3% passes 0.94, but Public Works and Transportation fall short
+    out = load(analyst_agent.run_what_if, on_time_target=0.94)
+    assert out["kpis"]["on_time_pct"] >= 0.94
+    assert out["target_met"] is False
+    assert out["departments_below_target"] == ["PWDx", "BTDT"]
+
+
+def test_department_on_time_matches_the_simulator():
+    from boston311.forecast.models import load_forecast
+    from boston311.planning.scenarios import load_plan
+    from boston311.planning.simulator import daily_arrivals, daily_capacity, simulate, sla_shares
+
+    forecast = {
+        d.department: {m.month: m.forecast for m in d.months} for d in load_forecast().departments
+    }
+    for d in load_plan("base").departments:
+        crews = {m.month: m.active_crews + m.seasonal for m in d.months}
+        sim = simulate(
+            daily_arrivals(d.department, forecast[d.department]),
+            daily_capacity(d.department, crews),
+            sla_shares(d.department),
+        )
+        rate = sim["on_time"].sum() / sim["eligible"].sum()
+        assert analyst_agent._on_time(d) == pytest.approx(rate, abs=1e-4)
+
+
+def test_a_tool_that_returns_an_error_stays_out_of_the_trace(script):
+    script(
+        call("run_what_if", 1, demand_multiplier=2.0),
+        AIMessage("Demand can only be scaled between 0.5 and 1.5."),
+    )
+    response, stats = analyst_agent.run_ask_with_stats(ask("What if demand doubles?"))
+    assert response.trace == [] and response.what_if is None
+    assert stats["tool_calls"] == 0
+
+
+def test_eval_waits_out_one_rate_limit(monkeypatch):
+    from groq import RateLimitError
+
+    calls = []
+
+    def flaky(messages):
+        calls.append(messages)
+        if len(calls) == 1:
+            request = httpx.Request("POST", "https://api.groq.com")
+            raise RateLimitError("429", response=httpx.Response(429, request=request), body=None)
+        return traced(), {}
+
+    monkeypatch.setattr(analyst_eval, "run_ask_with_stats", flaky)
+    monkeypatch.setattr(analyst_eval, "RATE_LIMIT_WAIT", 0)
+    response, _ = analyst_eval.ask("q")
+    assert len(calls) == 2 and response.trace == []

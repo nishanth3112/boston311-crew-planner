@@ -18,13 +18,16 @@ The whole file is checked before any LLM call. Errors name rows, never their con
 
 import json
 import sys
+import time
 
 import pandas as pd
+from groq import RateLimitError
 
 from boston311.api.schemas import ChatMessage
 from boston311.genai import llm
 from boston311.genai.analyst_agent import TOOLS, run_ask_with_stats
 
+RATE_LIMIT_WAIT = 60  # seconds; Groq limits tokens per minute
 COLUMNS = ["id", "question", "expected_tools", "expected_arguments", "expected_facts"]
 TOOL_ARGS = {t.name: t.args for t in TOOLS}  # argument name -> JSON schema
 # an argument the model leaves out takes the tool's default, so score against that
@@ -128,12 +131,22 @@ def score(row, response) -> dict:
     }
 
 
+def ask(question: str):
+    """One question; on Groq's per-minute rate limit, wait a minute and try once more."""
+    messages = [ChatMessage(role="user", content=question)]
+    try:
+        return run_ask_with_stats(messages)
+    except RateLimitError:
+        time.sleep(RATE_LIMIT_WAIT)
+        return run_ask_with_stats(messages)
+
+
 def run(questions: pd.DataFrame) -> list[dict]:
     records = []
     for row in questions.itertuples():
         record = {"id": row.id, "facts": row.expected_facts}
         try:
-            response, stats = run_ask_with_stats([ChatMessage(role="user", content=row.question)])
+            response, stats = ask(row.question)
             record |= stats | score(row, response)
             record |= {
                 "answer": response.answer,
@@ -141,7 +154,8 @@ def run(questions: pd.DataFrame) -> list[dict]:
                 "unverified_list": ", ".join(response.unverified_numbers),
             }
         except Exception as error:  # counted and printed, so one bad question doesn't stop the run
-            record["error"] = f"{type(error).__name__}: {error}"[:160]
+            # the first line only: Groq's messages go on to name the account
+            record["error"] = f"{type(error).__name__}: {str(error).splitlines()[0]}"[:80]
         records.append(record)
     return records
 

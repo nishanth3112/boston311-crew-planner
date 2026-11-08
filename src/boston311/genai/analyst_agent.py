@@ -21,6 +21,7 @@ from boston311.api.schemas import (
     AskResponse,
     ChatMessage,
     Department,
+    DepartmentPlan,
     PlanResult,
     Scenario,
     Shock,
@@ -58,8 +59,9 @@ crews, hires, releases, Parks seasonal crews, capacity, forecast, simulated on-t
 yearly totals per department, and plan-wide KPIs including the saving and on-time gain against \
 holding January crews flat.
 - run_what_if: re-solves the plan for a demand multiplier (0.5 to 1.5), a shock (none, snowstorm, \
-heat_wave) and an on-time target (0.5 to 0.99). Returns KPIs, target_met and the change from the \
-base plan. Use get_plan instead when a named scenario matches the question.
+heat_wave) and an on-time target (0.5 to 0.99). Returns KPIs, target_met (true only when every \
+department reaches the target) and the change from the base plan. Use get_plan instead when a \
+named scenario matches the question.
 - get_forecast: the monthly 2025 forecast with its 80% interval, the method, the backtest error \
 and the 2024 total for comparison.
 - query_service_stats: the 2023 or 2024 311 history: request counts (with shares), on-time rate \
@@ -70,7 +72,8 @@ add, subtract or divide numbers yourself; use the totals, shares and changes the
 2. Rates and shares come as fractions (0.921): write them as percentages (92.1%). Money can be \
 written in millions ($15.91M).
 3. Pass departments to keep results small. Use at most 4 tool calls.
-4. If target_met is false, say the plan could not reach the on-time target.
+4. If target_met is false, say the plan could not reach the on-time target and name the \
+departments_below_target.
 5. Answer in 2 to 5 plain sentences, without tables or headings, and say which plan or data each \
 number comes from.
 6. If a result has no rows and lists closest_names, call the tool again with one of those names.
@@ -190,14 +193,17 @@ def run_what_if(
     base = _plan_summary(load_plan("base"), departments)
     summary = _plan_summary(plan, departments)
     summary["request"] = request.model_dump()
-    summary["target_met"] = plan.kpis.on_time_pct >= request.on_time_target
+    # the planner aims each department at the target, so every department has to reach it
+    below = [d.department for d in plan.departments if _on_time(d) < request.on_time_target]
+    summary["target_met"] = not below
+    summary["departments_below_target"] = below
     summary["change_from_base"] = {
         k: round(summary["kpis"][k] - base["kpis"][k], 4)
         for k in ("total_cost", "overdue_cost", "on_time_pct")
     }
     for dept, base_dept in zip(summary["departments"], base["departments"], strict=True):
         dept["change_from_base"] = {
-            k: round(v - base_dept["totals"][k], 2) for k, v in dept["totals"].items()
+            k: round(v - base_dept["totals"][k], 4) for k, v in dept["totals"].items()
         }
     return _dump(summary)
 
@@ -213,6 +219,13 @@ def _solve(demand_multiplier: float, shock: str, on_time_target: float) -> PlanR
             demand_multiplier=demand_multiplier, shock=shock, on_time_target=on_time_target
         )
     )
+
+
+def _on_time(department: DepartmentPlan) -> float:
+    """The department's yearly simulated on-time rate. Eligible requests are a fixed share of
+    each month's demand, so the demand-weighted monthly rate is the simulator's yearly rate."""
+    months = department.months
+    return sum(m.forecast * m.on_time_pct for m in months) / sum(m.forecast for m in months)
 
 
 def _plan_summary(plan: PlanResult, departments: list[str] | None) -> dict:
@@ -247,6 +260,7 @@ def _plan_summary(plan: PlanResult, departments: list[str] | None) -> dict:
                 "on_time_pct": col("on_time_pct", 3),
                 "cost": col("cost"),
                 "totals": {
+                    "on_time_pct": round(_on_time(d), 4),
                     "cost": round(sum(x.cost for x in m)),
                     "hires": sum(x.hires for x in m),
                     "releases": sum(x.releases for x in m),
@@ -468,7 +482,12 @@ def run_ask_with_stats(messages: list[ChatMessage]) -> tuple[AskResponse, dict]:
     results = [m for m in new if isinstance(m, ToolMessage)]
     # past the cap the limiter answers the blocked calls with errors and ends the run with its
     # own AIMessage, so only calls that returned a result go in the trace
-    ran = {m.tool_call_id for m in results if m.status == "success"}
+    # a tool that returned {"error": ...} didn't run either, so it stays out of the trace
+    ran = {
+        m.tool_call_id
+        for m in results
+        if m.status == "success" and not m.content.startswith('{"error"')
+    }
     capped = any(m.status == "error" and m.content.startswith(LIMIT_ERRORS) for m in results)
     ai = [m for m in new if isinstance(m, AIMessage)][: -1 if capped else None]
     calls = [c for m in ai for c in m.tool_calls if c["id"] in ran and c["name"] in TOOL_NAMES]
