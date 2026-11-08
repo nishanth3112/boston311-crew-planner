@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link, NavLink, Outlet } from 'react-router'
 import { getJson, type Schemas } from '@/api/client'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { cn } from '@/lib/utils'
 
 const pages = [
@@ -46,9 +47,13 @@ export default function App() {
               ))}
             </ul>
           </nav>
+          <div className="pb-3 md:ml-auto">
+            <ThemeToggle />
+          </div>
         </div>
       </header>
-      <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 md:px-6">
+      {/* tabIndex lets the skip link move focus here in every browser */}
+      <main id="main" tabIndex={-1} className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 outline-none md:px-6">
         <Outlet />
       </main>
       <footer className="border-t">

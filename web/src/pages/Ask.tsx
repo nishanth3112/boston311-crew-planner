@@ -6,11 +6,12 @@ import { markUnverified } from '@/lib/unverified'
 
 type AskResponse = Schemas['AskResponse']
 
+// questions the tools answer directly, so every number in the answer can be verified
 const SUGGESTIONS = [
-  'How much do overdue requests cost Transportation in the base plan?',
+  'What happens to Transportation if demand is 20% higher?',
+  'Which neighborhoods wait longest for pothole repairs?',
   'In which months does Inspectional Services hire new crews?',
   'How does the 2025 Transportation forecast compare with 2024?',
-  'What share of 2024 requests came in through the BOS:311 app?',
 ]
 
 function scenarioLink({ demand_multiplier, shock, on_time_target }: Schemas['SolveRequest']) {
@@ -34,6 +35,7 @@ export default function Ask() {
         inputLabel="Your question"
         placeholder="Ask about crews, costs or on-time rates…"
         pendingText="Working on it…"
+        submitLabel="Ask"
         renderEmpty={(send) => (
           <>
             <p>Try one of these, or write your own below.</p>
@@ -82,7 +84,7 @@ export default function Ask() {
                 Open in Scenarios
               </Link>
             )}
-            <ToolTrace trace={r.trace} />
+            <ToolTrace trace={r.trace} label="Used" />
           </>
         )}
       />
