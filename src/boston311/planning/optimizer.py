@@ -171,7 +171,9 @@ def _department_plan(code, plan, sim, arrivals) -> DepartmentPlan:
 def solve_plan(request: SolveRequest, flat: bool = False) -> PlanResult:
     """Solve and simulate every department, and compare with holding January crews flat.
 
-    flat=True returns the hold-flat baseline itself as the plan.
+    flat=True returns the hold-flat baseline itself as the plan. The on-time target is not
+    guaranteed: a department that can't reach it with buffers up to 50% keeps its best rate,
+    so compare kpis.on_time_pct with request.on_time_target to see whether it was met.
     """
     forecast = {
         d.department: {m.month: m.forecast for m in d.months} for d in load_forecast().departments
