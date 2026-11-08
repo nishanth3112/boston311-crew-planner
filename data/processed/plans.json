@@ -1,0 +1,3368 @@
+{
+  "base": {
+    "scenario": "base",
+    "departments": [
+      {
+        "department": "PWDx",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13587.8,
+            "on_time_pct": 0.677,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 50,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 11558.4,
+            "on_time_pct": 0.6432,
+            "cost": 574166.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 53,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 13356.0,
+            "forecast": 13104.7,
+            "on_time_pct": 0.9572,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 14014.4,
+            "on_time_pct": 0.9634,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13350.8,
+            "on_time_pct": 0.9615,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 12935.9,
+            "on_time_pct": 0.969,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 56,
+            "hires": 10,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13936.9,
+            "on_time_pct": 0.9583,
+            "cost": 715000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 66,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 16632.0,
+            "forecast": 16425.3,
+            "on_time_pct": 0.9599,
+            "cost": 780000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 15939.7,
+            "on_time_pct": 0.965,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 11660.0,
+            "on_time_pct": 0.9704,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 10190.8,
+            "on_time_pct": 0.9607,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 11123.0,
+            "on_time_pct": 0.9708,
+            "cost": 693333.33
+          }
+        ]
+      },
+      {
+        "department": "BTDT",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 18,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 6077.7,
+            "on_time_pct": 0.6675,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 21,
+            "hires": 5,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 6438.8,
+            "on_time_pct": 0.5386,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7796.0,
+            "on_time_pct": 0.9036,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7578.7,
+            "on_time_pct": 0.9584,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 8122.6,
+            "on_time_pct": 0.9491,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7760.4,
+            "on_time_pct": 0.9576,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7221.8,
+            "on_time_pct": 0.9599,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 26,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7266.1,
+            "on_time_pct": 0.9483,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 8254.6,
+            "on_time_pct": 0.9583,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 8300.0,
+            "on_time_pct": 0.9571,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 7143.9,
+            "on_time_pct": 0.9464,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 6118.7,
+            "on_time_pct": 0.9598,
+            "cost": 247500.0
+          }
+        ]
+      },
+      {
+        "department": "PARK",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 928.0,
+            "on_time_pct": 0.9973,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 10,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 794.0,
+            "on_time_pct": 0.9969,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 1291.0,
+            "on_time_pct": 0.9964,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1638.0,
+            "forecast": 1519.0,
+            "on_time_pct": 0.9971,
+            "cost": 136000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 6,
+            "capacity": 2142.0,
+            "forecast": 2029.0,
+            "on_time_pct": 0.9965,
+            "cost": 188000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 12,
+            "capacity": 2898.0,
+            "forecast": 2881.0,
+            "on_time_pct": 0.9971,
+            "cost": 266000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 10,
+            "capacity": 2646.0,
+            "forecast": 2640.0,
+            "on_time_pct": 0.9949,
+            "cost": 240000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 7,
+            "capacity": 2268.0,
+            "forecast": 2143.0,
+            "on_time_pct": 0.9954,
+            "cost": 201000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1638.0,
+            "forecast": 1587.0,
+            "on_time_pct": 0.9963,
+            "cost": 136000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 1153.0,
+            "on_time_pct": 0.9973,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 935.0,
+            "on_time_pct": 0.9963,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 836.0,
+            "on_time_pct": 0.9973,
+            "cost": 110000.0
+          }
+        ]
+      },
+      {
+        "department": "ISD",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1491.0,
+            "on_time_pct": 0.938,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1285.0,
+            "on_time_pct": 0.896,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 16,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1342.0,
+            "on_time_pct": 0.9429,
+            "cost": 198333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 17,
+            "hires": 2,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1428.0,
+            "forecast": 1415.0,
+            "on_time_pct": 0.9631,
+            "cost": 221666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 19,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1596.0,
+            "forecast": 1555.0,
+            "on_time_pct": 0.981,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1779.0,
+            "on_time_pct": 0.9976,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 22,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1796.0,
+            "on_time_pct": 0.9978,
+            "cost": 291666.67
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 25,
+            "hires": 0,
+            "releases": 3,
+            "seasonal": 0,
+            "capacity": 2100.0,
+            "forecast": 2077.0,
+            "on_time_pct": 0.9971,
+            "cost": 396666.67
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1809.0,
+            "on_time_pct": 0.9974,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1610.0,
+            "on_time_pct": 0.9978,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1215.0,
+            "on_time_pct": 0.997,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1250.0,
+            "on_time_pct": 0.9978,
+            "cost": 256666.67
+          }
+        ]
+      }
+    ],
+    "kpis": {
+      "total_cost": 15909155.15,
+      "overdue_cost": 399655.15,
+      "on_time_pct": 0.9206,
+      "baseline_total_cost": 21047461.57,
+      "baseline_overdue_cost": 9127461.57,
+      "baseline_on_time_pct": 0.255
+    }
+  },
+  "hold_flat": {
+    "scenario": "hold_flat",
+    "departments": [
+      {
+        "department": "PWDx",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13587.8,
+            "on_time_pct": 0.677,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 11558.4,
+            "on_time_pct": 0.6432,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13104.7,
+            "on_time_pct": 0.8921,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 14014.4,
+            "on_time_pct": 0.4887,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13350.8,
+            "on_time_pct": 0.1565,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 12935.9,
+            "on_time_pct": 0.1238,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13936.9,
+            "on_time_pct": 0.0872,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 16425.3,
+            "on_time_pct": 0.0658,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 15939.7,
+            "on_time_pct": 0.0242,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 11660.0,
+            "on_time_pct": 0.0145,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 10190.8,
+            "on_time_pct": 0.0306,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 11123.0,
+            "on_time_pct": 0.021,
+            "cost": 541666.67
+          }
+        ]
+      },
+      {
+        "department": "BTDT",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 6077.7,
+            "on_time_pct": 0.6661,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 6438.8,
+            "on_time_pct": 0.2218,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7796.0,
+            "on_time_pct": 0.1375,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7578.7,
+            "on_time_pct": 0.0298,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 8122.6,
+            "on_time_pct": 0.0136,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7760.4,
+            "on_time_pct": 0.0037,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7221.8,
+            "on_time_pct": 0.0035,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7266.1,
+            "on_time_pct": 0.0033,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 8254.6,
+            "on_time_pct": 0.0033,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 8300.0,
+            "on_time_pct": 0.0006,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7143.9,
+            "on_time_pct": 0.0,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 6118.7,
+            "on_time_pct": 0.0,
+            "cost": 165000.0
+          }
+        ]
+      },
+      {
+        "department": "PARK",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 928.0,
+            "on_time_pct": 0.9973,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 794.0,
+            "on_time_pct": 0.9969,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 1291.0,
+            "on_time_pct": 0.9964,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 1519.0,
+            "on_time_pct": 0.9324,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 2029.0,
+            "on_time_pct": 0.6112,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 2881.0,
+            "on_time_pct": 0.5845,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 2640.0,
+            "on_time_pct": 0.5839,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 2143.0,
+            "on_time_pct": 0.5837,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 1587.0,
+            "on_time_pct": 0.0781,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 1153.0,
+            "on_time_pct": 0.0,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 935.0,
+            "on_time_pct": 0.0,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 836.0,
+            "on_time_pct": 0.0,
+            "cost": 100000.0
+          }
+        ]
+      },
+      {
+        "department": "ISD",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1491.0,
+            "on_time_pct": 0.938,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1285.0,
+            "on_time_pct": 0.896,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1342.0,
+            "on_time_pct": 0.9428,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1415.0,
+            "on_time_pct": 0.9134,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1555.0,
+            "on_time_pct": 0.8087,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1779.0,
+            "on_time_pct": 0.728,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1796.0,
+            "on_time_pct": 0.7234,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 2077.0,
+            "on_time_pct": 0.4768,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1809.0,
+            "on_time_pct": 0.4076,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1610.0,
+            "on_time_pct": 0.401,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1215.0,
+            "on_time_pct": 0.0,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1250.0,
+            "on_time_pct": 0.0,
+            "cost": 186666.67
+          }
+        ]
+      }
+    ],
+    "kpis": {
+      "total_cost": 21047461.57,
+      "overdue_cost": 9127461.57,
+      "on_time_pct": 0.255,
+      "baseline_total_cost": 21047461.57,
+      "baseline_overdue_cost": 9127461.57,
+      "baseline_on_time_pct": 0.255
+    }
+  },
+  "demand_plus_20": {
+    "scenario": "demand_plus_20",
+    "departments": [
+      {
+        "department": "PWDx",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 50,
+            "hires": 33,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 16305.4,
+            "on_time_pct": 0.3838,
+            "cost": 899166.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 83,
+            "hires": 0,
+            "releases": 9,
+            "seasonal": 0,
+            "capacity": 20916.0,
+            "forecast": 13870.1,
+            "on_time_pct": 0.7289,
+            "cost": 1191666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 74,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 18648.0,
+            "forecast": 15725.6,
+            "on_time_pct": 0.9622,
+            "cost": 801666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 74,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 18648.0,
+            "forecast": 16817.3,
+            "on_time_pct": 0.9696,
+            "cost": 801666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 74,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 18648.0,
+            "forecast": 16021.0,
+            "on_time_pct": 0.9624,
+            "cost": 801666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 74,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 18648.0,
+            "forecast": 15523.1,
+            "on_time_pct": 0.969,
+            "cost": 801666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 74,
+            "hires": 5,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 18648.0,
+            "forecast": 16724.3,
+            "on_time_pct": 0.9706,
+            "cost": 855833.33
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 79,
+            "hires": 0,
+            "releases": 3,
+            "seasonal": 0,
+            "capacity": 19908.0,
+            "forecast": 19710.4,
+            "on_time_pct": 0.9616,
+            "cost": 953333.33
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 76,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 19152.0,
+            "forecast": 19127.6,
+            "on_time_pct": 0.9414,
+            "cost": 823333.33
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 76,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 19152.0,
+            "forecast": 13992.0,
+            "on_time_pct": 0.9704,
+            "cost": 823333.33
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 76,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 19152.0,
+            "forecast": 12229.0,
+            "on_time_pct": 0.9607,
+            "cost": 823333.33
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 76,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 19152.0,
+            "forecast": 13347.6,
+            "on_time_pct": 0.9708,
+            "cost": 823333.33
+          }
+        ]
+      },
+      {
+        "department": "BTDT",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 18,
+            "hires": 19,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 7293.2,
+            "on_time_pct": 0.371,
+            "cost": 339166.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 37,
+            "hires": 0,
+            "releases": 3,
+            "seasonal": 0,
+            "capacity": 11655.0,
+            "forecast": 7726.6,
+            "on_time_pct": 0.784,
+            "cost": 421666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 34,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 10710.0,
+            "forecast": 9355.2,
+            "on_time_pct": 0.9483,
+            "cost": 366666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 9094.4,
+            "on_time_pct": 0.9584,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 9747.1,
+            "on_time_pct": 0.9491,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 9312.5,
+            "on_time_pct": 0.9576,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 8666.2,
+            "on_time_pct": 0.9599,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 8719.3,
+            "on_time_pct": 0.9483,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 9905.5,
+            "on_time_pct": 0.958,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 9960.0,
+            "on_time_pct": 0.918,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 8572.7,
+            "on_time_pct": 0.9437,
+            "cost": 293333.33
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 32,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 10080.0,
+            "forecast": 7342.4,
+            "on_time_pct": 0.9598,
+            "cost": 293333.33
+          }
+        ]
+      },
+      {
+        "department": "PARK",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 1113.6,
+            "on_time_pct": 0.9973,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 10,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 952.8,
+            "on_time_pct": 0.9969,
+            "cost": 130000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1638.0,
+            "forecast": 1549.2,
+            "on_time_pct": 0.9964,
+            "cost": 130000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1890.0,
+            "forecast": 1822.8,
+            "on_time_pct": 0.9971,
+            "cost": 156000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 7,
+            "capacity": 2520.0,
+            "forecast": 2434.8,
+            "on_time_pct": 0.9965,
+            "cost": 221000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 15,
+            "capacity": 3528.0,
+            "forecast": 3457.2,
+            "on_time_pct": 0.9971,
+            "cost": 325000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 13,
+            "capacity": 3276.0,
+            "forecast": 3168.0,
+            "on_time_pct": 0.9973,
+            "cost": 299000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 8,
+            "capacity": 2646.0,
+            "forecast": 2571.6,
+            "on_time_pct": 0.9964,
+            "cost": 234000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 3,
+            "capacity": 2016.0,
+            "forecast": 1904.4,
+            "on_time_pct": 0.997,
+            "cost": 169000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1638.0,
+            "forecast": 1383.6,
+            "on_time_pct": 0.9973,
+            "cost": 130000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1638.0,
+            "forecast": 1122.0,
+            "on_time_pct": 0.9963,
+            "cost": 130000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 13,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1638.0,
+            "forecast": 1003.2,
+            "on_time_pct": 0.9973,
+            "cost": 130000.0
+          }
+        ]
+      },
+      {
+        "department": "ISD",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 16,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1789.2,
+            "on_time_pct": 0.8465,
+            "cost": 221666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 19,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1596.0,
+            "forecast": 1542.0,
+            "on_time_pct": 0.7686,
+            "cost": 233333.33
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 20,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1680.0,
+            "forecast": 1610.4,
+            "on_time_pct": 0.8087,
+            "cost": 245000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 21,
+            "hires": 2,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1764.0,
+            "forecast": 1698.0,
+            "on_time_pct": 0.8377,
+            "cost": 268333.33
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 23,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1932.0,
+            "forecast": 1866.0,
+            "on_time_pct": 0.8776,
+            "cost": 303333.33
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 2184.0,
+            "forecast": 2134.8,
+            "on_time_pct": 0.9513,
+            "cost": 303333.33
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 26,
+            "hires": 4,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 2184.0,
+            "forecast": 2155.2,
+            "on_time_pct": 0.9634,
+            "cost": 350000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 30,
+            "hires": 0,
+            "releases": 4,
+            "seasonal": 0,
+            "capacity": 2520.0,
+            "forecast": 2492.4,
+            "on_time_pct": 0.9851,
+            "cost": 490000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 2184.0,
+            "forecast": 2170.8,
+            "on_time_pct": 0.9939,
+            "cost": 303333.33
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 2184.0,
+            "forecast": 1932.0,
+            "on_time_pct": 0.9978,
+            "cost": 303333.33
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 2184.0,
+            "forecast": 1458.0,
+            "on_time_pct": 0.997,
+            "cost": 303333.33
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 2184.0,
+            "forecast": 1500.0,
+            "on_time_pct": 0.9978,
+            "cost": 303333.33
+          }
+        ]
+      }
+    ],
+    "kpis": {
+      "total_cost": 20516835.85,
+      "overdue_cost": 567002.52,
+      "on_time_pct": 0.9061,
+      "baseline_total_cost": 34222586.77,
+      "baseline_overdue_cost": 22302586.77,
+      "baseline_on_time_pct": 0.1037
+    }
+  },
+  "demand_minus_20": {
+    "scenario": "demand_minus_20",
+    "departments": [
+      {
+        "department": "PWDx",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 5,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 10870.2,
+            "on_time_pct": 0.9704,
+            "cost": 704166.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 45,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 11340.0,
+            "forecast": 9246.7,
+            "on_time_pct": 0.967,
+            "cost": 487500.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 45,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 11340.0,
+            "forecast": 10483.8,
+            "on_time_pct": 0.9622,
+            "cost": 487500.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 45,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 11340.0,
+            "forecast": 11211.5,
+            "on_time_pct": 0.9685,
+            "cost": 487500.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 45,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 11340.0,
+            "forecast": 10680.6,
+            "on_time_pct": 0.9624,
+            "cost": 487500.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 45,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 11340.0,
+            "forecast": 10348.7,
+            "on_time_pct": 0.969,
+            "cost": 487500.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 45,
+            "hires": 8,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 11340.0,
+            "forecast": 11149.5,
+            "on_time_pct": 0.9638,
+            "cost": 574166.67
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 53,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 13356.0,
+            "forecast": 13140.2,
+            "on_time_pct": 0.9617,
+            "cost": 639166.67
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 51,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12852.0,
+            "forecast": 12751.8,
+            "on_time_pct": 0.9572,
+            "cost": 552500.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 51,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12852.0,
+            "forecast": 9328.0,
+            "on_time_pct": 0.9704,
+            "cost": 552500.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 51,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12852.0,
+            "forecast": 8152.6,
+            "on_time_pct": 0.9607,
+            "cost": 552500.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 51,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12852.0,
+            "forecast": 8898.4,
+            "on_time_pct": 0.9708,
+            "cost": 552500.0
+          }
+        ]
+      },
+      {
+        "department": "BTDT",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 4862.2,
+            "on_time_pct": 0.9598,
+            "cost": 165000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 18,
+            "hires": 2,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 5151.0,
+            "on_time_pct": 0.955,
+            "cost": 183333.33
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 20,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6300.0,
+            "forecast": 6236.8,
+            "on_time_pct": 0.9483,
+            "cost": 183333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 20,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6300.0,
+            "forecast": 6063.0,
+            "on_time_pct": 0.9584,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 21,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 6498.1,
+            "on_time_pct": 0.9491,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 21,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 6208.3,
+            "on_time_pct": 0.9576,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 21,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 5777.4,
+            "on_time_pct": 0.9599,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 21,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 5812.9,
+            "on_time_pct": 0.9483,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 21,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 6603.7,
+            "on_time_pct": 0.9351,
+            "cost": 201666.67
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6930.0,
+            "forecast": 6640.0,
+            "on_time_pct": 0.9392,
+            "cost": 201666.67
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6930.0,
+            "forecast": 5715.1,
+            "on_time_pct": 0.9464,
+            "cost": 201666.67
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6930.0,
+            "forecast": 4895.0,
+            "on_time_pct": 0.9598,
+            "cost": 201666.67
+          }
+        ]
+      },
+      {
+        "department": "PARK",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 1,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 742.4,
+            "on_time_pct": 0.9973,
+            "cost": 130000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1134.0,
+            "forecast": 635.2,
+            "on_time_pct": 0.9969,
+            "cost": 90000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1134.0,
+            "forecast": 1032.8,
+            "on_time_pct": 0.9964,
+            "cost": 90000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 1,
+            "capacity": 1260.0,
+            "forecast": 1215.2,
+            "on_time_pct": 0.9971,
+            "cost": 103000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 4,
+            "capacity": 1638.0,
+            "forecast": 1623.2,
+            "on_time_pct": 0.9965,
+            "cost": 142000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 10,
+            "capacity": 2394.0,
+            "forecast": 2304.8,
+            "on_time_pct": 0.9971,
+            "cost": 220000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 8,
+            "capacity": 2142.0,
+            "forecast": 2112.0,
+            "on_time_pct": 0.9969,
+            "cost": 194000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 5,
+            "capacity": 1764.0,
+            "forecast": 1714.4,
+            "on_time_pct": 0.9964,
+            "cost": 155000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 9,
+            "hires": 0,
+            "releases": 1,
+            "seasonal": 2,
+            "capacity": 1386.0,
+            "forecast": 1269.6,
+            "on_time_pct": 0.9971,
+            "cost": 146000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 8,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1008.0,
+            "forecast": 922.4,
+            "on_time_pct": 0.9973,
+            "cost": 80000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 8,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1008.0,
+            "forecast": 748.0,
+            "on_time_pct": 0.9963,
+            "cost": 80000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 8,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1008.0,
+            "forecast": 668.8,
+            "on_time_pct": 0.9973,
+            "cost": 80000.0
+          }
+        ]
+      },
+      {
+        "department": "ISD",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1192.8,
+            "on_time_pct": 0.9978,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1028.0,
+            "on_time_pct": 0.9975,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1073.6,
+            "on_time_pct": 0.9971,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1132.0,
+            "on_time_pct": 0.9977,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 16,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1244.0,
+            "on_time_pct": 0.9971,
+            "cost": 198333.33
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 17,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1428.0,
+            "forecast": 1423.2,
+            "on_time_pct": 0.9976,
+            "cost": 210000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 18,
+            "hires": 2,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1512.0,
+            "forecast": 1436.8,
+            "on_time_pct": 0.9978,
+            "cost": 233333.33
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 20,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 1680.0,
+            "forecast": 1661.6,
+            "on_time_pct": 0.9971,
+            "cost": 303333.33
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1512.0,
+            "forecast": 1447.2,
+            "on_time_pct": 0.9977,
+            "cost": 210000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1512.0,
+            "forecast": 1288.0,
+            "on_time_pct": 0.9978,
+            "cost": 210000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1512.0,
+            "forecast": 972.0,
+            "on_time_pct": 0.997,
+            "cost": 210000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 18,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1512.0,
+            "forecast": 1000.0,
+            "on_time_pct": 0.9978,
+            "cost": 210000.0
+          }
+        ]
+      }
+    ],
+    "kpis": {
+      "total_cost": 13048843.08,
+      "overdue_cost": 141343.08,
+      "on_time_pct": 0.9649,
+      "baseline_total_cost": 13357248.18,
+      "baseline_overdue_cost": 1437248.18,
+      "baseline_on_time_pct": 0.7063
+    }
+  },
+  "snowstorm": {
+    "scenario": "snowstorm",
+    "departments": [
+      {
+        "department": "PWDx",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 50,
+            "hires": 39,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13587.8,
+            "on_time_pct": 0.6825,
+            "cost": 964166.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 89,
+            "hires": 0,
+            "releases": 33,
+            "seasonal": 0,
+            "capacity": 22428.0,
+            "forecast": 17337.6,
+            "on_time_pct": 0.5831,
+            "cost": 2036666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13104.7,
+            "on_time_pct": 0.9622,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 14014.4,
+            "on_time_pct": 0.9634,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13350.8,
+            "on_time_pct": 0.9615,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 12935.9,
+            "on_time_pct": 0.969,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 56,
+            "hires": 10,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13936.9,
+            "on_time_pct": 0.9583,
+            "cost": 715000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 66,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 16632.0,
+            "forecast": 16425.3,
+            "on_time_pct": 0.9599,
+            "cost": 780000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 15939.7,
+            "on_time_pct": 0.965,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 11660.0,
+            "on_time_pct": 0.9704,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 10190.8,
+            "on_time_pct": 0.9607,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 11123.0,
+            "on_time_pct": 0.9708,
+            "cost": 693333.33
+          }
+        ]
+      },
+      {
+        "department": "BTDT",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 18,
+            "hires": 7,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 6077.7,
+            "on_time_pct": 0.6694,
+            "cost": 229166.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 25,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 7875.0,
+            "forecast": 7243.6,
+            "on_time_pct": 0.5681,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7796.0,
+            "on_time_pct": 0.9483,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7578.7,
+            "on_time_pct": 0.9584,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 8122.6,
+            "on_time_pct": 0.9491,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7760.4,
+            "on_time_pct": 0.9576,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7221.8,
+            "on_time_pct": 0.9599,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 26,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7266.1,
+            "on_time_pct": 0.9483,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 8254.6,
+            "on_time_pct": 0.9583,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 8300.0,
+            "on_time_pct": 0.9571,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 7143.9,
+            "on_time_pct": 0.9464,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 6118.7,
+            "on_time_pct": 0.9598,
+            "cost": 247500.0
+          }
+        ]
+      },
+      {
+        "department": "PARK",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 928.0,
+            "on_time_pct": 0.9973,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 10,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 794.0,
+            "on_time_pct": 0.9969,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 1291.0,
+            "on_time_pct": 0.9964,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1638.0,
+            "forecast": 1519.0,
+            "on_time_pct": 0.9971,
+            "cost": 136000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 6,
+            "capacity": 2142.0,
+            "forecast": 2029.0,
+            "on_time_pct": 0.9965,
+            "cost": 188000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 12,
+            "capacity": 2898.0,
+            "forecast": 2881.0,
+            "on_time_pct": 0.9971,
+            "cost": 266000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 10,
+            "capacity": 2646.0,
+            "forecast": 2640.0,
+            "on_time_pct": 0.9949,
+            "cost": 240000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 7,
+            "capacity": 2268.0,
+            "forecast": 2143.0,
+            "on_time_pct": 0.9954,
+            "cost": 201000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1638.0,
+            "forecast": 1587.0,
+            "on_time_pct": 0.9963,
+            "cost": 136000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 1153.0,
+            "on_time_pct": 0.9973,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 935.0,
+            "on_time_pct": 0.9963,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 836.0,
+            "on_time_pct": 0.9973,
+            "cost": 110000.0
+          }
+        ]
+      },
+      {
+        "department": "ISD",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1491.0,
+            "on_time_pct": 0.938,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1285.0,
+            "on_time_pct": 0.896,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 16,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1342.0,
+            "on_time_pct": 0.9429,
+            "cost": 198333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 17,
+            "hires": 2,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1428.0,
+            "forecast": 1415.0,
+            "on_time_pct": 0.9631,
+            "cost": 221666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 19,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1596.0,
+            "forecast": 1555.0,
+            "on_time_pct": 0.981,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1779.0,
+            "on_time_pct": 0.9976,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 22,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1796.0,
+            "on_time_pct": 0.9978,
+            "cost": 291666.67
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 25,
+            "hires": 0,
+            "releases": 3,
+            "seasonal": 0,
+            "capacity": 2100.0,
+            "forecast": 2077.0,
+            "on_time_pct": 0.9971,
+            "cost": 396666.67
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1809.0,
+            "on_time_pct": 0.9974,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1610.0,
+            "on_time_pct": 0.9978,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1215.0,
+            "on_time_pct": 0.997,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1250.0,
+            "on_time_pct": 0.9978,
+            "cost": 256666.67
+          }
+        ]
+      }
+    ],
+    "kpis": {
+      "total_cost": 17875081.95,
+      "overdue_cost": 443915.28,
+      "on_time_pct": 0.9137,
+      "baseline_total_cost": 24912848.19,
+      "baseline_overdue_cost": 12992848.19,
+      "baseline_on_time_pct": 0.1587
+    }
+  },
+  "heat_wave": {
+    "scenario": "heat_wave",
+    "departments": [
+      {
+        "department": "PWDx",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 50,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 13587.8,
+            "on_time_pct": 0.677,
+            "cost": 541666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 50,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 12600.0,
+            "forecast": 11558.4,
+            "on_time_pct": 0.6432,
+            "cost": 574166.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 53,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 13356.0,
+            "forecast": 13104.7,
+            "on_time_pct": 0.9572,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 14014.4,
+            "on_time_pct": 0.9634,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13350.8,
+            "on_time_pct": 0.9615,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 56,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 12935.9,
+            "on_time_pct": 0.969,
+            "cost": 606666.67
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 56,
+            "hires": 10,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 14112.0,
+            "forecast": 13936.9,
+            "on_time_pct": 0.9583,
+            "cost": 715000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 66,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 16632.0,
+            "forecast": 16425.3,
+            "on_time_pct": 0.9599,
+            "cost": 780000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 15939.7,
+            "on_time_pct": 0.965,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 11660.0,
+            "on_time_pct": 0.9704,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 10190.8,
+            "on_time_pct": 0.9607,
+            "cost": 693333.33
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 64,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 16128.0,
+            "forecast": 11123.0,
+            "on_time_pct": 0.9708,
+            "cost": 693333.33
+          }
+        ]
+      },
+      {
+        "department": "BTDT",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 18,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 5670.0,
+            "forecast": 6077.7,
+            "on_time_pct": 0.6675,
+            "cost": 192500.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 21,
+            "hires": 5,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 6615.0,
+            "forecast": 6438.8,
+            "on_time_pct": 0.5386,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7796.0,
+            "on_time_pct": 0.9036,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7578.7,
+            "on_time_pct": 0.9584,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 8122.6,
+            "on_time_pct": 0.9491,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7760.4,
+            "on_time_pct": 0.9576,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 26,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7221.8,
+            "on_time_pct": 0.9599,
+            "cost": 238333.33
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 26,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8190.0,
+            "forecast": 7266.1,
+            "on_time_pct": 0.9483,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 8254.6,
+            "on_time_pct": 0.9583,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 8300.0,
+            "on_time_pct": 0.9571,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 7143.9,
+            "on_time_pct": 0.9464,
+            "cost": 247500.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 8505.0,
+            "forecast": 6118.7,
+            "on_time_pct": 0.9598,
+            "cost": 247500.0
+          }
+        ]
+      },
+      {
+        "department": "PARK",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 10,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 928.0,
+            "on_time_pct": 0.9973,
+            "cost": 100000.0
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 10,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1260.0,
+            "forecast": 794.0,
+            "on_time_pct": 0.9969,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 1291.0,
+            "on_time_pct": 0.9964,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1638.0,
+            "forecast": 1519.0,
+            "on_time_pct": 0.9971,
+            "cost": 136000.0
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 6,
+            "capacity": 2142.0,
+            "forecast": 2029.0,
+            "on_time_pct": 0.9965,
+            "cost": 188000.0
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 12,
+            "capacity": 2898.0,
+            "forecast": 2881.0,
+            "on_time_pct": 0.9971,
+            "cost": 266000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 15,
+            "capacity": 3276.0,
+            "forecast": 3221.8,
+            "on_time_pct": 0.9586,
+            "cost": 305000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 7,
+            "capacity": 2268.0,
+            "forecast": 2143.0,
+            "on_time_pct": 0.9588,
+            "cost": 201000.0
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 2,
+            "capacity": 1638.0,
+            "forecast": 1587.0,
+            "on_time_pct": 0.983,
+            "cost": 136000.0
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 1153.0,
+            "on_time_pct": 0.9962,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 935.0,
+            "on_time_pct": 0.9963,
+            "cost": 110000.0
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 11,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1386.0,
+            "forecast": 836.0,
+            "on_time_pct": 0.9973,
+            "cost": 110000.0
+          }
+        ]
+      },
+      {
+        "department": "ISD",
+        "months": [
+          {
+            "month": "2025-01",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1491.0,
+            "on_time_pct": 0.938,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-02",
+            "active_crews": 16,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1285.0,
+            "on_time_pct": 0.896,
+            "cost": 186666.67
+          },
+          {
+            "month": "2025-03",
+            "active_crews": 16,
+            "hires": 1,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1344.0,
+            "forecast": 1342.0,
+            "on_time_pct": 0.9429,
+            "cost": 198333.33
+          },
+          {
+            "month": "2025-04",
+            "active_crews": 17,
+            "hires": 2,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1428.0,
+            "forecast": 1415.0,
+            "on_time_pct": 0.9631,
+            "cost": 221666.67
+          },
+          {
+            "month": "2025-05",
+            "active_crews": 19,
+            "hires": 3,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1596.0,
+            "forecast": 1555.0,
+            "on_time_pct": 0.981,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-06",
+            "active_crews": 22,
+            "hires": 5,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1779.0,
+            "on_time_pct": 0.9976,
+            "cost": 315000.0
+          },
+          {
+            "month": "2025-07",
+            "active_crews": 27,
+            "hires": 0,
+            "releases": 2,
+            "seasonal": 0,
+            "capacity": 2268.0,
+            "forecast": 2193.1,
+            "on_time_pct": 0.9407,
+            "cost": 385000.0
+          },
+          {
+            "month": "2025-08",
+            "active_crews": 25,
+            "hires": 0,
+            "releases": 3,
+            "seasonal": 0,
+            "capacity": 2100.0,
+            "forecast": 2077.0,
+            "on_time_pct": 0.9595,
+            "cost": 396666.67
+          },
+          {
+            "month": "2025-09",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1809.0,
+            "on_time_pct": 0.9794,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-10",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1610.0,
+            "on_time_pct": 0.9963,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-11",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1215.0,
+            "on_time_pct": 0.997,
+            "cost": 256666.67
+          },
+          {
+            "month": "2025-12",
+            "active_crews": 22,
+            "hires": 0,
+            "releases": 0,
+            "seasonal": 0,
+            "capacity": 1848.0,
+            "forecast": 1250.0,
+            "on_time_pct": 0.9978,
+            "cost": 256666.67
+          }
+        ]
+      }
+    ],
+    "kpis": {
+      "total_cost": 16134902.2,
+      "overdue_cost": 408735.53,
+      "on_time_pct": 0.9191,
+      "baseline_total_cost": 21184646.5,
+      "baseline_overdue_cost": 9264646.5,
+      "baseline_on_time_pct": 0.2533
+    }
+  }
+}
