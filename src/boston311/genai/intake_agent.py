@@ -144,7 +144,9 @@ def _summary(name: str, args: dict) -> str:
         n = len(args.get("queries", []))
         return f"Searched request types for {n} problem{'s' * (n != 1)}"
     n = len(args.get("request_types", []))
-    where = f" in {args['neighborhood']}" if args.get("neighborhood") else ""
+    place = args.get("neighborhood") or ""
+    known = place.lower() in {n.lower() for n in _neighborhoods()}
+    where = f" in {place}" if known else ""  # an unknown name was not used for the lookup
     return f"Looked up {n} request type{'s' * (n != 1)}{where}"
 
 
