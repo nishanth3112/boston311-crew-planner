@@ -12,7 +12,7 @@ from pydantic import ValidationError
 
 from boston311.api.schemas import ChatMessage
 from boston311.config import PROCESSED_DIR
-from boston311.eval.intake_eval import parse_problems, summarize
+from boston311.eval.intake_eval import load_set, parse_problems, summarize
 from boston311.genai import intake_agent, intake_pipeline, kb, llm
 from boston311.genai.kb import request_type_table
 from boston311.genai.llm import CountingCache, uncached_tokens
@@ -343,3 +343,38 @@ def test_trace_names_only_known_neighborhoods():
         intake_agent._summary("get_request_types", lookup)
         == "Looked up 1 request type in dorchester"
     )
+
+
+def write_set(tmp_path, rows):
+    path = tmp_path / "set.csv"
+    pd.DataFrame(
+        rows, columns=["id", "message", "expected_request_types", "expects_follow_up"]
+    ).to_csv(path, index=False)
+    return path
+
+
+def test_load_set_accepts_yes_no_and_one_zero(tmp_path):
+    path = write_set(
+        tmp_path, [[1, "a", RAT, "no"], [2, "b", "", "Yes"], [3, "c", "", 1], [4, "d", RAT, 0]]
+    )
+    assert list(load_set(path)["expects_follow_up"]) == [False, True, True, False]
+
+
+def test_load_set_names_bad_rows_without_showing_labels(tmp_path):
+    path = write_set(tmp_path, [[1, "a", RAT, "maybe"], [2, "b", "Made-up Type", "no"]])
+    with pytest.raises(ValueError) as error:
+        load_set(path)
+    message = str(error.value)
+    assert "row 1: expects_follow_up" in message and "row 2:" in message
+    assert "Made-up Type" not in message and "maybe" not in message
+
+
+def test_load_set_needs_the_columns(tmp_path):
+    path = tmp_path / "set.csv"
+    pd.DataFrame({"id": [1], "message": ["a"], "expected_types": [RAT]}).to_csv(path, index=False)
+    with pytest.raises(ValueError, match="missing columns"):
+        load_set(path)
+
+
+def test_dev_set_loads():
+    assert len(load_set(PROCESSED_DIR / "intake_dev_set.csv")) == 12

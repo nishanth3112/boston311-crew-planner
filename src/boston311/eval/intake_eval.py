@@ -2,7 +2,8 @@
 
     uv run python -m boston311.eval.intake_eval data/processed/intake_dev_set.csv
 
-The CSV needs columns id, message, expected_request_types and expects_follow_up (0/1).
+The CSV needs columns id, message, expected_request_types and expects_follow_up (yes/no
+or 1/0). The whole file is checked before any LLM call.
 expected_request_types separates problems with ";" and accepted alternatives for one problem
 with "|"; it is empty when the message is out of scope. A problem is right if a prediction
 matches any of its alternatives; department and queue come from the lookup table, as in the
@@ -23,6 +24,8 @@ from boston311.genai.intake_pipeline import run_pipeline
 from boston311.genai.kb import request_type_table
 
 PATHS = {"pipeline": run_pipeline, "agent": run_intake_with_stats}
+COLUMNS = ["id", "message", "expected_request_types", "expects_follow_up"]
+FOLLOW_UP = {"yes": True, "1": True, "true": True, "no": False, "0": False, "false": False}
 
 
 def parse_problems(cell: str) -> list[list[str]]:
@@ -45,13 +48,32 @@ def matched(problems: list[list[str]], predicted: list[str], key) -> int:
     return hits
 
 
+def load_set(path) -> pd.DataFrame:
+    """Read a labeled set and check every row before any LLM call. Errors name rows, never
+    labels, so checking a held-out set doesn't reveal it."""
+    df = pd.read_csv(path, keep_default_na=False, dtype=str)
+    if missing := [c for c in COLUMNS if c not in df.columns]:
+        raise ValueError(f"{path}: missing columns {missing}")
+    known = set(request_type_table().index)
+    problems = []
+    for row in df.itertuples():
+        if row.expects_follow_up.strip().lower() not in FOLLOW_UP:
+            problems.append(f"row {row.id}: expects_follow_up must be yes/no or 1/0")
+        if any(t not in known for p in parse_problems(row.expected_request_types) for t in p):
+            problems.append(f"row {row.id}: an expected request type is not in request_types.csv")
+    if problems:
+        raise ValueError(f"{path} has {len(problems)} problem(s):\n" + "\n".join(problems))
+    df["expects_follow_up"] = df["expects_follow_up"].str.strip().str.lower().map(FOLLOW_UP)
+    return df
+
+
 def run_path(run, dev: pd.DataFrame) -> list[dict]:
     records = []
     for row in dev.itertuples():
         record = {
             "id": row.id,
             "problems": parse_problems(row.expected_request_types),
-            "follow_up_expected": bool(int(row.expects_follow_up)),
+            "follow_up_expected": row.expects_follow_up,
         }
         try:
             response, stats = run([ChatMessage(role="user", content=row.message)])
@@ -113,7 +135,7 @@ def label(r: dict, types: list[str]) -> str:
 
 
 def main(path: str) -> None:
-    dev = pd.read_csv(path, keep_default_na=False)
+    dev = load_set(path)
     results = {name: run_path(run, dev) for name, run in PATHS.items()}
     print(f"Intake eval on `{path}`, model `{llm.model_name()}`\n")
     print(markdown([{"path": name} | summarize(records) for name, records in results.items()]))
