@@ -3,1741 +3,1741 @@
  "types": [
   {
    "request_type": "Abandoned Bicycle",
-   "description": "Reports bicycles, scooters, or motorcycles left unattended in public right\u2011of\u2011way.",
+   "description": "Reports bicycles, scooters, or motorcycles left unattended in public right\u2011of\u2011way for an extended period.",
    "phrasings": [
     "A bike has been sitting on the sidewalk for weeks.",
-    "There\u2019s an abandoned scooter blocking the bike lane.",
-    "A motorcycle is parked illegally on the street curb.",
-    "Someone left a bike chain on the trail, looks abandoned."
+    "Abandoned scooter blocking the bike lane on Main.",
+    "Motorcycle left in the alley, looks abandoned.",
+    "Someone left a bike under the streetlight for days."
    ],
-   "crew_needs": "Exact location, description of the vehicle, and a photo if possible."
+   "crew_needs": "Exact location, description of the vehicle, and how long it has been there."
   },
   {
    "request_type": "Abandoned Building",
-   "description": "Report of a vacant structure that appears neglected, unsafe, or a public nuisance.",
+   "description": "Internal tracking of properties identified as abandoned or vacant for city action.",
    "phrasings": [
-    "There's an empty building that's falling apart.",
-    "Abandoned house on my block is a hazard.",
-    "A vacant property is covered in graffiti and trash.",
-    "The old building looks unsafe and unused."
+    "Log abandoned building case for 123 Oak St.",
+    "Create internal WO for vacant property inspection",
+    "Record abandoned structure at corner of Main and 5th",
+    "Schedule survey of empty building on Pine Ave."
    ],
-   "crew_needs": "Property address or nearest cross\u2011streets and any visible safety concerns (photo optional)."
+   "crew_needs": "Exact property address, any known ownership info, and photos of the building\u2019s condition."
   },
   {
    "request_type": "Abandoned Vehicles",
-   "description": "Reports vehicles that have been left unattended for an extended period.",
+   "description": "Reports of vehicles that appear to be left unattended for an extended period, including scooters, mopeds, motorcycles, RVs, or trailers.",
    "phrasings": [
-    "A scooter has been sitting on the curb for weeks",
-    "Abandoned motorcycle blocking the driveway",
-    "Multiple cars parked in the lot for months",
-    "RV left on the street with no owner"
+    "A scooter has been parked on the curb for weeks.",
+    "Abandoned motorcycle blocking the driveway on my street.",
+    "Multiple cars are sitting unused in the lot for months.",
+    "RV parked on the sidewalk and taking up space."
    ],
-   "crew_needs": "Location (street address or lot) and, if possible, the license plate number."
+   "crew_needs": "Exact location, vehicle type, license plate if visible, and how long it\u2019s been there."
   },
   {
    "request_type": "Animal Generic Request",
-   "description": "Covers dead or stray animal removal and related ground\u2011maintenance issues.",
+   "description": "Resident reports dead or stray animals that need to be removed or investigated.",
    "phrasings": [
-    "There's a dead raccoon on the sidewalk.",
-    "Can someone pick up a dead squirrel in the park?",
-    "We have a stray dog hanging around the lot.",
-    "Dead bird on the grass needs to be removed."
+    "Found a dead raccoon on the sidewalk, can someone pick it up?",
+    "There's a stray dog hanging around my block, need help.",
+    "Dead squirrel in the park, please remove it.",
+    "A cat is stuck in a storm drain near my building."
    ],
-   "crew_needs": "Exact location (street and nearest cross\u2011street) and a photo if possible."
+   "crew_needs": "Exact location (street and cross\u2011street or park name) and, if possible, a photo of the animal."
   },
   {
    "request_type": "BWSC General Request",
-   "description": "General requests to the Boston Water and Sewer Commission, such as water main concerns or sewer line issues.",
+   "description": "General request to the Boston Water and Sewer Commission for any water\u2011related service or information.",
    "phrasings": [
-    "Water pressure is low on my street.",
-    "Sewer backup in the alley behind my house.",
-    "We have a leak in the water main near the park.",
-    "Strange smell coming from the sewer line on my block."
+    "Need a water main inspection at my property.",
+    "Requesting a copy of my water bill history.",
+    "Can I get a leak detection service for my house?",
+    "Question about sewer line maintenance schedule."
    ],
-   "crew_needs": "Exact address or nearest intersection and a description of the problem."
+   "crew_needs": "Address of the property and a brief description of the request."
   },
   {
    "request_type": "Bed Bugs",
-   "description": "Resident suspects or confirms a bed\u2011bug infestation in a dwelling.",
+   "description": "Resident reports a suspected bed\u2011bug infestation in a dwelling.",
    "phrasings": [
-    "I think I have bed bugs in my apartment.",
-    "Found tiny bugs in the mattress, likely bed bugs.",
-    "There are bites and bugs in my bedroom.",
-    "Need pest control for a bed\u2011bug problem."
+    "I think I have bed bugs in my bedroom",
+    "There are tiny bugs biting us at night, likely bed bugs",
+    "Our apartment has a bed\u2011bug problem, need inspection",
+    "Please send pest control for suspected bed bugs"
    ],
-   "crew_needs": "Exact address, unit number, and photos of the bugs or bites if possible."
+   "crew_needs": "Apartment/unit number, building address, and photos of bites or insects if possible."
   },
   {
    "request_type": "Bicycle Issues",
-   "description": "Problems related to Boston Bikes, such as broken bike racks, unsafe bike lanes, or bike theft.",
+   "description": "Resident reports problems with bike lanes, bike racks, or Boston Bikes program services.",
    "phrasings": [
-    "The bike rack at the station is broken.",
-    "Bike lane on my street has a large pothole.",
-    "My bike was stolen from a city rack.",
-    "Need repair on the bike share dock."
+    "The bike lane on Commonwealth is blocked by construction",
+    "Our bike rack at the station is broken",
+    "Can you fix the pothole in the bike path near the park?",
+    "Boston Bikes app isn\u2019t showing available bikes"
    ],
-   "crew_needs": "Location (street, intersection, or station name) and a photo of the issue."
+   "crew_needs": "Specific location (street, intersection, or station), description of the issue, and a photo if applicable."
   },
   {
    "request_type": "Big Buildings Recycling (INTERNAL)",
-   "description": "Requests for large\u2011scale recycling services (e.g., mattresses, bulk items) for big commercial or institutional buildings.",
+   "description": "Staff\u2011only internal request to schedule or manage recycling services for large commercial or institutional buildings.",
    "phrasings": [
-    "We need a mattress pickup for the dormitory.",
-    "Our office has a pile of old furniture to recycle.",
-    "Can you arrange bulk recycling for the warehouse?",
-    "The school wants to schedule a large\u2011item recycling day."
+    "Log: Schedule bulk recycling pickup for downtown office tower.",
+    "Internal: Arrange mattress collection at university dorm.",
+    "Crew note \u2013 coordinate recycling for high\u2011rise building lobby.",
+    "Set up recycling service for large apartment complex."
    ],
-   "crew_needs": "Building name or address, list of items to be recycled, and preferred pickup date."
+   "crew_needs": "Building name or address, type of recyclable material, and preferred pickup dates."
   },
   {
    "request_type": "Bridge Maintenance",
-   "description": "Requests inspection, repair, or upkeep of city bridges and overpasses.",
+   "description": "Requests for inspection, repair, or upkeep of city bridges.",
    "phrasings": [
-    "The bridge over the river has rusted railings.",
-    "Cracks appearing on the bridge deck.",
-    "Bridge lights are out at night.",
-    "Potholes on the bridge near the exit."
+    "The bridge over the river has rusted railings",
+    "Potholes on the bridge near my commute",
+    "Bridge deck feels bumpy on the highway",
+    "Need safety inspection for the downtown bridge"
    ],
-   "crew_needs": "Bridge name or location and description of the issue."
+   "crew_needs": "Bridge name or location, specific issue observed, and a photo if possible."
   },
   {
    "request_type": "Building Inspection Request",
-   "description": "Requests for a formal inspection of a building for safety or code compliance.",
+   "description": "Staff\u2011only internal request to schedule a building inspection for code compliance or safety.",
    "phrasings": [
-    "I need a building inspection for my condo.",
-    "Can you schedule a safety check on my rental property?",
-    "Please inspect the new construction on my block.",
-    "We want a code compliance review for our storefront."
+    "SCH1/31 Building Inspection Request filed for 5th floor fire safety.",
+    "SCH2/20 Building Inspection Request entered for structural review.",
+    "SCH 6/11 Building Inspection Request logged for elevator compliance.",
+    "SCH10/03 Building Inspection Request noted for occupancy permit."
    ],
-   "crew_needs": "Property address, type of inspection requested, and any specific concerns."
+   "crew_needs": "Building address, unit or floor details, and the specific inspection focus."
   },
   {
    "request_type": "CE Collection",
-   "description": "Requests for collection of community\u2011event debris or bulk trash after a gathering.",
+   "description": "Staff\u2011only internal work order for crew\u2011executed collection of park\u2011maintenance debris and materials.",
    "phrasings": [
-    "Need a pickup for the trash after the block party",
-    "Can you collect the leftover chairs and tables from the park event?",
-    "Bulk waste from the recent street fair needs removal",
-    "We have a pile of trash after the neighborhood clean\u2011up"
+    "Crew logged: Collected debris from Chester Park.",
+    "Crew logged: Removed excess material at Charter St. Park.",
+    "Crew logged: Picked up waste at Downer Avenue Playground.",
+    "Crew logged: Performed CE collection at designated site."
    ],
-   "crew_needs": "Location of the debris and an estimate of the volume or number of items."
+   "crew_needs": "Internal note \u2013 crew records location and items collected; no resident input required."
   },
   {
    "request_type": "Capital Improvement Long Term",
-   "description": "Requests for major, long\u2011range infrastructure projects such as park upgrades or new facilities.",
+   "description": "Staff\u2011only long\u2011range capital improvement planning request for parks or recreation facilities.",
    "phrasings": [
-    "We need a new playground in our neighborhood park.",
-    "Can the city add a bike path along the river?",
-    "The community center needs a roof replacement.",
-    "Please consider building a splash pad at the park."
+    "Plan: Long\u2011term capital project for new playground equipment.",
+    "Internal: Draft budget for park pavilion renovation.",
+    "Staff entry \u2013 future improvement of recreation field drainage.",
+    "Schedule long\u2011range capital work for community center."
    ],
-   "crew_needs": "Specific site location, description of the improvement, and any community support documentation."
+   "crew_needs": "Project site location, description of improvement, and projected timeline or budget."
   },
   {
    "request_type": "Carbon Monoxide",
-   "description": "Reports of suspected carbon monoxide presence in a building or residence.",
+   "description": "Staff\u2011only internal order for carbon monoxide complaints or inspections in housing units.",
    "phrasings": [
-    "My apartment smells like exhaust, think CO.",
-    "Carbon monoxide alarm went off in the office.",
-    "We feel dizzy, suspect carbon monoxide leak.",
-    "CO detector triggered in the basement."
+    "CO alarm triggered at apartment 3B \u2013 internal ticket.",
+    "Inspection scheduled for possible carbon monoxide leak at SCH4.",
+    "Crew assigned to CO detector check in housing complex.",
+    "Internal work order: carbon monoxide investigation at unit 12."
    ],
-   "crew_needs": "Building address, unit number (if any), and time the alarm sounded."
+   "crew_needs": "Internal \u2013 building address, unit number, and alarm details."
   },
   {
    "request_type": "Catchbasin",
-   "description": "Problems with storm\u2011water catch basins such as clogs, damage, or missing grates.",
+   "description": "Resident reports a clogged or damaged storm\u2011water catch basin that needs cleaning or repair.",
    "phrasings": [
-    "The catch basin on my street is full of leaves.",
-    "Water is pooling because the storm drain is blocked.",
-    "The grate on the catch basin is broken.",
-    "Catch basin near the park is not draining."
+    "The catch basin on Commonwealth Avenue is full of leaves.",
+    "Water is pooling because the storm drain near my house is blocked.",
+    "Catch basin at the corner of Washington and Tremont is broken.",
+    "Need someone to clear the storm\u2011water grate on the bike lane."
    ],
-   "crew_needs": "Exact street location and a photo of the basin condition."
+   "crew_needs": "Exact street location, any visible blockage, and a photo if possible."
   },
   {
    "request_type": "Cemetery Maintenance Request",
-   "description": "Requests for upkeep, repairs, or cleaning of city\u2011owned cemetery grounds.",
+   "description": "Requests for upkeep, repair, or cleaning of cemetery grounds and monuments.",
    "phrasings": [
-    "The grass in the cemetery is overgrown.",
-    "Broken headstone needs fixing at the cemetery.",
-    "We need trash cleared from the cemetery path.",
-    "The cemetery walkway is cracked and unsafe."
+    "The cemetery needs the grass mowed",
+    "Broken headstone in the cemetery",
+    "We have trash piling up at the burial grounds",
+    "Can someone clean the cemetery pathway?"
    ],
-   "crew_needs": "Cemetery name, specific area or plot, and photos of the problem."
+   "crew_needs": "Exact cemetery name, specific location of the issue, and a photo if possible."
   },
   {
    "request_type": "Chronic Dampness/Mold",
-   "description": "Reports of persistent moisture problems or mold growth in residential units.",
+   "description": "Staff\u2011only internal work order for ongoing moisture or mold problems in a residence.",
    "phrasings": [
-    "There\u2019s black mold on my bathroom wall.",
-    "My basement is constantly damp and smells musty.",
-    "We have a water\u2011logged ceiling in the living room.",
-    "Mold keeps returning after cleaning."
+    "SCH 9/6 Chronic Dampness/Mold logged for bathroom wall.",
+    "SCH 10/28 Chronic Dampness/Mold noted in basement ceiling.",
+    "SCH1/16 Chronic Dampness/Mold recorded for kitchen cabinets.",
+    "SCH2/1 Chronic Dampness/Mold entered for bedroom window area."
    ],
-   "crew_needs": "Unit address, location of dampness/mold, and photos if possible."
+   "crew_needs": "Unit address, specific location of dampness/mold, and photos of the affected area."
   },
   {
    "request_type": "City/State Snow Issues",
-   "description": "Reports of snow\u2011related problems that involve coordination between city and state agencies, such as major road blockages.",
+   "description": "Staff\u2011only internal coordination of snow\u2011related problems that involve both city and state responsibilities.",
    "phrasings": [
-    "The highway is still covered in snow after the storm.",
-    "State route 9 is blocked by a snow drift.",
-    "We need plowing on the bridge that connects to the state road.",
-    "Snow is making the interstate entrance unsafe."
+    "Log: State\u2011maintained road still snowed after city plow.",
+    "Internal: Coordinate snow removal on city\u2011state border street.",
+    "Staff note \u2013 snow accumulation on state highway segment.",
+    "Schedule joint city/state snow clearing for Main St."
    ],
-   "crew_needs": "Exact road or highway segment and any photos of the blockage."
+   "crew_needs": "Exact road segment, jurisdiction details, and current snow conditions."
   },
   {
    "request_type": "Construction Debris",
-   "description": "Report abandoned or scattered construction debris that is creating a hazard or eyesore.",
+   "description": "Report of abandoned construction waste or debris left on public or private property.",
    "phrasings": [
-    "There\u2019s a pile of concrete blocks left on the sidewalk.",
-    "Construction trash is littering the street after a job finished.",
-    "I see broken drywall and wood debris in the alley.",
-    "Debris from a recent remodel is blocking the curb."
+    "There\u2019s a pile of concrete blocks on the sidewalk near the new building.",
+    "Construction trash was left in the alley behind the school.",
+    "I see broken drywall and wood littering the park path.",
+    "Debris from a renovation is scattered on the street outside my house."
    ],
-   "crew_needs": "Location (street and nearest cross\u2011street), type of debris, and a photo if possible."
+   "crew_needs": "Exact location (street and cross street or property name) and photos of the debris."
   },
   {
    "request_type": "Contractor Complaints",
-   "description": "Complaints about contractor work, such as missed street cleaning or poor performance.",
+   "description": "Reports issues with contractors performing work on city streets or sidewalks, such as missed cleaning or damage.",
    "phrasings": [
-    "The street cleaning crew didn\u2019t show up this week.",
-    "Contractors left debris on the sidewalk after work.",
-    "The pothole repair was done poorly and is still unsafe.",
-    "Construction noise is exceeding allowed hours."
+    "The street cleaning crew left debris after work.",
+    "Contractor damaged the curb while repaving.",
+    "Sidewalk was not swept after construction.",
+    "Pothole repair left loose gravel on the road."
    ],
-   "crew_needs": "Location of the issue, contractor name (if known), and description of the problem."
+   "crew_needs": "Location of the work, contractor name if known, and description of the problem."
   },
   {
    "request_type": "Contractors Complaint",
-   "description": "Formal complaints about building contractors violating codes or permits.",
+   "description": "Staff\u2011only internal work order for complaints about building\u2011related contractor activities.",
    "phrasings": [
-    "The contractor is building without a permit.",
-    "Work is being done after hours without approval.",
-    "The site is unsafe and the contractor ignored safety rules.",
-    "Construction debris is being dumped on the sidewalk."
+    "INSPECTION: Contractor left hazardous materials on site.",
+    "COMPLAINT: Unpermitted work observed at 123 Main St.",
+    "VIOLATION: Contractor failed to secure scaffolding.",
+    "REPORT: Noise violations from construction after hours."
    ],
-   "crew_needs": "Property address, contractor name (if known), description of violation, and any photos."
+   "crew_needs": "Site address, contractor name, description of violation, and any evidence (photos, logs)."
   },
   {
    "request_type": "Cross Metering - Sub-Metering",
-   "description": "Resident reports that a sub\u2011meter or shared meter is reading incorrectly or needs to be installed/checked.",
+   "description": "Internal work order for checking or installing sub\u2011metering on residential or commercial utilities.",
    "phrasings": [
-    "My sub\u2011meter is showing the wrong usage.",
-    "Can someone check the shared meter for my building?",
-    "The sub\u2011meter reading looks off, need a fix.",
-    "We need a new sub\u2011meter installed in our unit."
+    "Log sub\u2011meter check for unit 3A",
+    "Create work order for sub\u2011meter installation on new tenant",
+    "Record internal inspection of cross\u2011metering system",
+    "Schedule sub\u2011meter verification for building X"
    ],
-   "crew_needs": "Exact address of the unit, meter number (if known), and a photo of the meter display."
+   "crew_needs": "Internal staff only \u2013 no resident input needed; provide building ID and meter numbers."
   },
   {
    "request_type": "Egress",
-   "description": "Report of blocked or unsafe emergency exit routes in a building.",
+   "description": "Internal request to inspect or repair building egress routes (exits, stairways, fire escapes).",
    "phrasings": [
-    "The fire exit door is locked.",
-    "Our building's egress stair is blocked by trash.",
-    "Emergency exit hallway is obstructed.",
-    "Can't open the exit door in my building."
+    "Log egress inspection for building 45",
+    "Create internal work order for fire\u2011escape repair",
+    "Record egress compliance check on 2nd floor",
+    "Schedule stairwell egress clearance review"
    ],
-   "crew_needs": "Exact location (building address, floor, and stair/door number) and a photo of the blockage."
+   "crew_needs": "Internal use \u2013 building identifier and specific egress area needing attention."
   },
   {
    "request_type": "Electrical",
-   "description": "Reports of electrical problems such as power outages, faulty wiring, or no electricity.",
+   "description": "Issues related to loss of power, faulty wiring, or other electrical problems reported by residents.",
    "phrasings": [
-    "The street light on my corner is dead.",
-    "No power in my apartment since this morning.",
-    "There\u2019s a sparking outlet in the hallway.",
-    "The traffic signal is flashing erratically."
+    "No power in my kitchen, the breaker keeps tripping.",
+    "The street light near my house flickers all night.",
+    "We have a dead outlet in the hallway, need an electrician.",
+    "My garage door won\u2019t open, suspect an electrical fault."
    ],
-   "crew_needs": "Exact location (address or intersection) and description of the electrical issue."
+   "crew_needs": "Exact location (address or street corner) and description of the electrical issue; a photo if safe to share."
   },
   {
    "request_type": "Empty Litter Basket",
-   "description": "Requests emptying of full litter baskets in parks, streets, or public plazas.",
+   "description": "Reports litter baskets that are full or missing, needing emptying or replacement.",
    "phrasings": [
     "The trash can on the corner is overflowing.",
-    "Litter basket at the park entrance is full and needs emptying.",
-    "The recycling bin near the bus stop is jammed with trash.",
-    "Our neighborhood basket is spilling over with garbage."
+    "The litter basket at the park entrance is full.",
+    "There\u2019s no trash bin near the bus stop.",
+    "The recycling bin on Main St is empty and needs a new one."
    ],
-   "crew_needs": "Exact basket location (street, park, or plaza) and any access restrictions."
+   "crew_needs": "Exact location of the basket (street, park, intersection) and whether it needs emptying or replacement."
   },
   {
    "request_type": "Equipment Repair",
-   "description": "Reports broken or malfunctioning park equipment such as swings, slides, benches, or sports gear.",
+   "description": "Covers repair or replacement of park equipment such as benches, playground structures, and sports field gear.",
    "phrasings": [
-    "The swing set at the playground is rusted and unsafe.",
-    "A basketball hoop is broken at the field.",
-    "One of the park benches is cracked and wobbly.",
-    "The picnic table near the pond has a missing leg."
+    "The swing set at the playground is broken.",
+    "A bench in the park is cracked and needs fixing.",
+    "The basketball hoop pole is rusted and unsafe.",
+    "The picnic table at the field is missing a leg."
    ],
-   "crew_needs": "Specific park and equipment location, description of damage, and a photo."
+   "crew_needs": "Specific park or field name, exact equipment description, and a photo showing the damage."
   },
   {
    "request_type": "Exceeding Terms of Permit",
-   "description": "Report a property that is continuing work or use beyond the time or scope allowed by its permit.",
+   "description": "Resident reports a property that is continuing work or use beyond the time allowed by its permit.",
    "phrasings": [
-    "Construction is still going on weeks after the permit expired.",
-    "The event is running longer than the approved time.",
-    "They\u2019re still using the lot for storage after the permit ended.",
-    "The temporary fence is still up past the permit date."
+    "Construction is still going on past the permit end date.",
+    "The temporary event is still set up after the approved time.",
+    "A vendor is operating beyond the allowed hours on the street.",
+    "The demolition crew is still on site after the permit expired."
    ],
-   "crew_needs": "Location, permit number if known, description of the over\u2011stay, and photos."
+   "crew_needs": "Location, permit number if known, and description of the continued activity."
   },
   {
    "request_type": "Fire in Food Establishment",
-   "description": "Reports a fire or smoke incident occurring inside a restaurant, cafe, or other food service venue.",
+   "description": "Internal inspection note for a fire incident at a food establishment; not reported by the public.",
    "phrasings": [
-    "There's a fire in the kitchen of the diner down the street.",
-    "Smoke coming from the bakery on Main.",
-    "The restaurant next to me has a blaze in the cooking area.",
-    "Fire alarm went off at the coffee shop, looks like a fire."
+    "Fire incident at restaurant logged by inspector",
+    "Crew notes fire in food service venue",
+    "Internal report: kitchen fire at eatery",
+    "Inspectional Services entry for fire in food establishment"
    ],
-   "crew_needs": "Exact address of the establishment and any visible hazards (e.g., flames, smoke)."
+   "crew_needs": "Inspector provides establishment name, address, and fire details; no resident action needed."
   },
   {
    "request_type": "Follow-Up",
-   "description": "Requests for status updates or additional action on a previously filed inspection or enforcement case.",
+   "description": "Internal follow\u2011up on a previous inspectional services case to verify resolution or gather additional info.",
    "phrasings": [
-    "What\u2019s the update on my restaurant health inspection?",
-    "Can you check the status of my building complaint?",
-    "I need a follow\u2011up on the noise violation case.",
-    "Has the fire safety issue been resolved yet?"
+    "Follow\u2011up: Check status of previous health code violation.",
+    "Internal: Re\u2011inspect after corrective actions were taken.",
+    "Staff note \u2013 follow\u2011up on earlier housing complaint.",
+    "Log: Verify compliance on earlier utility issue."
    ],
-   "crew_needs": "Original case number or reference and any new information the resident can provide."
+   "crew_needs": "Original case number, location, and any new documentation."
   },
   {
    "request_type": "Food Alert - Confirmed",
-   "description": "Report a confirmed health violation at a food establishment, such as unsanitary conditions or foodborne illness risk.",
+   "description": "Resident reports a confirmed food\u2011related health hazard such as contamination or unsanitary conditions at a food establishment.",
    "phrasings": [
-    "The restaurant on Main has a health code violation.",
-    "I saw food safety issues at the deli downtown.",
-    "There are unsanitary conditions at the bakery near me.",
-    "The cafe's kitchen looks dirty and could make people sick."
+    "The restaurant on the corner has dirty food prep surfaces.",
+    "I saw mold on the sandwiches at the deli downtown.",
+    "There are flies swarming the kitchen at the cafe near me.",
+    "Food was left out in the open at the food truck and looks spoiled."
    ],
-   "crew_needs": "Exact address of the establishment, description of the problem, and photos of the unsanitary conditions."
+   "crew_needs": "Exact address of the establishment, description of the hazard, and photos of the unsanitary condition."
   },
   {
    "request_type": "Food Alert - Unconfirmed",
-   "description": "Report a suspected health issue at a food venue that has not yet been verified by inspectors.",
+   "description": "Resident reports a possible food\u2011related health issue that has not yet been verified by the city.",
    "phrasings": [
-    "I think the food at the deli made me sick.",
-    "Someone got food poisoning after eating at the taco stand.",
-    "The soup smelled off at the cafeteria.",
-    "I saw a customer get sick after eating at the bakery."
+    "I think the food at the market might be contaminated.",
+    "There\u2019s a strange odor coming from the bakery\u2019s kitchen.",
+    "Someone saw a pest inside the deli but it wasn\u2019t confirmed.",
+    "The ice cream shop looks like it might have a temperature problem."
    ],
-   "crew_needs": "Venue name and location, description of the suspected issue, and any details (symptoms, time, etc.)."
+   "crew_needs": "Location of the establishment, what was observed, and any photos if available."
   },
   {
    "request_type": "General Comments For An Employee",
-   "description": "Feedback, compliments, or general comments directed to a specific city employee or department.",
+   "description": "Resident feedback\u2014positive or negative\u2014directed toward a specific city employee or department.",
    "phrasings": [
-    "Great job by the crew that cleared the trash last week!",
-    "I want to thank the inspector who helped with my permit.",
-    "The park staff were very helpful today.",
-    "Just wanted to leave a positive note for the street cleaning team."
+    "Great job by the crew that cleared the trash on my block!",
+    "The public works team was late to fix the pothole on my street.",
+    "Thank you to the parks staff for the new playground equipment.",
+    "I appreciate the quick response from transportation on the signal issue."
    ],
-   "crew_needs": "Name of the employee (if known) or department and the comment text."
+   "crew_needs": "Name or ID of the employee (if known) and the comment text."
   },
   {
    "request_type": "General Comments For a Program or Policy",
-   "description": "Provides feedback, suggestions, or comments about city programs, policies, or services.",
+   "description": "Allows residents to submit feedback, suggestions, or concerns about city programs or policies.",
    "phrasings": [
     "I think the bike\u2011share program could use more stations downtown.",
     "The street cleaning schedule should be earlier in the week.",
-    "Can the city add more recycling bins in the park?",
-    "I have a suggestion for improving the snow\u2011removal plan."
+    "Can the city add more recycling bins on Main St?",
+    "I have a suggestion for improving park safety lighting."
    ],
-   "crew_needs": "None; just the comment or suggestion text."
+   "crew_needs": "Brief description of the comment or suggestion; no additional info required."
   },
   {
    "request_type": "General Lighting Request",
    "description": "Requests for installation, repair, or adjustment of street lighting.",
    "phrasings": [
-    "The street light on my block is out.",
-    "Can you add a light at the dark intersection near the park?",
-    "The lamp post near my house flickers constantly.",
-    "We need better lighting on the bike path."
+    "The street light on the corner is out.",
+    "Can a new lamp be added near the park entrance?",
+    "The light at the intersection flickers at night.",
+    "Please replace the broken pole on Elm St."
    ],
-   "crew_needs": "Location of the light (street, pole number if known), description of issue, and a photo."
+   "crew_needs": "Location of the light (street, intersection), description of issue, and a photo if possible."
   },
   {
    "request_type": "General Traffic Engineering Request",
-   "description": "Request new traffic signs, pavement markings, or other engineering improvements to improve safety or flow.",
+   "description": "Resident requests new traffic signs, pavement markings, or other engineering improvements.",
    "phrasings": [
-    "We need a stop sign at the busy intersection near my school.",
-    "Can you add a bike lane on this street?",
-    "The crosswalk markings are faded at my corner.",
-    "Please install a speed\u2011limit sign on this road."
+    "Can we get a stop sign at the intersection of 5th and Pine?",
+    "The crosswalk markings are faded near the library.",
+    "We need a speed\u2011limit sign on the road behind our neighborhood.",
+    "Add a bike lane on the main street, please."
    ],
-   "crew_needs": "Exact location (street and cross\u2011streets), type of engineering improvement requested, and any supporting photos."
+   "crew_needs": "Location (nearest intersection or mile marker) and description of the desired improvement."
   },
   {
    "request_type": "Graffiti Removal",
-   "description": "Removal of unwanted graffiti from public surfaces such as walls, sidewalks, or signs.",
+   "description": "Reports of graffiti on public property that needs cleaning or removal.",
    "phrasings": [
-    "Graffiti on the wall of the community center.",
-    "Someone painted tags on the sidewalk near my building.",
-    "Graffiti on the bus stop shelter.",
-    "Vandalized mural needs cleaning."
+    "Graffiti on the wall of the park",
+    "Someone painted tags on the bus stop shelter",
+    "Graffiti on the side of the library",
+    "Need removal of spray paint on the bridge"
    ],
-   "crew_needs": "Exact location (street, landmark) and a photo of the graffiti."
+   "crew_needs": "Exact location (park, street, building), description of the graffiti, and a photo."
   },
   {
    "request_type": "Ground Maintenance",
-   "description": "Covers lawn care, grass trimming, leaf removal, and general ground upkeep in parks and public spaces.",
+   "description": "Covers mowing, leaf removal, weed control, and general upkeep of park grounds and public green spaces.",
    "phrasings": [
-    "The grass in the park is overgrown and needs cutting.",
-    "Leaves are piling up around the playground area.",
-    "The field near the baseball diamonds is looking muddy and unkept.",
-    "We have weeds growing along the walking path."
+    "The grass at the park is overgrown and needs mowing.",
+    "There are piles of leaves in the playground area.",
+    "Weeds are taking over the walking path in the common.",
+    "The field near the basketball courts looks unkept."
    ],
-   "crew_needs": "Specific park or area name, exact spot needing work, and any access notes."
+   "crew_needs": "Specific park or location name, area size if possible, and any photos showing the condition."
   },
   {
    "request_type": "Heat - Excessive  Insufficient",
-   "description": "Reports heating problems in housing, either too hot or not enough heat.",
+   "description": "Staff\u2011only internal work order for housing heat complaints where temperature is too high or too low.",
    "phrasings": [
-    "My apartment is freezing even though the thermostat is on.",
-    "The heat in my unit is blasting and making it unbearable.",
-    "There\u2019s no heat in the hallway of my building.",
-    "The radiators are leaking and not providing enough warmth."
+    "INSPECTION: Apartment 4A has excessive heat, thermostat stuck.",
+    "COMPLAINT: Unit 2B lacks sufficient heating in winter.",
+    "REPORT: Heat spikes causing discomfort in building C.",
+    "VIOLATION: No heat in bedroom of unit 6C during cold snap."
    ],
-   "crew_needs": "Full address, unit number, description of heat issue, and any photos of thermostats or radiators."
+   "crew_needs": "Address, unit number, temperature issue details, and any temperature logs or photos."
   },
   {
    "request_type": "Illegal Auto Body Shop",
-   "description": "Report an unpermitted auto body or repair shop operating in a residential or non\u2011commercial area.",
+   "description": "Report of an auto body or repair shop operating without proper permits or in violation of zoning rules.",
    "phrasings": [
-    "Someone is running a car repair shop out of a house on my block.",
-    "There\u2019s an illegal auto body shop in the backyard of a home.",
-    "A garage is operating without a permit on this street.",
-    "I see a car paint operation in a residential lot."
+    "There\u2019s a car repair shop in a residential area with no sign.",
+    "Someone is painting cars on the street without a license.",
+    "I see an unpermitted auto body shop on the corner of Main.",
+    "A garage is operating out of a house and looks illegal."
    ],
-   "crew_needs": "Exact address, description of the activities, and photos of the shop setup."
+   "crew_needs": "Address, description of the activities, and any visible permit information or license plates."
   },
   {
    "request_type": "Illegal Dumping",
-   "description": "Reports trash, debris, or hazardous material left in public right\u2011of\u2011way without permission.",
+   "description": "Reports trash, construction debris, or other waste that has been left in public spaces without permission.",
    "phrasings": [
-    "Someone dumped a pile of trash on the sidewalk.",
-    "There\u2019s a bag of garbage left in the alley behind the store.",
-    "I found a broken refrigerator abandoned on the street.",
-    "Random construction debris is sitting in the park."
+    "Someone dumped a pile of trash on the sidewalk near the station.",
+    "There\u2019s a bag of garbage left in the park\u2019s picnic area.",
+    "Construction debris is sitting in the alley behind my building.",
+    "I found a mattress abandoned on the street."
    ],
-   "crew_needs": "Precise location (street, corner, or park), description of items, and a photo if possible."
+   "crew_needs": "Exact location (street, intersection, or park), type of material dumped, and a photo if possible."
   },
   {
    "request_type": "Illegal Occupancy",
-   "description": "Report a building or unit being occupied without the required permits or in violation of occupancy limits.",
+   "description": "Resident reports a building being occupied in violation of zoning or safety codes (e.g., too many occupants, unapproved use).",
    "phrasings": [
-    "A house on my block is being used as a hotel without a license.",
-    "There are too many people living in a single apartment.",
-    "The building is being used for a business without permission.",
-    "I think the basement is illegally rented out."
+    "There are too many people living in that house on Maple.",
+    "The building looks like a squat with no utilities.",
+    "A commercial business is operating in a residential home.",
+    "The apartment unit is being used as a short\u2011term rental without a permit."
    ],
-   "crew_needs": "Address, description of the occupancy issue, and any supporting evidence (photos, number of occupants)."
+   "crew_needs": "Address, observed occupancy details, and any supporting photos."
   },
   {
    "request_type": "Illegal Posting of Signs",
-   "description": "Report signs, flyers, or advertisements posted without permission on public property.",
+   "description": "Report of signs or flyers posted in public right\u2011of\u2011way without permission.",
    "phrasings": [
-    "There are flyers taped to the street pole illegally.",
-    "Someone posted a billboard without a permit on the sidewalk.",
-    "Unauthorized signs are covering the park bench.",
-    "A private advertisement is nailed to a city building."
+    "There are flyers taped to the street pole on my block.",
+    "Someone posted a billboard illegally on the sidewalk.",
+    "Unauthorized signs are covering the bus stop shelter.",
+    "A private advertisement is nailed to a utility pole."
    ],
-   "crew_needs": "Location (street, park, or building), description of the sign, and a photo."
+   "crew_needs": "Location (street and pole/structure), description of the sign, and a photo."
   },
   {
    "request_type": "Illegal Rooming House",
-   "description": "Report a residence being used as an unpermitted rooming house or boarding home.",
+   "description": "Resident reports a dwelling being used as an unpermitted rooming house or boarding home.",
    "phrasings": [
-    "A house on my street is operating as a rooming house without a permit.",
-    "There are many strangers staying at a single home here.",
-    "The building is being used as an illegal boarding house.",
-    "Multiple unrelated tenants are living in one apartment illegally."
+    "That house on Pine has dozens of rooms rented out illegally.",
+    "There are many strangers staying at the same address, looks like a rooming house.",
+    "The building is being used as a boarding house without a permit.",
+    "Multiple families are sharing one apartment in violation of housing rules."
    ],
-   "crew_needs": "Address, description of the suspected rooming house activity, and any photos or observations."
+   "crew_needs": "Address, number of occupants observed, and any photos of the interior/exterior."
   },
   {
    "request_type": "Illegal Vending",
-   "description": "Report a vendor operating without a permit or in a prohibited location.",
+   "description": "Report of a vendor operating without a permit or in violation of city vending rules.",
    "phrasings": [
-    "There's a street vendor selling without a license on my block.",
-    "Someone is setting up a cart in the park illegally.",
-    "I see an unpermitted food stand on the sidewalk.",
-    "A vendor is operating on the sidewalk without permission."
+    "There\u2019s a cart selling food on the sidewalk without a license.",
+    "Someone is setting up a stand in the park that isn\u2019t allowed.",
+    "I see a vendor selling goods on the street with no permit sign.",
+    "A person is hawking items on the corner illegally."
    ],
-   "crew_needs": "Exact location (street and cross\u2011street), description of the vending activity, and a photo if safe to take."
+   "crew_needs": "Exact location, description of the goods being sold, and any visible permit information."
   },
   {
    "request_type": "Improper Storage of Trash (Barrels)",
-   "description": "Reports trash barrels or containers left in the wrong place or overflowing.",
+   "description": "Reports of trash barrels, bags, or other waste being left out or stored in a way that blocks sidewalks or streets.",
    "phrasings": [
-    "Trash barrels are blocking the sidewalk on Elm",
-    "Someone left a garbage bin on the park path",
-    "Overflowing trash cans at the corner of 5th and Pine",
-    "Barrels stacked against the curb near the school"
+    "Trash barrels are stacked on the sidewalk outside my building.",
+    "Someone left a big garbage bag in the middle of the bike lane.",
+    "There are several trash cans blocking the curb on Summer St.",
+    "Overflowing trash barrels are making it hard to walk."
    ],
-   "crew_needs": "Exact location and, if possible, a photo showing the misplaced barrels."
+   "crew_needs": "Exact location, number of barrels/bags, and a photo if possible."
   },
   {
    "request_type": "Install New Lighting",
-   "description": "Requests installation of brand\u2011new streetlights where none currently exist.",
+   "description": "Requests for brand\u2011new streetlight installations at locations lacking illumination.",
    "phrasings": [
-    "We need a streetlight at the dead\u2011end of our street.",
-    "No lighting on the park trail, please add one.",
-    "Install a new lamp at the intersection of Oak and 5th.",
-    "The alley behind my building is dark, need a light."
+    "We need a new light at the dead\u2011end on Pine",
+    "Install a streetlamp at the park entrance",
+    "No lighting on the bike path near my house",
+    "Add a new pole light on the corner of 5th and Main"
    ],
-   "crew_needs": "Exact location (street, intersection, or area) and desired pole placement."
+   "crew_needs": "Street name, precise location (corner or mile marker), and any preferred pole style."
   },
   {
    "request_type": "Item Price Missing",
-   "description": "Reports that a product\u2019s price is not displayed where required (e.g., at a market or vendor).",
+   "description": "Staff\u2011only internal order for missing price tags on items inspected by Weights & Measures.",
    "phrasings": [
-    "The price tag is missing on the apples at the farmer\u2019s market.",
-    "No price listed on the bottled water at the kiosk.",
-    "Can't see the cost of the pretzels on the stand.",
-    "Missing price label on the fresh fish display."
+    "Price label missing on packaged goods at market stall \u2013 logged.",
+    "Internal note: no price displayed on bulk candy at vendor booth.",
+    "Weights & Measures crew recorded missing price on bakery items.",
+    "Work order created for missing price tags at street fair."
    ],
-   "crew_needs": "Vendor location (market name or street) and a photo of the item without a price."
+   "crew_needs": "Internal \u2013 location and item description supplied by inspector."
   },
   {
    "request_type": "Knockdown Replacement",
-   "description": "Request to replace a missing or damaged street\u2011light knockdown (the metal base that holds the pole).",
+   "description": "Staff\u2011only internal order to replace damaged street\u2011light knockdown hardware.",
    "phrasings": [
-    "The base for the street light is broken.",
-    "Missing knockdown on the light pole near my street.",
-    "Need a new knockdown for the street lamp.",
-    "The metal bracket for the light pole is gone."
+    "Log knockdown replacement for pole 12\u201134",
+    "Create internal WO for street\u2011light knockdown repair",
+    "Record replacement of knocked\u2011down light fixture",
+    "Schedule knockdown hardware swap on Main St."
    ],
-   "crew_needs": "Precise location (street and nearest cross\u2011street), and a photo of the damaged or missing knockdown."
+   "crew_needs": "Internal crew only \u2013 location of pole and inventory part numbers."
   },
   {
    "request_type": "Lead",
-   "description": "Reports of lead hazards in housing, such as peeling paint or contaminated dust.",
+   "description": "Staff\u2011only internal order for lead\u2011based paint or lead hazard investigations in housing units.",
    "phrasings": [
-    "Peeling paint in the old apartment may have lead.",
-    "Lead dust found in the basement of my rental.",
-    "Concern about lead in the water pipes of my house.",
-    "Kids playing with paint chips that could be lead."
+    "Lead inspection requested for unit 5A at SCH10.",
+    "Crew assigned to test for lead paint at apartment complex.",
+    "Internal note: lead hazard assessment at school building.",
+    "Work order created for lead abatement in residential unit."
    ],
-   "crew_needs": "Property address, unit number, and any visible evidence (photo)."
+   "crew_needs": "Internal \u2013 property address, unit number, and scope of lead testing."
   },
   {
    "request_type": "Litter Basket Maintenance",
-   "description": "Report that a public litter basket is broken, full, or missing.",
+   "description": "Requests to repair, replace, or empty public litter baskets.",
    "phrasings": [
-    "The trash can on the sidewalk is broken.",
-    "Litter basket at the park is overflowing.",
-    "Missing trash bin near the bus stop.",
-    "The public trash basket is tipped over."
+    "The litter basket on the corner is broken",
+    "Can someone empty the trash can near the park entrance?",
+    "Our street\u2019s litter basket is full and tipped over",
+    "Need a new litter basket at the bus stop"
    ],
-   "crew_needs": "Location (street, park name, or nearest landmark) and a photo of the basket's condition."
+   "crew_needs": "Exact location (street, intersection, or landmark) and description of the problem."
   },
   {
    "request_type": "Maintenance - Homeowner",
-   "description": "Report a maintenance issue on a private residence that may affect safety or code compliance.",
+   "description": "Resident\u2011initiated request for building\u2011code related maintenance that the homeowner is responsible for (e.g., structural, safety).",
    "phrasings": [
-    "The porch railing on my house is broken.",
-    "My roof has missing shingles and is leaking.",
-    "The steps leading to my front door are cracked.",
-    "There\u2019s a broken window on the second floor of my home."
+    "My porch railing is loose and needs fixing.",
+    "The roof on my house is leaking after the storm.",
+    "There\u2019s a cracked step on the front stairs of my home.",
+    "My basement walls are showing water damage."
    ],
-   "crew_needs": "Property address, specific maintenance problem, and photos showing the damage."
+   "crew_needs": "Exact property address, description of the maintenance issue, and photos of the problem."
   },
   {
    "request_type": "Maintenance Complaint - Residential",
-   "description": "Residents reporting maintenance problems in their housing units.",
+   "description": "Staff\u2011only internal work order for housing maintenance issues reported by residents.",
    "phrasings": [
-    "My apartment hallway light is out.",
-    "The faucet in my kitchen is leaking.",
-    "The building lobby has a broken door.",
-    "There\u2019s a cracked window in my unit."
+    "DISP Maintenance Complaint - Residential logged for unit 3B.",
+    "SCH 9/19 Maintenance Complaint - Residential entered for plumbing leak.",
+    "DSP 4/4 Maintenance Complaint - Residential noted broken window.",
+    "SCH 8/20 Maintenance Complaint - Residential recorded for heating problem."
    ],
-   "crew_needs": "Unit number or building address, description of the problem, and a photo if possible."
+   "crew_needs": "Resident\u2019s unit number, specific problem details, and any photos if available."
   },
   {
    "request_type": "Major System Failure",
-   "description": "Reports of large\u2011scale failures affecting water, gas, sewer, or other critical city systems.",
+   "description": "Large\u2011scale failures affecting water, sewer, gas, or other critical city infrastructure.",
    "phrasings": [
-    "There\u2019s a massive water main break on the highway.",
-    "Gas leak reported near the downtown plaza.",
-    "Sewer backup affecting multiple streets.",
-    "Citywide power outage in the East Boston area."
+    "Major system failure \u2013 gas leak reported on the 2nd floor of the office tower.",
+    "Water main burst on the highway near the tunnel entrance.",
+    "Sewer backup affecting multiple blocks on the South End.",
+    "Power outage affecting the entire downtown district."
    ],
-   "crew_needs": "General area or street names, type of system affected, and any immediate safety hazards."
+   "crew_needs": "General area (street or neighborhood), type of system, and any safety hazards observed."
   },
   {
    "request_type": "Mattress_Pickup",
-   "description": "Requests removal of an old mattress for disposal.",
+   "description": "Requests for the city to pick up a mattress for proper disposal.",
    "phrasings": [
-    "I need a mattress hauled away",
-    "Can you pick up a used mattress from my apartment?",
-    "Old mattress sitting in my hallway, need it removed",
-    "Schedule a mattress pickup for next week"
+    "I need a mattress removed from my apartment.",
+    "Can you schedule a pickup for an old mattress?",
+    "We have a single mattress that needs to be hauled away.",
+    "Please arrange for a mattress disposal at my address."
    ],
-   "crew_needs": "Exact address and the mattress size (twin, queen, king)."
+   "crew_needs": "Exact address, mattress size, and any access notes (e.g., stairs, elevator)."
   },
   {
    "request_type": "Mechanical",
-   "description": "Issues with building mechanical systems such as HVAC, elevators, or fire\u2011suppression equipment.",
+   "description": "Staff\u2011only internal work order for mechanical system issues (elevator, HVAC) in city\u2011owned buildings.",
    "phrasings": [
-    "The elevator in my building keeps stopping between floors.",
-    "Our HVAC is blowing hot air in the winter.",
-    "The fire alarm in the hallway is beeping nonstop.",
-    "The boiler in the basement is leaking water."
+    "Mechanical issue logged for City Hall elevator #2.",
+    "HVAC repair ticket created for public library basement.",
+    "Crew assigned to mechanical failure in municipal garage.",
+    "Internal work order: pump malfunction at water treatment plant."
    ],
-   "crew_needs": "Building address, unit number (if applicable), and a description of the malfunction."
+   "crew_needs": "Internal \u2013 details supplied by building management."
   },
   {
    "request_type": "Mice Infestation - Residential",
-   "description": "Resident reports of mouse or rodent activity inside homes or apartments.",
+   "description": "Staff\u2011only internal order to address mouse or rodent problems inside a residence.",
    "phrasings": [
-    "We\u2019re seeing mice in our kitchen.",
-    "Rodents have been running through the hallway.",
-    "There are mouse droppings in the bedroom.",
-    "Mice are chewing wires in my apartment."
+    "SCH 8/20 Mice Infestation - Residential logged for apartment 2A.",
+    "SCH1/17 Mice Infestation - Residential noted in basement storage.",
+    "SCH9/10 Mice Infestation - Residential recorded for kitchen cabinets.",
+    "SCH1/16 Mice Infestation - Residential entered for attic."
    ],
-   "crew_needs": "Unit number or building address and description of the infestation."
+   "crew_needs": "Resident\u2019s unit number, areas affected, and any evidence (photos, droppings)."
   },
   {
    "request_type": "Misc. Snow Complaint",
-   "description": "General complaints about snow removal, accumulation, or related hazards not covered by emergency requests.",
+   "description": "General complaints about snow conditions, such as uncleared sidewalks or excessive accumulation.",
    "phrasings": [
-    "Snow still piled on the sidewalk after plowing.",
-    "Ice buildup on the curb is dangerous.",
-    "Snow drift blocking my driveway.",
-    "Uncleared snow on the bike lane."
+    "Snow still on the sidewalk at my building",
+    "Too much snow piled up on the curb",
+    "Snow not cleared from the bike lane",
+    "Snow drift blocking my driveway"
    ],
-   "crew_needs": "Street and block, and description of the snow issue."
+   "crew_needs": "Exact location (street and block) and description of the problem."
   },
   {
    "request_type": "Missed Trash/Recycling/Yard Waste/Bulk Item",
-   "description": "Reports that scheduled trash, recycling, yard waste, or bulk pickup was not collected.",
+   "description": "Reports that scheduled trash, recycling, yard waste, or bulk item collection did not occur as expected.",
    "phrasings": [
-    "My trash wasn't picked up yesterday",
-    "Recycling bins are still out after collection day",
-    "Yard waste left on the curb after the pickup",
-    "Bulk item pickup missed this week"
+    "My trash wasn\u2019t picked up on Tuesday night.",
+    "Recycling bins were missed on my street this week.",
+    "Yard waste collection didn\u2019t happen on the scheduled day.",
+    "The bulk item pickup I scheduled never showed up."
    ],
-   "crew_needs": "Street address, type of service missed, and the date it was supposed to be collected."
+   "crew_needs": "Street address, type of service missed, and date of the missed collection."
   },
   {
    "request_type": "Missing Sign",
-   "description": "Reports that a traffic or street sign is missing, damaged, or needs replacement.",
+   "description": "Report of a traffic or street sign that is missing, damaged, or needs replacement.",
    "phrasings": [
-    "The stop sign at the corner is gone.",
-    "Missing speed limit sign on Maple Ave.",
-    "The street name sign fell off the pole.",
-    "No yield sign where the road merges."
+    "The stop sign at the end of Oak Street is gone.",
+    "Missing speed limit sign on the highway ramp near Exit 12.",
+    "The street name sign on the corner of Beacon and Charles is missing.",
+    "Need a new yield sign at the bike lane crossing on Commonwealth."
    ],
-   "crew_needs": "Exact location (intersection or mile marker) and type of sign needed."
+   "crew_needs": "Exact location (street and cross\u2011street) and type of sign needed."
   },
   {
    "request_type": "Mosquitoes (West Nile)",
-   "description": "Reports of mosquito activity that may pose a West Nile virus risk.",
+   "description": "Staff\u2011only internal order to investigate and treat areas with mosquito activity that could spread West Nile virus.",
    "phrasings": [
-    "Lots of mosquitoes around the playground.",
-    "Mosquitoes are biting everyone near the pond.",
-    "We think there\u2019s a breeding site in the vacant lot.",
-    "Heavy mosquito presence on my block."
+    "West Nile mosquito treatment scheduled for East Boston park.",
+    "Crew assigned to mosquito control at community garden.",
+    "Internal work order: larvicide application in stagnant pond.",
+    "Mosquito surveillance request logged for neighborhood."
    ],
-   "crew_needs": "Location (street and nearest landmark) and any standing water sources observed."
+   "crew_needs": "Internal \u2013 location and treatment plan supplied by environmental services."
   },
   {
    "request_type": "Municipal Parking Lot Complaints",
-   "description": "Issues with city\u2011owned parking lots such as broken stalls, lighting, or illegal use.",
+   "description": "Issues with city\u2011owned parking lots, like broken stalls, lighting, or payment problems.",
    "phrasings": [
-    "Parking spots are all taken by unauthorized cars.",
-    "The municipal lot has potholes.",
-    "Lights are out in the city parking garage.",
-    "The lot\u2019s barrier gate is stuck."
+    "Parking stall #12 is cracked in the municipal lot",
+    "Lights out in the city parking garage",
+    "Meter in the municipal lot won\u2019t take cards",
+    "Pothole in the municipal parking area"
    ],
-   "crew_needs": "Name or location of the municipal lot and specific problem details."
+   "crew_needs": "Lot name or address, specific spot or feature, and any relevant photos."
   },
   {
    "request_type": "Needle Pickup",
-   "description": "Removal of discarded needles or other hazardous sharps from streets or public areas.",
+   "description": "Resident reports discarded needles or other hazardous sharps that need to be collected safely.",
    "phrasings": [
-    "Found a used needle on the sidewalk near the park.",
-    "Needle on the bike path, please clean it up.",
-    "There are several syringes on the curb outside the school.",
-    "Sharp objects on the street near the bus stop."
+    "Found a used needle on the sidewalk near the bus stop.",
+    "There\u2019s a syringe lying in the park, can someone pick it up?",
+    "Needle on the bike path at the river trail, please remove.",
+    "Sharp object (needle) on the curb outside my building."
    ],
-   "crew_needs": "Precise location (street and nearest cross\u2011street) and a photo if safe to take."
+   "crew_needs": "Precise location (street, intersection, or park) and a photo if safe to take."
   },
   {
    "request_type": "New Sign  Crosswalk or Pavement Marking",
    "description": "Requests for new or updated traffic signs, crosswalks, or pavement markings.",
    "phrasings": [
     "Please add a crosswalk at the school entrance.",
-    "We need a stop sign at the dangerous intersection.",
-    "Can you repaint the bike lane markings on Main St?",
-    "Requesting a new speed\u2011limit sign near the park."
+    "We need a stop sign at the blind corner on Elm.",
+    "Request new bike lane markings on the avenue.",
+    "Add a pedestrian flashing beacon at the intersection."
    ],
-   "crew_needs": "Exact location (street, intersection), type of sign or marking, and any supporting photos."
+   "crew_needs": "Exact location (street, intersection), type of sign or marking requested, and any supporting photos."
   },
   {
    "request_type": "New Tree Requests",
-   "description": "Requests planting of a new tree on public land or in a park.",
+   "description": "Residents can ask for a new tree to be planted on public land such as streets, parks, or medians.",
    "phrasings": [
-    "Can a new tree be planted on the vacant lot on my block?",
-    "We\u2019d love a shade tree on the corner of Elm and 5th.",
-    "Please add a tree to the empty space near the playground.",
-    "Requesting a new maple tree for the community garden."
+    "Can a tree be planted on the empty lot on my block?",
+    "We\u2019d love a shade tree on the corner of Oak and 5th.",
+    "Please add a tree to the median on Washington St.",
+    "Requesting a new tree for the park entrance."
    ],
-   "crew_needs": "Exact planting location, preferred tree type (if any), and any soil or space constraints."
+   "crew_needs": "Desired planting location (street, park, median), preferred tree type if any, and any site constraints."
   },
   {
    "request_type": "News Boxes",
-   "description": "Reports about the condition, placement, or removal of newspaper distribution boxes.",
+   "description": "Staff\u2011only internal task to install, repair, or replace newspaper distribution boxes.",
    "phrasings": [
-    "The news box on the corner is broken.",
-    "We need a new newspaper box near the library.",
-    "The box is overflowing with junk mail.",
-    "The newsstand box was stolen last night."
+    "Log: Replace broken news box on Beacon St.",
+    "Internal: Install new newspaper box at corner of Oak and 2nd.",
+    "Crew note \u2013 repair vandalized news box near library.",
+    "Schedule maintenance for news box on Cambridge Ave."
    ],
-   "crew_needs": "Exact street location and a photo showing the box\u2019s condition."
+   "crew_needs": "Exact street location, condition of the box, and any required hardware."
   },
   {
    "request_type": "No Price on Gas/Wrong Price",
-   "description": "Issues where gasoline price is missing or displayed incorrectly at a fuel station.",
+   "description": "Staff\u2011only internal order for gasoline pumps missing price displays or showing incorrect prices.",
    "phrasings": [
-    "The gas pump has no price listed.",
-    "Wrong price shown for diesel at the station.",
-    "Missing price tag on the gasoline dispenser.",
-    "Price on the pump is higher than advertised."
+    "Gas pump at Main St station shows no price \u2013 logged.",
+    "Incorrect price displayed on diesel pump at highway exit.",
+    "Internal note: missing price on gasoline dispenser at corner store.",
+    "Work order created for wrong price on fuel pump."
    ],
-   "crew_needs": "Gas station name or location and a photo of the pump display."
+   "crew_needs": "Internal \u2013 station name, pump number, and observed price issue."
   },
   {
    "request_type": "No Utilities - Food Establishment - Electricity",
-   "description": "Reports of electrical problems in restaurants or other food\u2011service venues that affect health safety.",
+   "description": "Internal work order for a food\u2011service venue that has lost electrical service and needs utility inspection.",
    "phrasings": [
-    "The kitchen lights keep flickering during service.",
-    "Our ovens lost power and we can\u2019t cook.",
-    "There\u2019s a dead outlet in the prep area.",
-    "The restaurant\u2019s breaker keeps tripping."
+    "Inspection logged: Power outage in restaurant kitchen.",
+    "Utility crew needed for electrical failure at cafe.",
+    "Report: No electricity in food establishment, check panel.",
+    "Internal note \u2013 electrical shutdown at bakery, assess safety."
    ],
-   "crew_needs": "Address of the establishment, description of the electrical issue, and any visible damage photos."
+   "crew_needs": "Address of the establishment, description of outage, and any known breaker status."
   },
   {
    "request_type": "No Utilities - Food Establishment - Flood",
-   "description": "Reports of flooding inside a restaurant or food\u2011service venue that affects health\u2011safety conditions.",
+   "description": "Internal work order for a food\u2011service location that experienced flooding and needs utility inspection.",
    "phrasings": [
-    "The kitchen floor is flooded after the storm.",
-    "Water is pooling around the prep area at the deli.",
-    "Our restaurant\u2019s back room is under several inches of water.",
-    "There\u2019s a leak in the dining area that\u2019s causing a flood."
+    "Inspection logged: Flood in kitchen, water damage to equipment.",
+    "Utility crew needed for flooded restaurant, assess electrical safety.",
+    "Report: Basement flood at food establishment, check gas lines.",
+    "Internal note \u2013 flood in dining area, request plumbing and electrical inspection."
    ],
-   "crew_needs": "Exact address of the establishment, location of the flood, and a photo of the affected area."
+   "crew_needs": "Exact address of the establishment, extent of flooding, and any known utility shut\u2011offs."
   },
   {
    "request_type": "No Utilities - Food Establishment - Sewer",
-   "description": "Reports that a restaurant or food venue lacks sewer service or has a sewer backup.",
+   "description": "Staff\u2011only internal order when a food establishment has a sewer service outage or problem.",
    "phrasings": [
-    "The diner has no sewer service today.",
-    "Sewer backup in the kitchen of the bakery.",
-    "Food truck's waste line is clogged.",
-    "No drainage in the restaurant restroom."
+    "Sewer backup reported at downtown restaurant \u2013 internal ticket.",
+    "Inspection note: no sewer service at bakery on Washington St.",
+    "Crew assigned to fix sewer line for food truck near the market.",
+    "Internal work order: sewer issue at cafe on Beacon."
    ],
-   "crew_needs": "Establishment name or address and the time the issue started."
+   "crew_needs": "Internal \u2013 establishment address and description of the sewer problem."
   },
   {
    "request_type": "No Utilities - Food Establishment - Water",
-   "description": "Reports that a restaurant or food venue lacks water service.",
+   "description": "Staff\u2011only internal order when a food establishment lacks a functioning water supply.",
    "phrasings": [
-    "The cafe has no running water today.",
-    "No water in the kitchen of the deli on Main.",
-    "Restaurant's water tap is dry.",
-    "Food truck can't get water for cleaning."
+    "Water service outage noted at downtown deli \u2013 internal ticket.",
+    "Inspection report: kitchen without running water at cafe.",
+    "Crew assigned to restore water to restaurant on Hanover St.",
+    "Internal work order: no water at food truck near the park."
    ],
-   "crew_needs": "Establishment name or address and the time the outage began."
+   "crew_needs": "Internal \u2013 address of establishment and utility status."
   },
   {
    "request_type": "No Utilities Residential - Electricity",
-   "description": "Resident reports loss of electric service at a home or apartment.",
+   "description": "Internal work orders for residences lacking electricity service.",
    "phrasings": [
-    "No power in my apartment.",
-    "The electricity went out across the whole building.",
-    "My lights are out, no electricity.",
-    "We have an electric outage on our street."
+    "Log no\u2011electricity case for 88 Willow St.",
+    "Create internal WO for power outage in unit 5D",
+    "Record electricity shutoff at 12th Avenue residence",
+    "Schedule investigation of missing power for apartment 3"
    ],
-   "crew_needs": "Address, unit number (if applicable), and any recent outage notices."
+   "crew_needs": "Exact address, unit number, and any recent notices about electric service."
   },
   {
    "request_type": "No Utilities Residential - Gas",
-   "description": "Reports a lack of gas service to a residential unit, often after a move\u2011in or outage.",
+   "description": "Residents reporting that their home has no gas service or a gas outage.",
    "phrasings": [
-    "My new apartment has no gas service.",
-    "No gas coming to the kitchen stove.",
-    "Gas line was shut off after the move.",
-    "Can't get gas for my water heater."
+    "No gas coming out of my stove",
+    "Gas line is dead at my apartment",
+    "Can't get gas heat in my house",
+    "Gas service stopped working yesterday"
    ],
-   "crew_needs": "Exact address and account number if known."
+   "crew_needs": "Exact address, description of the outage, and any recent gas work performed."
   },
   {
    "request_type": "No Utilities Residential - Water",
-   "description": "Resident reports loss of water service at a home or apartment.",
+   "description": "Internal work orders for residences lacking water service.",
    "phrasings": [
-    "No water coming out of any taps.",
-    "Our water stopped working this morning.",
-    "We have a water outage in the building.",
-    "Can't get any water in my house."
+    "Log no\u2011water utility case for 22 River St.",
+    "Create internal WO for water outage in apartment 3C",
+    "Record water service loss at 5th Avenue residence",
+    "Schedule investigation of water shutoff for unit 7"
    ],
-   "crew_needs": "Address, unit number (if applicable), and any recent notices about water shut\u2011off."
+   "crew_needs": "Exact residential address, unit number, and any recent notices of service interruption."
   },
   {
    "request_type": "No-Tow Complaint Confirmation",
-   "description": "Resident wants confirmation that a vehicle was not towed after a complaint or wants verification of a no\u2011tow request.",
+   "description": "Resident asks city to confirm that a vehicle should not be towed (e.g., parked legally).",
    "phrasings": [
-    "Can you confirm my car wasn't towed?",
-    "I filed a no\u2011tow request, need status.",
-    "Did anyone check that my truck wasn't towed?",
-    "Please verify my vehicle is still here."
+    "Can you confirm my car isn\u2019t subject to tow?",
+    "I think my vehicle was wrongly marked for towing",
+    "Please verify if my parked car can stay here",
+    "Need confirmation that my car won\u2019t be towed today"
    ],
-   "crew_needs": "License plate number, exact location where the vehicle is parked, and date/time of the original complaint."
+   "crew_needs": "License plate number, exact parking location, and any signage or permit details."
   },
   {
    "request_type": "Notification",
-   "description": "General notifications about city\u2011wide service disruptions like water main breaks, sewer overflows, or fire alerts.",
+   "description": "Internal notifications about city\u2011wide events such as water main breaks, sewer overflows, or fire alerts.",
    "phrasings": [
-    "I heard there's a water main break nearby.",
-    "Can you confirm a sewer overflow in my area?",
-    "Is there a fire alert for my neighborhood?",
-    "Need info on the recent water shutoff."
+    "Log notification for water main break on Main St.",
+    "Create internal alert for sewer overflow in district 4",
+    "Record fire department notification for downtown area",
+    "Schedule broadcast of utility outage notice"
    ],
-   "crew_needs": "Neighborhood or street name and the type of notification the resident wants confirmed."
+   "crew_needs": "Event type, affected area or streets, and expected duration."
   },
   {
    "request_type": "Occupying W/Out A Valid CO/CI",
-   "description": "Reports of occupants using a property without a current Certificate of Occupancy or Inspection.",
+   "description": "Staff\u2011only internal order for buildings occupied without a valid Certificate of Occupancy or Inspection.",
    "phrasings": [
-    "People are living in a building that looks abandoned.",
-    "There's an illegal tenant in a vacant storefront.",
-    "A house is being used without any permits.",
-    "Unpermitted occupants in the basement unit."
+    "CO/CI violation logged for vacant warehouse on Summer St.",
+    "Inspection crew assigned to illegal occupancy at 12th Ave loft.",
+    "Work order: building lacking valid Certificate of Occupancy.",
+    "Internal note: occupancy without proper inspection at downtown condo."
    ],
-   "crew_needs": "Property address and any visible signage or documentation indicating lack of permits."
+   "crew_needs": "Internal \u2013 address and property details provided by code enforcement."
   },
   {
    "request_type": "Overcrowding",
-   "description": "Reports housing units that exceed legal occupancy limits.",
+   "description": "Reports that a rental unit or housing unit has more occupants than legally allowed.",
    "phrasings": [
-    "There are too many people living in that apartment.",
-    "The house on my street has way more tenants than allowed.",
-    "Overcrowded living conditions in the building next door.",
-    "Multiple families are sharing one small unit."
+    "There are too many people living in that apartment",
+    "The house on Beacon has way too many tenants",
+    "Overcrowded conditions at the duplex on Brookline Ave",
+    "More than the allowed number of occupants in my building"
    ],
-   "crew_needs": "Address of the dwelling and number of occupants observed."
+   "crew_needs": "Exact address, number of occupants observed, and any supporting photos."
   },
   {
    "request_type": "Overflowing or Un-kept Dumpster",
-   "description": "Resident reports a dumpster that is overflowing, dirty, or not being maintained properly.",
+   "description": "Resident reports a dumpster that is overflowing, dirty, or not being maintained.",
    "phrasings": [
-    "The dumpster on my block is overflowing.",
-    "Trash is spilling out of the dumpster behind my building.",
-    "The dumpster hasn't been emptied in weeks.",
-    "Garbage is piling up around the dumpster."
+    "The dumpster on my block is overflowing with trash",
+    "Our building\u2019s dumpster is full and smells bad",
+    "Dumpster behind the store is not being emptied",
+    "Can someone clean up the trash pile at the dumpster?"
    ],
-   "crew_needs": "Exact address or location of the dumpster and a photo showing the condition."
+   "crew_needs": "Exact dumpster location (street and block), description of condition, and a photo if possible."
   },
   {
    "request_type": "PWD Graffiti",
-   "description": "Reports graffiti or vandalism on public works property, including walls, signs, and structures.",
+   "description": "Reports graffiti on public property that needs removal or cleaning.",
    "phrasings": [
-    "There\u2019s graffiti on the side of the water tower.",
-    "Someone painted tags on the street sign near my block.",
-    "The metal fence by the park has spray\u2011paint vandalism.",
-    "Graffiti on the public restroom door needs removal."
+    "There\u2019s graffiti on the wall of the community center.",
+    "Someone painted tags on the bridge rail.",
+    "Graffiti on the side of the library needs cleaning.",
+    "Vandalism on the park fence, please remove."
    ],
-   "crew_needs": "Exact location, description of graffiti, and a clear photo."
+   "crew_needs": "Exact location, size of the graffiti, and a photo to assess removal method."
   },
   {
    "request_type": "Park Improvement Requests",
-   "description": "Requests for enhancements, repairs, or new amenities in city parks.",
+   "description": "Requests for upgrades, repairs, or new amenities in city parks.",
    "phrasings": [
-    "Please add more benches at the playground.",
-    "We need a new basketball hoop in the park.",
-    "Can the walking path be resurfaced?",
-    "Install a water fountain near the picnic area."
+    "Can we add more benches at Boston Common near the fountain?",
+    "Please install a new basketball hoop at Ringer Playground.",
+    "We need a fresh coat of paint on the slides at Malcolm X Park.",
+    "Add a dog\u2011run fence at Garvey Playground."
    ],
-   "crew_needs": "Park name, specific improvement desired, and any location details within the park."
+   "crew_needs": "Park name, specific location within the park, and description of the improvement."
   },
   {
    "request_type": "Parking Enforcement",
-   "description": "Reports illegal, unsafe, or improperly parked vehicles.",
+   "description": "Reports of illegal, unsafe, or improperly parked vehicles that need to be ticketed or towed.",
    "phrasings": [
-    "Car parked on a fire hydrant",
-    "Someone double\u2011parked in front of my building",
-    "Bike blocking the curb on my street",
-    "Truck parked in a no\u2011parking zone"
+    "Car parked across the fire hydrant on the corner.",
+    "Someone left their truck double\u2011parked on the bike lane.",
+    "There\u2019s a car blocking the driveway on my street.",
+    "A vehicle is parked in a no\u2011parking zone near the school."
    ],
-   "crew_needs": "Exact location (street name and nearest cross\u2011street) and a photo of the offending vehicle."
+   "crew_needs": "Exact location (street and cross\u2011street) and a description of the violation; a photo helps."
   },
   {
    "request_type": "Parking Meter Repairs",
-   "description": "Reports malfunctioning, broken, or unreadable parking meters.",
+   "description": "Problems with broken, unreadable, or malfunctioning parking meters.",
    "phrasings": [
-    "The meter on Beacon St won\u2019t take coins.",
-    "Parking meter is flashing error code.",
-    "Meter at the corner is stuck and won\u2019t print a ticket.",
-    "The pay\u2011by\u2011phone meter isn\u2019t working."
+    "The meter on Main St isn\u2019t taking coins",
+    "Parking meter shows error code 404",
+    "Meter at the corner is stuck on \u2018expired\u2019",
+    "Can't pay at the meter near the library"
    ],
-   "crew_needs": "Meter location (street and nearest cross street) and description of the fault."
+   "crew_needs": "Exact meter location (street and cross\u2011street) and, if possible, a photo of the display."
   },
   {
    "request_type": "Parking on Front/Back Yards (Illegal Parking)",
-   "description": "Report vehicles parked on private front or back yards where parking is prohibited.",
+   "description": "Report of vehicles parked on private front or back yards where parking is prohibited.",
    "phrasings": [
-    "Someone parked their car in my front yard.",
-    "A truck is blocking the back yard of a house on my street.",
-    "Cars are parked on the grass in front of the houses here.",
-    "There\u2019s illegal parking on the yard of the house at the corner."
+    "Someone\u2019s parked a car on the front yard of the house on Oak St.",
+    "A truck is sitting in the backyard of the row houses on Beacon.",
+    "Cars keep blocking the driveway by parking on the grass.",
+    "A vehicle is parked on the front lawn of a residence near me."
    ],
-   "crew_needs": "Street address, which yard (front or back), and a photo showing the vehicle(s)."
+   "crew_needs": "Exact address, description of the vehicle (make/model/color), and a photo showing the illegal parking."
   },
   {
    "request_type": "Parks General Request",
-   "description": "General requests for park maintenance, equipment repair, weed removal, or other park\u2011related issues.",
+   "description": "Resident reports general park issues such as weeds, equipment repair, or ground maintenance.",
    "phrasings": [
-    "The playground swing set is broken at the neighborhood park.",
-    "Weeds are taking over the walking path in the park.",
-    "The basketball court surface is cracked.",
-    "A trash can is overflowing at the park entrance."
+    "Weeds are taking over the path at the playground.",
+    "The swing set at the park is broken and needs fixing.",
+    "The grass in the picnic area is patchy and needs reseeding.",
+    "A basketball hoop pole is rusted and unsafe."
    ],
-   "crew_needs": "Park name or location, specific issue, and a photo if possible."
+   "crew_needs": "Park name, specific area or equipment, and photos of the problem."
   },
   {
    "request_type": "Parks Lighting/Electrical Issues",
-   "description": "Reports of non\u2011functioning or faulty lighting/electrical systems in city parks.",
+   "description": "Problems with lighting or electrical systems in city parks.",
    "phrasings": [
-    "The lights in the playground are out.",
-    "Park restroom has no electricity.",
-    "Street lamp near the baseball field flickers.",
-    "Lighting in the walking trail is broken."
+    "The lights in the playground at Malcolm X Park are out.",
+    "Street light near the baseball field at Boston Common flickers.",
+    "No illumination on the walking trail at Ringer Playground after dark.",
+    "Park lighting at the picnic area in Garvey Playground is broken."
    ],
-   "crew_needs": "Park name, specific area or fixture, and description of the problem."
+   "crew_needs": "Park name, specific area or fixture, and a photo of the non\u2011functioning light."
   },
   {
    "request_type": "Pavement Marking Inspection",
-   "description": "Request inspection or repair of faded, missing, or damaged pavement markings.",
+   "description": "Resident requests inspection of faded or missing pavement markings such as lane lines or crosswalks.",
    "phrasings": [
-    "The lane lines on my street are fading.",
-    "The stop bar at the intersection is missing.",
-    "Crosswalk stripes are worn out on this road.",
-    "Painted arrows are peeling off the pavement."
+    "The lane lines on the road near my house are almost gone.",
+    "Crosswalk paint is worn out at the corner of Main and 2nd.",
+    "The stop bar on the bike lane is missing.",
+    "Road markings are faded on the highway entrance ramp."
    ],
-   "crew_needs": "Exact location (street and mile marker or cross\u2011streets), description of the marking issue, and a photo."
+   "crew_needs": "Exact location (street and mile marker or intersection) and photos of the markings."
   },
   {
    "request_type": "Pavement Marking Maintenance",
-   "description": "Reports of faded, missing, or damaged road markings such as lane lines, crosswalks, or arrows.",
+   "description": "Staff\u2011only internal job to repair or repaint road markings such as lane lines, crosswalks, or arrows.",
    "phrasings": [
-    "The crosswalk paint is worn out on my block.",
-    "Lane lines are missing on the street near the school.",
-    "The stop line at the intersection is barely visible.",
-    "Our road\u2019s arrows have faded away."
+    "Log: Repaint faded crosswalk on Washington St.",
+    "Internal: Repair missing lane markings near school.",
+    "Staff note \u2013 touch\u2011up pavement arrows on Elm Ave.",
+    "Schedule pavement marking maintenance for downtown block."
    ],
-   "crew_needs": "Exact street and intersection, and a photo of the damaged marking."
+   "crew_needs": "Exact street location, type of marking, and condition details (photos if available)."
   },
   {
    "request_type": "Pest Infestation - Residential",
-   "description": "Reports infestations of insects, rodents, or other pests inside a residence.",
+   "description": "Staff\u2011only internal work order for pest\u2011related complaints in residential units.",
    "phrasings": [
-    "We have a rat problem in our basement.",
-    "Bed bugs are spreading throughout our bedroom.",
-    "There are cockroaches in the kitchen cabinets.",
-    "Ants have taken over the pantry area."
+    "INSPECTION: Rodent activity observed in kitchen of 2\u2011floor unit.",
+    "PEST: Bed bugs reported in bedroom of apartment 5C.",
+    "INFESTATION: Cockroach sightings in hallway of building B.",
+    "VERMIN: Termite damage noted in basement flooring."
    ],
-   "crew_needs": "Exact address, unit/apartment number, type of pest, and photos if safe to capture."
+   "crew_needs": "Address, unit/apartment number, type of pest, and any supporting photos."
   },
   {
    "request_type": "Phone Bank Service Inquiry",
-   "description": "Questions or issues related to the 311 phone bank service, such as call routing or accessibility.",
+   "description": "Resident asks about the 311 phone\u2011bank service, hours, or how to reach an operator.",
    "phrasings": [
-    "I can't get through to 311 on my phone.",
-    "The 311 line keeps dropping my call.",
-    "How do I request a service via the phone bank?",
-    "Is there a text option for 311 requests?"
+    "What are the hours for the 311 phone bank?",
+    "How do I speak to a live person on 311?",
+    "Can I call 311 for non\u2011emergency issues?",
+    "Is there a toll\u2011free number for 311 service?"
    ],
-   "crew_needs": "Caller\u2019s phone number and a brief description of the issue."
+   "crew_needs": "None \u2013 provide information directly to the caller."
   },
   {
    "request_type": "Pick up Dead Animal",
-   "description": "Requests removal of a dead animal from streets, parks, or public spaces.",
+   "description": "Requests for removal of dead wildlife or pets from streets, parks, or public spaces.",
    "phrasings": [
-    "Found a dead raccoon on the sidewalk",
-    "Dead bird on the park trail needs to be removed",
-    "There\u2019s a dead squirrel near the bus stop",
-    "Can someone pick up a dead animal on my block?"
+    "A dead raccoon is lying on the sidewalk near the park entrance.",
+    "There\u2019s a dead bird on the bike path at the corner of Beacon.",
+    "Can someone remove a dead squirrel from the grass on my block?",
+    "Dead animal on the ground near the playground needs pickup."
    ],
-   "crew_needs": "Precise location and, if safe, a photo of the animal."
+   "crew_needs": "Exact location, type of animal, and a photo if safe to take."
   },
   {
    "request_type": "Pickup/Clear Conduit",
-   "description": "Requests to pick up or clear debris from underground conduits, utility boxes, or street\u2011level ducts.",
+   "description": "Staff\u2011only internal work order for picking up or clearing utility conduits; not reported by residents.",
    "phrasings": [
-    "Debris blocking the conduit on my street.",
-    "Need the utility box cleared near the fire hydrant.",
-    "Conduit entrance is full of trash.",
-    "Clear the underground duct by the sidewalk."
+    "Conduit clearance scheduled for downtown utility corridor.",
+    "Crew assigned to pickup abandoned conduit on Brookline Ave.",
+    "Internal work order: clear conduit blockage near subway entrance.",
+    "Pickup/clear conduit task logged for city street."
    ],
-   "crew_needs": "Exact street location and a photo of the blocked conduit."
+   "crew_needs": "Internal \u2013 exact conduit location and any obstruction details."
   },
   {
    "request_type": "Pigeon Infestation",
-   "description": "Reports large numbers of pigeons roosting or nesting in a building or public space.",
+   "description": "Staff\u2011only internal work order for pigeon roosting or nesting issues that crews will address.",
    "phrasings": [
-    "Pigeons are nesting under the eaves of my building.",
-    "Too many pigeons on the balcony, need help.",
-    "There's a pigeon roost on the awning outside my shop.",
-    "Pigeons are covering the roof of the community center."
+    "Inspectors logged pigeon roosting at 5th St \u2013 scheduled cleanup.",
+    "Pigeon nest removal request entered for downtown alley.",
+    "Crew assigned to pigeon infestation at municipal building.",
+    "Pigeon infestation work order created for public plaza."
    ],
-   "crew_needs": "Specific address or landmark and a photo showing the infestation."
+   "crew_needs": "Internal note \u2013 no resident input required."
   },
   {
    "request_type": "Planting",
-   "description": "Requests for new trees, shrubs, flowers, or other plantings in parks and public spaces.",
+   "description": "Requests for planting trees, shrubs, flowers, or grass in parks and public spaces.",
    "phrasings": [
-    "Can we plant a new tree in the playground area?",
-    "We need flower beds added to the park near the basketball court.",
-    "Please plant shrubs along the sidewalk on my block.",
-    "I'd like a community garden planting in the vacant lot."
+    "Can you plant some new trees in the vacant lot on Beacon St?",
+    "We need flower beds added to the playground near my school.",
+    "Please put grass in the empty field behind the community center.",
+    "Requesting a maple tree planting at the corner of Main and Oak."
    ],
-   "crew_needs": "Exact site location and preferred plant type (if any)."
+   "crew_needs": "Exact site (park name or street location) and preferred plant type if any."
   },
   {
    "request_type": "Plumbing",
-   "description": "General plumbing problems in a residence, such as leaks, clogs, or broken fixtures.",
+   "description": "Internal work orders for plumbing issues in residential or commercial properties.",
    "phrasings": [
-    "My sink is clogged and won't drain.",
-    "There's a leak under the kitchen faucet.",
-    "Toilet keeps running nonstop.",
-    "Pipe burst in the basement, water everywhere."
+    "Log plumbing repair for leak in unit 2A",
+    "Create internal WO for clogged drain at 45 Oak",
+    "Record pipe burst in basement of building 12",
+    "Schedule plumbing inspection for new construction"
    ],
-   "crew_needs": "Address, unit number, and a description or photo of the specific plumbing issue."
+   "crew_needs": "Property address, unit/room number, and description of the plumbing problem."
   },
   {
    "request_type": "Pole Compliance",
-   "description": "Ensures utility or street poles meet safety standards and are properly placed.",
+   "description": "Reports of street or utility poles that are unsafe, damaged, or not meeting city standards.",
    "phrasings": [
-    "A street pole is leaning dangerously near my house.",
-    "The utility pole is too close to the sidewalk.",
-    "Pole on the corner is missing its base plate.",
-    "There\u2019s an unsafe pole right outside my building."
+    "A pole is leaning over the sidewalk",
+    "The street pole has broken lights",
+    "Pole near my house is cracked",
+    "Utility pole is too close to the road"
    ],
-   "crew_needs": "Exact pole location (street and nearest intersection) and a photo."
+   "crew_needs": "Precise pole location (street and nearest address) and a photo of the condition."
   },
   {
    "request_type": "Poor Conditions of Property",
-   "description": "Reports unsafe or deteriorated conditions on private or public property (e.g., weeds, broken fixtures).",
+   "description": "Reports of unsafe or unsanitary conditions on private or public property, such as weeds, debris, or structural issues.",
    "phrasings": [
-    "Weeds are taking over the playground area",
-    "The fence in front of my building is falling apart",
-    "Broken bench at the park needs fixing",
-    "The sidewalk is cracked and hazardous near my unit"
+    "The playground area is overgrown with weeds and trash.",
+    "There\u2019s a broken fence and debris at the community garden.",
+    "The property behind my building has piles of junk and rotting wood.",
+    "Excessive weeds are making the sidewalk unsafe near my house."
    ],
-   "crew_needs": "Specific location (address or park name) and a photo of the condition."
+   "crew_needs": "Exact location, description of the condition, and a photo if possible."
   },
   {
    "request_type": "Poor Ventilation",
-   "description": "Reports inadequate airflow in rental housing units that may affect health or safety.",
+   "description": "Reports that a residential unit has inadequate airflow or ventilation problems.",
    "phrasings": [
-    "My apartment feels stuffy, no fresh air.",
-    "The kitchen vent isn\u2019t working at all.",
-    "Bathrooms have no proper ventilation.",
-    "Air doesn\u2019t circulate in the bedroom."
+    "My apartment feels stuffy, no fresh air",
+    "Ventilation in the kitchen is terrible",
+    "Bathroom fan isn\u2019t working, poor ventilation",
+    "Air doesn\u2019t circulate in my bedroom"
    ],
-   "crew_needs": "Unit address and specific rooms with ventilation issues."
+   "crew_needs": "Unit address, specific room(s) affected, and any visible signs (mold, condensation)."
   },
   {
    "request_type": "Private Parking Lot Complaints",
-   "description": "Reports problems or violations in privately owned parking lots, such as illegal parking or blocked spaces.",
+   "description": "Resident reports problems with a private parking lot such as illegal parking, blocked access, or poor maintenance.",
    "phrasings": [
-    "Someone is parked in a spot they shouldn't be in at the mall lot.",
-    "My car got hit in a private lot and the owner won't help.",
-    "There are cars parked in front of a fire lane in a private garage.",
-    "The lot is full of abandoned vehicles and trash."
+    "Someone is parked in my spot in the private lot.",
+    "The lot gate is stuck and cars can\u2019t get out.",
+    "There\u2019s trash and potholes in the private parking area.",
+    "A car is blocking the driveway in the private lot."
    ],
-   "crew_needs": "Exact location of the lot (address or landmark) and a description of the offending vehicle(s)."
+   "crew_needs": "Exact location of the lot (address or landmark), description of the issue, and a photo if possible."
   },
   {
    "request_type": "Product Short Measure",
-   "description": "Complaints that a product\u2019s measured quantity (weight, volume, etc.) is less than advertised.",
+   "description": "Internal inspectional services case where a product\u2019s measured quantity is less than advertised.",
    "phrasings": [
-    "My bag of chips is lighter than it says on the label.",
-    "The milk bottle only had half a gallon.",
-    "The soda can was underfilled.",
-    "The package of rice didn\u2019t have the promised weight."
+    "Log: Short measure complaint on packaged cereal.",
+    "Internal: Verify weight of product claims for soda bottles.",
+    "Staff note \u2013 under\u2011filled coffee bags reported.",
+    "Inspection entry: Product short measure on frozen meals."
    ],
-   "crew_needs": "Product name, brand, purchase location, and a photo of the packaging and measured amount."
+   "crew_needs": "Product name, brand, packaging size, and a photo of the label and contents."
   },
   {
    "request_type": "Protection of Adjoining Property",
-   "description": "Requests to safeguard neighboring properties during construction or demolition work.",
+   "description": "Staff\u2011only internal work order to safeguard neighboring property during construction or repair activities.",
    "phrasings": [
-    "Please protect my fence while the road work is happening.",
-    "We need a barrier for our garden during the sidewalk repair.",
-    "Can you ensure my driveway isn\u2019t damaged by the excavation?",
-    "Requesting property protection for the upcoming building project."
+    "Protection of Adjoining Property logged for excavation on Summer St.",
+    "Internal note: need shoring to protect adjacent building at Beacon.",
+    "Recorded Protection of Adjoining Property for sidewalk work near Harvard.",
+    "Adjoining property protection scheduled for pipe replacement on Columbus."
    ],
-   "crew_needs": "Address of the property to be protected and description of the work nearby."
+   "crew_needs": "Project location, description of the work, and details of the adjoining property to be protected."
   },
   {
    "request_type": "Public Works General Request",
-   "description": "Requests for trash, recycling, yard waste, bulk item pickup, weeds, dead animals, or street cleaning.",
+   "description": "Requests for trash, recycling, yard waste, bulk item pickup, weeds, dead animals, or other general public works services.",
    "phrasings": [
-    "There\u2019s a pile of leaves that needs to be cleared.",
-    "Can someone pick up the dead raccoon on my street?",
-    "We have a bunch of old furniture to dispose of.",
-    "The sidewalk is overgrown with weeds."
+    "There are weeds growing on the sidewalk near my building.",
+    "Can someone pick up a dead raccoon on the corner of Tremont and Shaw?",
+    "We need cones placed for a street event this weekend.",
+    "Please schedule a bulk item pickup for old furniture."
    ],
-   "crew_needs": "Exact address or block, type of material, and preferred pickup date if applicable."
+   "crew_needs": "Exact address or nearest intersection and the type/quantity of material to be removed."
   },
   {
    "request_type": "Rat Bite",
-   "description": "Reports a rat bite incident or suspected rat\u2011related injury.",
+   "description": "Resident reports of being bitten or scratched by a rat.",
    "phrasings": [
-    "I was bitten by a rat in my yard.",
-    "A rat bit my child on the playground.",
-    "Got a rat bite while cleaning the garage.",
-    "Rat bite on my arm, need help."
+    "I got bitten by a rat in my yard",
+    "Rat bit my child on the playground",
+    "Got a rat bite on my arm near the alley",
+    "Someone was scratched by a rat outside"
    ],
-   "crew_needs": "Exact location of the bite and any medical attention already received."
+   "crew_needs": "Location of the bite (address or nearest landmark) and date/time of the incident."
   },
   {
    "request_type": "Recycling Cart Return",
-   "description": "Requests the return of a city recycling cart that was taken away or misplaced.",
+   "description": "Requests to have a city recycling cart taken back after a resident no longer needs it.",
    "phrasings": [
-    "Our recycling cart was taken to the street and never came back",
-    "Need the recycling bin returned to our block",
-    "Missing recycling cart from our curbside",
-    "Can you bring back the recycling cart that was removed?"
+    "I want the recycling cart removed from my driveway.",
+    "Can you pick up the extra recycling bin we no longer use?",
+    "Please return the recycling cart we placed on the curb.",
+    "We need the recycling cart taken away from our property."
    ],
-   "crew_needs": "Address and the cart number (if known)."
+   "crew_needs": "Address, cart identification (color/size), and preferred pickup time."
   },
   {
    "request_type": "Rental Unit Delivery Conditions",
-   "description": "Reports unsafe or unsanitary conditions in a rental unit that affect deliveries (e.g., blocked entry, pest issues).",
+   "description": "Internal housing inspection notes about delivery access or conditions for rental units.",
    "phrasings": [
-    "Delivery can't get to my apartment because the hallway is blocked.",
-    "Pests are making deliveries unsafe in my building.",
-    "The entry door is broken, deliveries keep getting turned away.",
-    "Trash piles are blocking the delivery chute."
+    "Delivery condition issue logged by staff",
+    "Inspection note: blocked delivery path for unit",
+    "Crew records poor delivery access at rental",
+    "Internal report on delivery conditions for apartment"
    ],
-   "crew_needs": "Building address and specific condition preventing deliveries."
+   "crew_needs": "Unit address, description of the delivery obstacle, and any photos."
   },
   {
    "request_type": "Request for Litter Basket Installation",
-   "description": "Ask for a new litter basket to be placed in a public area to help keep the neighborhood clean.",
+   "description": "Resident asks for a new litter basket to be placed in a public area.",
    "phrasings": [
-    "We need a trash can on the corner of our block.",
-    "Can you install a litter basket near the park entrance?",
-    "There\u2019s no garbage bin on this street; could one be added?",
-    "Please put a litter basket at the bike rack."
+    "Can we get a trash can installed near the park bench?",
+    "There\u2019s no litter basket on the corner of 3rd and Oak.",
+    "Please add a garbage bin at the entrance of the playground.",
+    "We need a receptacle for trash on the bike path."
    ],
-   "crew_needs": "Exact location (street and intersection or park name), preferred placement, and any photo of the spot."
+   "crew_needs": "Exact location (street, intersection, or park area) and preferred type of basket if any."
   },
   {
    "request_type": "Request for Pothole Repair",
-   "description": "Reports potholes, sinkholes, or other roadway surface defects needing repair.",
+   "description": "Reports of potholes, sinkholes, or other roadway surface defects needing repair.",
    "phrasings": [
-    "Big pothole on the road near the library",
-    "Sinkhole forming on the bike lane at 2nd Ave",
-    "Patch needed for the pothole on Main St",
-    "Road surface is cracked and dangerous near the school"
+    "Large pothole on the right lane of Commonwealth Avenue.",
+    "Sinkhole forming near the intersection of Washington and Boylston.",
+    "There\u2019s a deep hole in the road on my block.",
+    "Pothole on the bike lane at the corner of Tremont St."
    ],
-   "crew_needs": "Exact street location (including nearest cross\u2011street) and a photo of the defect."
+   "crew_needs": "Exact street and mile marker or cross\u2011street, size estimate, and a photo."
   },
   {
    "request_type": "Request for Recycling Cart",
-   "description": "Requests a new recycling cart to be placed at a residence or business.",
+   "description": "Requests for a new recycling cart to be placed at a residence or business.",
    "phrasings": [
-    "We need a recycling cart for our building",
-    "Can you deliver a recycling bin to our street?",
-    "Requesting a new recycling cart for our block",
-    "Please provide a recycling container for our apartment complex"
+    "We need a recycling cart for our apartment building.",
+    "Can you deliver a recycling bin to my street?",
+    "Please provide a recycling cart for our neighborhood.",
+    "I\u2019d like to request a new recycling bin for my house."
    ],
-   "crew_needs": "Exact address and the number of carts needed."
+   "crew_needs": "Address, preferred cart size/color, and any placement instructions."
   },
   {
    "request_type": "Request for Snow Plowing",
-   "description": "Requests snow plowing or removal of snow/ice from streets, sidewalks, or driveways.",
+   "description": "Requests snow plowing or clearing of snow from streets, sidewalks, or parking areas.",
    "phrasings": [
-    "The side street is still covered in snow after the storm.",
-    "Please clear the snow from the sidewalk in front of my building.",
-    "Our driveway is blocked by ice and needs plowing.",
-    "The parking lot on the corner is still icy and unsafe."
+    "Snow still on the side of the road on my block.",
+    "Please clear the driveway on Maple St after the storm.",
+    "Sidewalk still covered in snow near the library.",
+    "Need plowing on the parking lot behind the school."
    ],
-   "crew_needs": "Exact street or address, side of the street (if applicable), and any access notes."
+   "crew_needs": "Exact street or area needing plowing, and any access notes (e.g., private driveway)."
   },
   {
    "request_type": "Request for Snow Plowing (Emergency Responder)",
-   "description": "Emergency snow\u2011plow request for routes used by emergency vehicles or critical access roads.",
+   "description": "Internal work order for emergency\u2011responder snow plowing; not a resident\u2011initiated request.",
    "phrasings": [
-    "The ambulance route is buried under snow.",
-    "Emergency vehicles can\u2019t get through the main road.",
-    "Snow is blocking the fire station driveway.",
-    "Critical access road is impassable after the storm."
+    "Emergency snow plow request logged by staff",
+    "Crew notes priority snow removal for responders",
+    "Internal request: snow plow for emergency route",
+    "Snow plowing for emergency vehicles entered"
    ],
-   "crew_needs": "Exact street name, block, and why it\u2019s needed for emergency response."
+   "crew_needs": "Staff must specify exact route, block numbers, and any time\u2011critical details."
   },
   {
    "request_type": "Requests for Directional or Roadway Changes",
-   "description": "Requests to modify traffic signs, lane markings, or road layouts to improve safety or flow.",
+   "description": "Resident asks for a change to road markings, signs, or traffic flow such as new arrows, stop signs, or lane adjustments.",
    "phrasings": [
-    "Can we add a left\u2011turn lane on Main near the school?",
-    "The stop sign at the corner is missing a flashing light.",
-    "We need a bike lane on the street behind the park.",
-    "The traffic arrows on the road are confusing and need fixing."
+    "Can we get a left\u2011turn arrow added at the intersection?",
+    "The stop sign is missing on Maple Street.",
+    "We need a bike lane painted on the road near the school.",
+    "The traffic flow looks wrong on the corner of Main and 5th."
    ],
-   "crew_needs": "Precise intersection or road segment, desired change, and any supporting photos or sketches."
+   "crew_needs": "Specific intersection or road segment, type of change requested, and any supporting photos or sketches."
   },
   {
    "request_type": "Requests for Street Cleaning",
-   "description": "Requests for routine street sweeping, litter pickup, or cleaning of public spaces.",
+   "description": "Requests for routine street sweeping, power\u2011washing, weed removal, or other general street\u2011level cleaning tasks.",
    "phrasings": [
-    "The sidewalk is covered in trash on Main St",
-    "Can someone sweep the bike lane near the park?",
-    "Leaves and debris are piling up on the street",
-    "Need a power\u2011wash for the sidewalk outside the library"
+    "The sidewalk on Washington St is covered in leaves and trash.",
+    "Can someone power\u2011wash the sidewalk outside the library?",
+    "Weeds are growing in the cracks on Beacon St.",
+    "The street cleaning missed my block after the last sweep."
    ],
-   "crew_needs": "Precise address or block and a brief description of the area to be cleaned."
+   "crew_needs": "Precise block or intersection, type of cleaning needed, and any obstacles; a photo is useful."
   },
   {
    "request_type": "Requests for Traffic Signal Studies or Reviews",
-   "description": "Requests to evaluate, study, or modify traffic signals and related timing.",
+   "description": "Resident requests a study or review of a traffic signal to assess timing, placement, or functionality.",
    "phrasings": [
-    "Can you check the timing on the traffic light at the corner?",
-    "The signal at Main and 2nd seems off, need a review.",
-    "We need a study on the new traffic light installation.",
-    "Please look at the traffic signal that\u2019s causing backups."
+    "Can someone check the traffic light at the corner, it seems off timing?",
+    "The signal on Main St looks broken, need a review.",
+    "Is the new traffic light working properly? Please inspect.",
+    "We think the intersection light needs a study for better flow."
    ],
-   "crew_needs": "Exact intersection location and any observed issues (e.g., long waits, flashing lights)."
+   "crew_needs": "Exact intersection location and a description of the issue (e.g., timing, flashing)."
   },
   {
    "request_type": "Roadway Repair",
-   "description": "Requests to fix or maintain road surfaces, potholes, cracks, or other roadway defects.",
+   "description": "Requests to repair potholes, cracks, or other roadway surface defects.",
    "phrasings": [
-    "Big pothole on the left lane of Elm St.",
-    "Cracks forming on the bike lane near the park.",
-    "The asphalt is buckling on Main Street.",
-    "Need resurfacing of the driveway on my street."
+    "Big pothole on the left lane of Commonwealth Avenue near Arlington.",
+    "Cracked pavement on the bike path at the Charles River bridge.",
+    "Need the sinkhole filled on the side of Beacon Street at the school.",
+    "Repair the uneven road surface on the corner of Washington and Boylston."
    ],
-   "crew_needs": "Exact street address or mile marker and description of the roadway issue."
+   "crew_needs": "Precise street location, size of the defect (if known), and a photo if possible."
   },
   {
    "request_type": "Rodent Activity",
-   "description": "Reports sightings or evidence of rats, mice, or other rodents in public areas.",
+   "description": "Reports of rats, mice, or other rodent activity in public spaces or residential areas.",
    "phrasings": [
-    "Seeing rats in the alley behind my building",
-    "Mice droppings in the park restroom",
-    "Rodent nests near the dumpster on my block",
-    "We have a rat problem in the basement hallway"
+    "I keep seeing rats in the alley behind my building.",
+    "Mice are nesting under the trash cans on my street.",
+    "There\u2019s a rodent problem in the park near the playground.",
+    "Rodents have been spotted near the sidewalk on my block."
    ],
-   "crew_needs": "Location of the activity and any photos of evidence (droppings, nests, sightings)."
+   "crew_needs": "Location, type of activity observed, and a photo if possible."
   },
   {
    "request_type": "Scale Not Visible",
-   "description": "Reports that a commercial weighing scale is missing, obscured, or unreadable.",
+   "description": "Internal request indicating a weighing scale\u2019s display is unreadable or missing.",
    "phrasings": [
-    "The scale at the fish market is covered up.",
-    "I can\u2019t see the numbers on the grocery store scale.",
-    "The weighing scale in the market is broken and blank.",
-    "The scale display is hidden behind a shelf."
+    "Log: Scale display illegible at market stall.",
+    "Internal: Weighing scale missing numbers at fish market.",
+    "Staff note \u2013 scale screen not visible for produce vendor.",
+    "Inspection entry: Broken scale display at grocery stand."
    ],
-   "crew_needs": "Location of the scale (store name or address) and a photo showing the visibility issue."
+   "crew_needs": "Location of the scale, type of scale, and a photo of the issue."
   },
   {
    "request_type": "Scanning Overcharge",
-   "description": "Reports being charged too much for a scanned receipt or barcode transaction (e.g., at a market).",
+   "description": "Internal case for overcharging on weight\u2011scale scans; not a resident\u2011submitted request.",
    "phrasings": [
-    "I was overcharged when I scanned my grocery receipt.",
-    "The scanner gave me a higher price than listed.",
-    "My checkout scan added extra fees.",
-    "Charged too much after scanning my coupon."
+    "Scanning overcharge logged by staff",
+    "Internal note: weight\u2011scale billing error",
+    "Crew records overcharge on scanned goods",
+    "Overcharge on scan entry entered by inspector"
    ],
-   "crew_needs": "Location of the transaction and a copy or photo of the receipt."
+   "crew_needs": "Staff must attach transaction ID, location of the scanner, and amount overcharged."
   },
   {
    "request_type": "Schedule a Bulk Item Pickup",
-   "description": "Schedules a one\u2011time pickup of large items like furniture or appliances.",
+   "description": "Resident requests for a one\u2011time pickup of large items such as furniture, appliances, or other bulk waste.",
    "phrasings": [
-    "I want to have a couch hauled away next week",
-    "Can I schedule a pickup for an old refrigerator?",
-    "Need a bulk pickup for a mattress and a TV",
-    "How do I arrange a bulk trash collection for a broken dryer?"
+    "I need a pickup for an old couch and mattress next week.",
+    "Can you schedule a bulk pickup for a broken refrigerator?",
+    "We have a pile of junk furniture that needs to be hauled away.",
+    "Please arrange a bulk item collection for a used dryer."
    ],
-   "crew_needs": "Exact address, list of items, and preferred pickup date/time."
+   "crew_needs": "Exact address, list of items, preferred pickup date/time, and any access instructions."
   },
   {
    "request_type": "Schedule a Bulk Item Pickup SS",
-   "description": "Schedules a bulk\u2011item pickup for schools or institutions (special service).",
+   "description": "Resident\u2011initiated scheduling of a bulk item pickup (same as Schedule a Bulk Item Pickup, but logged through a different system).",
    "phrasings": [
-    "School needs a bulk pickup for old desks",
-    "Can we arrange a bulk item collection for the community center?",
-    "Schedule a bulk pickup for classroom furniture",
-    "Need a bulk waste pickup for the after\u2011school program"
+    "I\u2019d like to schedule a bulk pickup for a sofa and mattress.",
+    "Please arrange a bulk item collection for a broken washing machine.",
+    "Can I set up a pickup for several pieces of old furniture?",
+    "Need a bulk waste pickup for a large trash pile next week."
    ],
-   "crew_needs": "Institution name, address, list of items, and preferred pickup date."
+   "crew_needs": "Address, list of items, preferred date/time, and any access instructions."
   },
   {
    "request_type": "Sewage/Septic Back-Up",
-   "description": "Report of sewage or septic system backing up into a residence or property.",
+   "description": "Internal work orders for sewage or septic system backups affecting residences.",
    "phrasings": [
-    "Sewage is coming up through my floor drain.",
-    "Our septic system is overflowing.",
-    "There's a foul smell and backup in the bathroom.",
-    "Waste water is backing up in the basement."
+    "Log sewage backup case for 77 River Rd.",
+    "Create internal WO for septic overflow in basement",
+    "Record back\u2011up of sewer line at 5th Street unit",
+    "Schedule inspection of septic system failure"
    ],
-   "crew_needs": "Address, unit number, and photos of the backup (if safe to take)."
+   "crew_needs": "Exact address, description of backup (sewage or septic), and photos of affected area."
   },
   {
    "request_type": "Short Measure - Gas",
-   "description": "Complaints that a gas\u2011measured product (e.g., propane tank) contains less gas than indicated.",
+   "description": "Internal case where a gas\u2011related product (e.g., propane tank) is found to contain less gas than advertised.",
    "phrasings": [
-    "My propane tank was half empty when I bought it.",
-    "The gas cylinder didn\u2019t have the advertised amount.",
-    "The BBQ gas canister was short\u2011filled.",
-    "The gas bottle I purchased was missing volume."
+    "Log: Propane tank short measure complaint.",
+    "Internal: Verify gas volume in refillable cylinders.",
+    "Staff note \u2013 under\u2011filled natural gas canisters reported.",
+    "Inspection entry: Gas bottle short measure at retailer."
    ],
-   "crew_needs": "Product type, purchase location, and a photo of the label and remaining gas indicator."
+   "crew_needs": "Product details, container size, and a photo of the label and gauge."
   },
   {
    "request_type": "Short Term Rental",
-   "description": "Inquiries or complaints related to short\u2011term rental properties and compliance.",
+   "description": "Staff\u2011only internal order to investigate or enforce short\u2011term rental regulations.",
    "phrasings": [
-    "Is this house registered for short\u2011term rentals?",
-    "Too many guests are staying at the Airbnb next door.",
-    "Can you check if the condo has a proper rental permit?",
-    "Noise from a short\u2011term rental is disturbing the neighborhood."
+    "Housing: Short Term Rental logged for unit 4B on Summer St.",
+    "SCH7/9 Short Term Rental noted for illegal Airbnb operation.",
+    "DISP Short Term Rental recorded for unregistered rental at 5th Ave.",
+    "Short Term Rental entry for suspected violation on Beacon Street."
    ],
-   "crew_needs": "Property address and nature of the short\u2011term rental concern."
+   "crew_needs": "Property address, unit number (if applicable), and any evidence of rental activity."
   },
   {
    "request_type": "Sidewalk Cover / Manhole",
-   "description": "Requests for repair or replacement of sidewalk covers, manhole lids, or related street\u2011level structures.",
+   "description": "Resident reports a missing, broken, or unsafe sidewalk cover or manhole that needs repair or replacement.",
    "phrasings": [
-    "The manhole cover is cracked on my street.",
-    "Sidewalk cover is missing near the library.",
-    "A loose grate is a tripping hazard on the sidewalk.",
-    "Manhole lid is rusted and needs replacement."
+    "The manhole cover on Cambridge St is cracked.",
+    "Sidewalk grate missing near the library entrance.",
+    "Broken cover on the sidewalk at the corner of Beacon and Summer.",
+    "Can someone fix the loose manhole cover on my block?"
    ],
-   "crew_needs": "Exact street location and a photo of the damaged cover."
+   "crew_needs": "Exact location (street and cross\u2011street) and a photo of the defect."
   },
   {
    "request_type": "Sidewalk Repair",
-   "description": "Fixes cracked, uneven, or hazardous sidewalks and pedestrian pathways.",
+   "description": "Issues with cracked, uneven, or broken sidewalks that need fixing.",
    "phrasings": [
-    "The sidewalk on my block is cracked and a trip hazard.",
-    "Uneven pavement near the bus stop needs fixing.",
-    "Sidewalk has a big hole where kids walk.",
-    "Broken concrete on the sidewalk by the school."
+    "The sidewalk on Washington is cracked",
+    "Trip hazard: raised slab on the sidewalk",
+    "Sidewalk near my building is missing pieces",
+    "Need repair for the uneven sidewalk on Oak St"
    ],
-   "crew_needs": "Street name, block, and a photo of the damage."
+   "crew_needs": "Exact street and block, description of damage, and a photo if possible."
   },
   {
    "request_type": "Sidewalk Repair (Make Safe)",
-   "description": "Reports sidewalk damage, cracks, or hazards that need fixing to make them safe.",
+   "description": "Requests for fixing cracked, uneven, or otherwise unsafe sidewalks to make them pedestrian\u2011friendly.",
    "phrasings": [
-    "Cracked sidewalk on the corner of Oak and 5th",
-    "Uneven bricks on the walkway near the museum",
-    "Sidewalk has a large hole that\u2019s a tripping hazard",
-    "Need the sidewalk repaired where the tree roots are up"
+    "The sidewalk is cracked and a trip hazard on my block.",
+    "Uneven concrete on the sidewalk near the library needs repair.",
+    "There\u2019s a large gap in the sidewalk at the corner of Main and 2nd.",
+    "Sidewalk bricks are loose and could cause a fall."
    ],
-   "crew_needs": "Exact location (street and cross\u2011street) and a photo of the damage."
+   "crew_needs": "Exact location, description of damage, and a photo."
   },
   {
    "request_type": "Sign Repair",
-   "description": "Requests repair, replacement, or installation of traffic or way\u2011finding signs.",
+   "description": "Requests to fix, replace, or install traffic, street, or way\u2011finding signs.",
    "phrasings": [
-    "The stop sign at the intersection is broken",
-    "Missing bike lane sign on Main St",
-    "Street name sign is faded and unreadable",
-    "Need a new directional sign for the park entrance"
+    "The stop sign at the corner of Harvard and Boylston is missing letters.",
+    "A street sign is bent and hard to read on my block.",
+    "The bike lane sign is broken near the park entrance.",
+    "Can someone repair the directional sign on the sidewalk?"
    ],
-   "crew_needs": "Exact location of the sign and a description or photo of the damage."
+   "crew_needs": "Exact location, description of the sign issue, and a photo."
   },
   {
    "request_type": "Snow/Ice Control",
-   "description": "Requests for snow removal or ice\u2011control services on city streets, sidewalks, or public spaces.",
+   "description": "Staff\u2011only internal task for managing snow and ice removal, sanding, or de\u2011icing on city streets.",
    "phrasings": [
-    "The sidewalk outside my building is still icy.",
-    "We need plowing on the street behind the park.",
-    "The snow pile is blocking the bike lane.",
-    "Ice on the curb is making it unsafe to walk."
+    "Log: Deploy salt trucks on icy section of Columbia Rd.",
+    "Internal: Snow plow schedule for North Dorchester district.",
+    "Staff note \u2013 ice control needed on hill near park.",
+    "Schedule snow/ice control for upcoming storm."
    ],
-   "crew_needs": "Street address or block description and a photo of the condition."
+   "crew_needs": "Street names, priority level, and current weather conditions."
   },
   {
    "request_type": "Space Savers",
-   "description": "Report illegal storage of items (trash, furniture, etc.) that block sidewalks or public right\u2011of\u2011way.",
+   "description": "Staff\u2011only internal work order for managing storage or space\u2011saving projects within the Public Works district.",
    "phrasings": [
-    "Someone left a couch on the sidewalk blocking the path.",
-    "There\u2019s a pile of trash bags in the bike lane.",
-    "A dumpster is parked on the sidewalk and taking up space.",
-    "Old appliances are stacked on the street curb."
+    "Create internal ticket: relocate excess equipment in North Dorchester warehouse.",
+    "Log work order: consolidate storage bins in district 03 facility.",
+    "Schedule crew to install space\u2011saving racks in PWD North Dorchester office.",
+    "Document internal request for reorganizing inventory in district 03."
    ],
-   "crew_needs": "Location (street and nearest cross\u2011street), description of the items, and a photo."
+   "crew_needs": "Internal note: specify exact location within the district, items to be moved, and any required equipment."
   },
   {
    "request_type": "Squalid Living Conditions",
-   "description": "Report of extremely dirty, unsafe, or unsanitary conditions inside a residence.",
+   "description": "Internal reports of extremely poor or unsafe housing conditions.",
    "phrasings": [
-    "My apartment is filthy and smells bad.",
-    "There is mold and rotting food everywhere in my unit.",
-    "Living conditions are unsanitary, need help.",
-    "The house is covered in grime and pests."
+    "Log squalid living condition case for unit 4B",
+    "Create internal WO for hazardous housing conditions",
+    "Record severe cleanliness issue at address 78 Maple",
+    "Schedule inspection of unsanitary dwelling"
    ],
-   "crew_needs": "Exact address, unit number, and photos showing the squalid conditions."
+   "crew_needs": "Property address, unit number, and photos showing the conditions."
   },
   {
    "request_type": "Sticker Request",
-   "description": "Requests stickers for permits, signage, or other official uses from Public Works.",
+   "description": "Residents request official city stickers (e.g., parking permits, recycling stickers).",
    "phrasings": [
-    "I need a new parking permit sticker for my car.",
-    "Can I get a sticker for my street vendor permit?",
-    "Please send a replacement sticker for my trash cart.",
-    "I lost my sidewalk construction sticker, need a new one."
+    "I need a new residential parking sticker.",
+    "Can I get a recycling sticker for my building?",
+    "Please send me a permit sticker for my street parking.",
+    "I lost my parking sticker, need a replacement."
    ],
-   "crew_needs": "Type of sticker needed, address or permit number, and proof of eligibility if required."
+   "crew_needs": "Resident\u2019s address, vehicle/license plate if applicable, and proof of eligibility (e.g., lease, registration)."
   },
   {
    "request_type": "Street Light Knock Downs",
-   "description": "Reports that a street light has been knocked down or is missing.",
+   "description": "Reports of street lights that have been knocked down or are missing.",
    "phrasings": [
-    "A street lamp fell on my driveway.",
-    "The light pole at the corner is down.",
-    "Missing street light on the intersection of 5th and Oak.",
-    "Someone knocked over the street light near my house."
+    "A street light was knocked over on the corner of Summer and Willow.",
+    "Missing pole at the intersection of Harvard and Boylston after the accident.",
+    "The light post fell near the bus stop on Columbus Ave.",
+    "Street light down on the bike lane at the Charles River bridge."
    ],
-   "crew_needs": "Exact location (intersection or address) and any safety concerns."
+   "crew_needs": "Exact location, any visible damage, and a photo if safe."
   },
   {
    "request_type": "Street Light Outages",
-   "description": "Reports streetlights that are out, flickering, or otherwise not functioning.",
+   "description": "Reports that a streetlight is out, flickering, or otherwise not functioning.",
    "phrasings": [
-    "Street light out on the corner of 3rd and Beacon",
-    "Flickering light on the sidewalk near my house",
-    "No illumination on the bike path at night",
-    "Broken streetlamp in front of the library"
+    "The streetlight on my corner is completely dark.",
+    "A street lamp is flickering on the block near my house.",
+    "The light at the intersection of Main and 3rd isn\u2019t working.",
+    "Streetlight out on the sidewalk near the park."
    ],
-   "crew_needs": "Location (street and nearest cross\u2011street) and, if possible, a photo of the dark pole."
+   "crew_needs": "Exact pole location (street and cross\u2011street), pole number if known, and a photo."
   },
   {
    "request_type": "StreetLight Pole WO",
-   "description": "Work order for repair, replacement, or maintenance of a street\u2011light pole.",
+   "description": "Staff\u2011only internal work order for street\u2011light pole construction or repair.",
    "phrasings": [
-    "The street light pole is bent and needs fixing.",
-    "Pole for the street lamp is cracked.",
-    "We need a new pole for the broken light.",
-    "The pole holding the light is unstable."
+    "Log street\u2011light pole work order for segment 7B",
+    "Create internal WO for pole foundation repair",
+    "Record pole replacement request on Oak Ave.",
+    "Schedule pole installation for new roadway"
    ],
-   "crew_needs": "Exact street location, pole identifier if known, and a photo of the pole."
+   "crew_needs": "Pole location (street and mile marker), type of work, and any required permits."
   },
   {
    "request_type": "Student Move-in Issues",
-   "description": "Problems encountered by students moving into housing, such as missing utilities or unsafe conditions.",
+   "description": "Problems reported by students moving into housing, such as missing utilities or broken fixtures.",
    "phrasings": [
-    "My dorm room has no water after moving in.",
-    "The apartment I just moved into has broken heating.",
-    "We can't get into our new student housing, doors are stuck.",
-    "The unit we moved into has a huge leak."
+    "My dorm room has no water after move\u2011in",
+    "The heater in my apartment isn\u2019t working since I moved in",
+    "Missing light switches in my new student housing",
+    "We can\u2019t get internet in our new dorm unit"
    ],
-   "crew_needs": "Building address, unit number, and a brief description of the issue (photo if applicable)."
+   "crew_needs": "Building name or address, unit number, and specific issue details (e.g., which utility or fixture)."
   },
   {
    "request_type": "Student Overcrowding",
-   "description": "Complaints about student housing or dormitories that are exceeding occupancy limits.",
+   "description": "Internal inspectional services order concerning student housing that exceeds occupancy limits.",
    "phrasings": [
-    "The dorm rooms are way too crowded right now.",
-    "There are too many students in the apartment building.",
-    "Our student housing is over capacity and unsafe.",
-    "The hallway is packed with extra beds and people."
+    "Inspection note: Dorm exceeds allowed student capacity.",
+    "Report: Overcrowding observed in off\u2011campus student housing.",
+    "Staff log \u2013 student housing occupancy violation.",
+    "Internal: Verify student count vs. permit at apartment."
    ],
-   "crew_needs": "Address of the housing unit and the number of occupants versus the legal limit."
+   "crew_needs": "Property address, current number of occupants, and copy of occupancy permit if available."
   },
   {
    "request_type": "Traffic Signal Inspection",
-   "description": "Reports problems, malfunctions, or damage to traffic signals and related equipment.",
+   "description": "Covers checking, testing, and troubleshooting traffic signals and related equipment.",
    "phrasings": [
-    "The traffic light at the corner is flashing red nonstop.",
-    "My intersection has a busted signal that never changes.",
-    "The pedestrian walk button isn\u2019t working at Main and 2nd.",
-    "There\u2019s a dead traffic signal on the highway ramp."
+    "My traffic light at the corner is flashing weirdly.",
+    "The signal on Main St looks dead, can someone check it?",
+    "The pedestrian walk button isn\u2019t working at the intersection.",
+    "The traffic light is stuck on red for too long."
    ],
-   "crew_needs": "Exact intersection location, direction of travel, and a photo of the signal."
+   "crew_needs": "Exact intersection location and a description of the problem (e.g., flashing, stuck, no power)."
   },
   {
    "request_type": "Traffic Signal Repair",
-   "description": "Report a traffic signal that is out, flashing incorrectly, or has graffiti.",
+   "description": "Resident reports a traffic signal that is out, flashing incorrectly, or has graffiti.",
    "phrasings": [
-    "The traffic light at the intersection is stuck on red.",
-    "The signal near the school is flashing weirdly.",
-    "There's graffiti on the traffic signal on Washington St.",
-    "The stop light at the corner isn\u2019t working."
+    "The light at the Main\u2011Elm intersection is stuck on red.",
+    "The traffic signal near the school is flashing weirdly.",
+    "There\u2019s graffiti on the stoplight on Washington Ave.",
+    "The pedestrian walk signal isn\u2019t working at the corner."
    ],
-   "crew_needs": "Intersection name or nearest cross streets, description of the issue, and a photo of the signal."
+   "crew_needs": "Intersection name or nearest cross streets, description of the problem, and a photo if safe to take."
   },
   {
    "request_type": "Transportation General Request",
-   "description": "General inquiries or service requests related to city transportation services.",
+   "description": "General transportation\u2011related request such as signage, bike lanes, or road concerns not covered elsewhere.",
    "phrasings": [
-    "How do I get a bike rack installed on my street?",
-    "I need info on the new bus route schedule.",
-    "Can you add a crosswalk near my block?",
-    "What\u2019s the process to request a sidewalk repair?"
+    "Can you add a bike lane on Cambridge St?",
+    "We need a new stop sign at the dead\u2011end on Beacon.",
+    "Please look at the pothole near the bus stop on Columbus Ave.",
+    "Is it possible to get a crosswalk painted at the school entrance?"
    ],
-   "crew_needs": "Specific location or route details and the nature of the request."
+   "crew_needs": "Precise location (street and cross\u2011street) and a brief description of the request."
   },
   {
    "request_type": "Trash on Vacant Lot",
-   "description": "Report of litter or debris dumped on an empty lot.",
+   "description": "Reports of trash or debris left on an empty lot.",
    "phrasings": [
-    "There's trash piled up on the vacant lot behind my house.",
-    "Abandoned lot is full of garbage.",
-    "Someone dumped bags on the empty lot near me.",
-    "The vacant lot is littered with debris."
+    "There\u2019s a pile of trash on the vacant lot behind the school",
+    "Empty lot on Elm St. is full of garbage",
+    "Can someone clean up debris on the unused lot near the library?",
+    "Trash dumped on vacant property at 9th and Beacon"
    ],
-   "crew_needs": "Lot location (address or nearest cross\u2011streets) and a photo of the trash."
+   "crew_needs": "Location of the lot (street intersection or parcel number) and a photo of the trash."
   },
   {
    "request_type": "Tree Emergencies",
-   "description": "Urgent reports of hazardous trees that are dead, leaning, or have broken limbs.",
+   "description": "Urgent reports of fallen, hazardous, or diseased trees that pose an immediate risk to public safety.",
    "phrasings": [
-    "A large tree is leaning over the sidewalk and could fall.",
-    "Broken branches are hanging over the road after the storm.",
-    "A dead tree is blocking the bike path.",
-    "The tree by the school looks unstable after the wind."
+    "A large tree fell on the sidewalk after the storm.",
+    "Dead branches hanging over the road need removal.",
+    "A leaning tree is threatening the power line on my street.",
+    "Tree trunk cracked and could fall any minute."
    ],
    "crew_needs": "Exact location, description of the hazard, and a photo if safe to take."
   },
   {
    "request_type": "Tree Maintenance Requests",
-   "description": "Requests for tree trimming, removal, or other tree\u2011related care.",
+   "description": "Requests for tree pruning, removal, or other maintenance in parks, playgrounds, or public right\u2011of\u2011way.",
    "phrasings": [
-    "A tree branch is hanging over the sidewalk",
-    "Need a dead tree removed from the park",
-    "Can someone trim the overgrown tree by my house?",
-    "Tree roots are lifting the pavement on my street"
+    "A branch is hanging low over the sidewalk on Elm St.",
+    "The tree in the park is dead and needs removal.",
+    "Can someone trim the overgrown tree near the playground?",
+    "There\u2019s a hazardous tree limb over the bike path."
    ],
-   "crew_needs": "Location of the tree (address or park) and a brief description of the issue."
+   "crew_needs": "Location (street or park name), description of the issue, and a photo if safe."
   },
   {
    "request_type": "Tree in Park",
-   "description": "Report of a tree in a city park that needs removal, pruning, or is hazardous.",
+   "description": "Requests related to trees located in city parks (planting, removal, damage, disease).",
    "phrasings": [
-    "A dead tree is leaning over the playground.",
-    "Tree branches are hanging over the path in the park.",
-    "Need a hazardous tree removed from the park.",
-    "The park tree is cracked and looks unsafe."
+    "A dead tree needs to be removed from the playground",
+    "Can you plant a new tree near the basketball court?",
+    "The oak in the park is leaning dangerously",
+    "We have a diseased tree by the picnic area"
    ],
-   "crew_needs": "Park name, specific area or nearest landmark, and a photo of the tree."
+   "crew_needs": "Park name, specific area or landmark within the park, and photos of the tree."
   },
   {
    "request_type": "Unit Pricing Wrong/Missing",
-   "description": "Issues where a product\u2019s unit price is incorrect or not shown, affecting consumer information.",
+   "description": "Staff\u2011only internal order for incorrect or absent unit pricing on goods inspected by Weights & Measures.",
    "phrasings": [
-    "The price per ounce on the juice is wrong.",
-    "Unit price missing on the bag of chips.",
-    "Incorrect price per pound on the meat display.",
-    "No per\u2011item price shown on the bakery items."
+    "Unit price error on bulk nuts at farmer\u2019s market \u2013 logged.",
+    "Incorrect per\u2011pound price recorded on cheese stand.",
+    "Weights & Measures crew noted missing unit price on produce.",
+    "Internal note: wrong unit pricing on bottled water."
    ],
-   "crew_needs": "Store location and a photo of the incorrect or missing unit price."
+   "crew_needs": "Internal \u2013 product details and location provided by inspector."
   },
   {
    "request_type": "Unsafe Dangerous Conditions",
-   "description": "Reports of hazards that pose an immediate safety risk to the public or occupants.",
+   "description": "Staff\u2011only internal work order for hazardous conditions in or around a building that pose safety risks.",
    "phrasings": [
-    "A broken stair rail is hanging loose.",
-    "There\u2019s a large pothole near the school entrance.",
-    "The balcony floor is collapsing.",
-    "Exposed wiring is hanging from the ceiling."
+    "Unsafe/Dangerous Conditions logged for broken stair railing.",
+    "SCH 5/28 Unsafe/Dangerous Conditions noted for exposed wiring.",
+    "DISP6/6 Unsafe/Dangerous Conditions recorded for falling ceiling tile.",
+    "SCH12/3 Unsafe/Dangerous Conditions entered for cracked sidewalk."
    ],
-   "crew_needs": "Precise location and a brief description of the danger; a photo is helpful."
+   "crew_needs": "Exact location, description of the hazard, and any safety precautions needed for crew."
   },
   {
    "request_type": "Unsanitary Conditions - Employees",
-   "description": "Report of unsanitary conditions observed by city employees (e.g., in a public building or facility).",
+   "description": "Internal tracking of unsanitary conditions observed by city employees during inspections.",
    "phrasings": [
-    "The city office restroom is filthy.",
-    "I saw a public shelter with dirty floors and trash.",
-    "Employees reported mold in the community center.",
-    "Unsanitary conditions in the municipal building."
+    "Log unsanitary condition observed by inspector at 33 Pine",
+    "Create internal WO for employee\u2011reported hygiene issue",
+    "Record health violation noted during site visit",
+    "Schedule follow\u2011up on unsanitary findings in building X"
    ],
-   "crew_needs": "Location (building name or address) and a photo of the unsanitary area."
+   "crew_needs": "Location of the issue, description of unsanitary condition, and photos if available."
   },
   {
    "request_type": "Unsanitary Conditions - Establishment",
-   "description": "Reports of health\u2011code violations or unsanitary conditions at businesses or public establishments.",
+   "description": "Staff\u2011only internal order to address health\u2011code violations or unsanitary conditions at a business or public establishment.",
    "phrasings": [
-    "The restaurant kitchen is full of trash.",
-    "There\u2019s mold growing in the bathroom of the bar.",
-    "Food is left out in the open at the deli.",
-    "The coffee shop has a pest problem."
+    "SCH3/20 Unsanitary Conditions - Establishment logged for dirty kitchen area.",
+    "SCH 11/15 Unsanitary Conditions - Establishment noted for rodent droppings.",
+    "DISP entry: Unsanitary Conditions - Establishment observed in restroom.",
+    "Recorded Unsanitary Conditions - Establishment for food storage issue."
    ],
-   "crew_needs": "Business name, address, and description or photo of the unsanitary condition."
+   "crew_needs": "Name and address of the establishment, description of the unsanitary condition, and any photos."
   },
   {
    "request_type": "Unsanitary Conditions - Food",
-   "description": "Report suspected unsanitary conditions at a food venue before a health inspection is completed.",
+   "description": "Resident reports possible food\u2011related health issues that have not yet been confirmed by the city.",
    "phrasings": [
-    "I think the food truck is dirty.",
-    "The kitchen at the corner eatery looks filthy.",
-    "There are flies and grime in the restaurant's prep area.",
-    "The lunch spot has mold on the counters."
+    "I think the bakery might have a rodent problem.",
+    "The ice cream shop looks like it\u2019s not cleaning its counters.",
+    "There\u2019s a bad smell coming from the kitchen at the lunch spot.",
+    "I saw food left uncovered on a table at the market."
    ],
-   "crew_needs": "Location of the food venue, details of what looks unsanitary, and any photos if possible."
+   "crew_needs": "Location of the business, details of what was observed, and any photos if possible."
   },
   {
    "request_type": "Unsatisfactory Living Conditions",
-   "description": "Reports housing conditions that are unsafe, unhealthy, or violate housing codes.",
+   "description": "Staff\u2011only internal work order for housing inspections when conditions do not meet city standards.",
    "phrasings": [
-    "My apartment has mold on the walls and ceiling.",
-    "There\u2019s no heat in my unit during winter.",
-    "The building has broken windows and exposed wiring.",
-    "Pests are infesting the rental unit and the landlord isn\u2019t fixing it."
+    "INSPECTION: Unit 3B fails habitability standards \u2013 moisture, mold.",
+    "HOUSING: Reported lack of heat and broken windows in building A.",
+    "UNIT CHECK: Inadequate sanitation, pest signs observed.",
+    "VIOLATION: Structural damage noted in basement apartment."
    ],
-   "crew_needs": "Full address, unit number, description of the issue, and any photos."
+   "crew_needs": "Exact address, unit number, and detailed notes/photos of the deficiencies."
   },
   {
    "request_type": "Unsatisfactory Utilities - Electrical  Plumbing",
-   "description": "Report problems with electrical or plumbing services that don\u2019t meet code or are unsafe.",
+   "description": "Resident reports ongoing electrical or plumbing problems that have not been resolved to satisfaction.",
    "phrasings": [
-    "My apartment has exposed wiring in the hallway.",
-    "The sink in my kitchen is leaking and the water won\u2019t stop.",
-    "There are frequent power outages in my building.",
-    "The bathroom faucet drips nonstop and the pipe looks corroded."
+    "My apartment has frequent power outages in the kitchen.",
+    "The sink in my bathroom won\u2019t drain and the faucet leaks.",
+    "There\u2019s a buzzing sound from the electrical panel in my unit.",
+    "My hot water shuts off randomly and the shower drips."
    ],
-   "crew_needs": "Exact address, description of the electrical or plumbing issue, and photos of the problem area."
+   "crew_needs": "Full address, unit number if applicable, description of the issue, and any recent work order numbers."
   },
   {
    "request_type": "Unshoveled Sidewalk",
-   "description": "Reports sidewalks that have not been cleared of snow or ice.",
+   "description": "Reports of sidewalks that have not been cleared of snow or ice, creating hazardous walking conditions.",
    "phrasings": [
-    "Sidewalk still covered in snow on Maple St",
-    "Ice buildup on the walkway outside my building",
-    "Unshoveled sidewalk at the corner of 7th and Washington",
-    "Need the sidewalk cleared after the storm"
+    "The sidewalk on my street is still covered in snow.",
+    "Ice hasn\u2019t been cleared from the walkway outside my building.",
+    "Snow accumulation on the sidewalk is making it unsafe.",
+    "Unshoveled sidewalk at the corner of Washington and Beacon."
    ],
-   "crew_needs": "Exact address or block and a note on the current condition."
+   "crew_needs": "Exact location, current condition, and a photo if possible."
   },
   {
    "request_type": "Upgrade Existing Lighting",
-   "description": "Requests to replace or improve existing streetlights for better illumination.",
+   "description": "Requests to replace or brighten existing streetlights with higher\u2011output fixtures.",
    "phrasings": [
-    "The streetlights on my block are too dim at night.",
-    "Can we get brighter lights on the avenue?",
-    "The existing lamps flicker and need upgrading.",
-    "Upgrade the old sodium lights on my street."
+    "The lights on my block are too dim",
+    "Can we get brighter streetlights on Elm?",
+    "Upgrade the existing lighting at the park entrance",
+    "Need higher\u2011wattage lamps on the downtown sidewalk"
    ],
-   "crew_needs": "Exact street and block, and any specific issues (dim, flickering, outdated)."
+   "crew_needs": "Street name, block range, and any specific pole numbers; a photo of the current lighting is helpful."
   },
   {
    "request_type": "Utility Call-In",
-   "description": "Reports of utility outages or problems (water, gas, electric) that need city\u2011managed response.",
+   "description": "Staff\u2011only internal request to log a utility outage or issue reported by a city employee or partner.",
    "phrasings": [
-    "The water isn\u2019t coming out of any taps on my street.",
-    "We have a gas leak near the corner of Main and 5th.",
-    "The street lights are out on my block.",
-    "Power is down for the whole neighborhood."
+    "Log: Water main break reported at 5th and Beacon.",
+    "Internal: Call\u2011in for gas leak at industrial park.",
+    "Staff note \u2013 electricity outage on campus building.",
+    "Record utility call\u2011in for sewer backup near school."
    ],
-   "crew_needs": "Exact address or nearest cross streets and any observable safety hazards."
+   "crew_needs": "Utility type, precise location, and nature of the problem."
   },
   {
    "request_type": "Utility Casting Repair",
-   "description": "Fixes broken or cracked concrete utility casts (manholes, catch basins, etc.) that affect drainage or utilities.",
+   "description": "Internal work order for repairing utility casting; not a resident\u2011reported issue.",
    "phrasings": [
-    "Manhole cover is cracked and leaking water.",
-    "The catch basin in front of my building is broken.",
-    "There's a busted utility cast on the sidewalk.",
-    "Our storm drain grate is broken and needs repair."
+    "Utility casting repair logged by crew",
+    "Cast iron utility pipe repair needed \u2013 crew note",
+    "Repair of underground utility casting scheduled",
+    "Crew reports utility casting damage"
    ],
-   "crew_needs": "Exact location of the cast, description of damage, and a photo if possible."
+   "crew_needs": "Crew must record exact street location and pipe size; no resident input required."
   },
   {
    "request_type": "Valet Parking Problems",
-   "description": "Complaints or issues with city\u2011run valet parking services, such as lost tickets or vehicle damage.",
+   "description": "Resident reports issues with city\u2011run valet parking services (e.g., lost ticket, overcharge, vehicle damage).",
    "phrasings": [
-    "My car was scratched while in city valet.",
-    "Lost my valet ticket at the downtown garage.",
-    "Valet staff overcharged me for parking.",
-    "The valet attendant left my car unattended."
+    "I lost my valet ticket at the downtown garage.",
+    "My car was scratched while in city valet parking.",
+    "Charged too much for valet service at the convention center.",
+    "Valet driver took my car to the wrong lot."
    ],
-   "crew_needs": "Location of the valet service, vehicle make/model, and license plate number."
+   "crew_needs": "Location of the valet service, ticket number if available, and a description of the problem."
   },
   {
    "request_type": "Walk-In Service Inquiry",
-   "description": "General questions about where and how to access walk\u2011in services at city offices.",
+   "description": "Resident asks about services they can receive by walking into a city office or facility.",
    "phrasings": [
-    "Where can I drop by for a driver\u2019s license renewal?",
-    "Do you have walk\u2011in hours for building permits?",
-    "I need to know the location of the 311 walk\u2011in desk.",
-    "Can I get a passport photo without an appointment?"
+    "Do I need an appointment to get a parking permit?",
+    "Can I drop by the city hall for a building permit?",
+    "What services are available at the neighborhood office?",
+    "Is there a walk\u2011in window for driver\u2019s license renewal?"
    ],
-   "crew_needs": "None; just provide the requested information."
+   "crew_needs": "Specific service the resident is interested in and the preferred office location."
   },
   {
    "request_type": "Water in Gas - High Priority",
-   "description": "Urgent reports of water contamination in a gas line or gas\u2011powered equipment, posing safety risks.",
+   "description": "Staff\u2011only high\u2011priority internal case where water has entered a gas line or appliance, requiring immediate safety inspection.",
    "phrasings": [
-    "There\u2019s water coming out of the gas stove burners.",
-    "My gas furnace is sputtering water.",
-    "The gas line outside the house looks wet.",
-    "Water is leaking into the gas regulator."
+    "Log: Water intrusion in gas line at apartment complex.",
+    "Internal: High\u2011priority gas\u2011water contamination report.",
+    "Staff note \u2013 emergency water in gas pipe, shut\u2011off needed.",
+    "Urgent: Water found in gas regulator, immediate response."
    ],
-   "crew_needs": "Exact location (address), description of the equipment, and a photo of the water\u2011in\u2011gas condition."
+   "crew_needs": "Exact address, description of the affected gas equipment, and any visible water presence."
   },
   {
    "request_type": "Work Hours-Loud Noise Complaints",
-   "description": "Report excessive noise from construction or other work occurring outside permitted hours.",
+   "description": "Report of excessive noise from construction or other work occurring outside permitted hours.",
    "phrasings": [
-    "Construction is hammering at 10\u202fp.m. on my street.",
-    "There\u2019s loud drilling early this morning before 7\u202fa.m.",
-    "The crew is using a jackhammer after hours.",
-    "Noise from a renovation is keeping us up late."
+    "Construction is hammering at 10\u202fp.m. on my block.",
+    "Loud drilling started early this morning before 7\u202fa.m.",
+    "The crew is using a jackhammer late at night on the street.",
+    "Noise from a renovation is going on past the allowed time."
    ],
-   "crew_needs": "Address, description of the noise and time it occurs, and optionally a short audio clip or video."
+   "crew_needs": "Address of the noisy site, type of work, and time the noise started."
   },
   {
    "request_type": "Work w/out Permit",
-   "description": "Reports construction or excavation work being performed without the required permits.",
+   "description": "Staff\u2011only internal work order for detecting or reporting work being done without the required city permit.",
    "phrasings": [
-    "People are digging on the street without a permit.",
-    "Construction is happening on my block with no visible permits.",
-    "A crew is building a deck on the sidewalk without approval.",
-    "Unpermitted work is going on at the corner of Oak and 3rd."
+    "INSPECTION: Unpermitted deck construction at 45 Oak St.",
+    "VIOLATION: No permit for fence installation on property.",
+    "REPORT: Illegal excavation observed on vacant lot.",
+    "COMPLAINT: Unapproved signage erected on storefront."
    ],
-   "crew_needs": "Address or site location, description of work, and any photos of missing permits."
+   "crew_needs": "Address, description of the work, and any visible permit documentation (or lack thereof)."
   },
   {
    "request_type": "Working Beyond Hours",
-   "description": "Requests for building or safety work that must be performed outside normal business hours.",
+   "description": "Staff\u2011only internal work order for building\u2011related tasks that must be performed outside normal hours.",
    "phrasings": [
-    "We need a fire alarm test after 6\u202fpm.",
-    "Can the elevator inspection be done at night?",
-    "Please schedule the roof repair for early morning.",
-    "We require a building inspection on a weekend."
+    "ISD_Building logged Working Beyond Hours for emergency roof repair.",
+    "DISP entry: Working Beyond Hours needed for after\u2011hours HVAC service.",
+    "SCH 5/12 Working Beyond Hours scheduled for night\u2011time window replacement.",
+    "Recorded Working Beyond Hours for 2\u202fam plumbing fix in building 12."
    ],
-   "crew_needs": "Location, specific work needed, and the requested after\u2011hours date/time."
+   "crew_needs": "Building address, specific task, and required access instructions for after\u2011hours work."
   },
   {
    "request_type": "Zoning",
-   "description": "Issues related to land\u2011use, building setbacks, permits, or violations of zoning regulations.",
+   "description": "Internal zoning case logged by staff; residents do not submit this directly.",
    "phrasings": [
-    "Someone built a fence that\u2019s too close to the street.",
-    "A new shop opened without a zoning permit.",
-    "The backyard addition looks illegal.",
-    "There\u2019s a structure that doesn\u2019t match the zoning rules."
+    "Zoning review request entered by staff",
+    "Internal zoning compliance note",
+    "Crew logs zoning issue for property",
+    "Zoning case created by inspectional services"
    ],
-   "crew_needs": "Precise location and description of the alleged violation."
+   "crew_needs": "Staff must attach parcel ID and zoning district information."
   }
  ]
 }
