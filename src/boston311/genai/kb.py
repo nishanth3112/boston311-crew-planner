@@ -25,6 +25,9 @@ in varied everyday wording. No street addresses or names.
 - crew_needs: one line on what the crew needs from the resident (exact location, size, \
 a photo, a license plate, ...).
 Use the department, queue and example case titles to work out what cryptic type names mean.
+Types marked "staff only" were never reported by residents in 2024: they are internal work \
+orders that city crews log. Say so in the description, and write the phrasings as a crew \
+member would log the job.
 Return every listed request type exactly once."""
 
 
@@ -50,15 +53,20 @@ def _batch_schema(types: list[str]) -> type[BaseModel]:
     return create_model("RequestTypeBatch", types=(list[entry], ...))
 
 
-def _describe(row, titles: list[str]) -> str:
+def _describe(row, titles: list[str], staff_only: bool) -> str:
     line = f"- {row.request_type} (department: {DEPARTMENTS[row.department]['name']}, "
-    line += f"queue: {row.queue})"
+    line += f"queue: {row.queue}{', staff only' if staff_only else ''})"
     if titles:
         line += ". Example case titles: " + "; ".join(titles)
     return line
 
 
-def build_kb(types: pd.DataFrame, titles: dict[str, list[str]], model) -> list[dict]:
+def build_kb(
+    types: pd.DataFrame,
+    titles: dict[str, list[str]],
+    model,
+    staff_only: frozenset[str] = frozenset(),
+) -> list[dict]:
     """One entry per row of `types`, sorted by request_type; raises if a type never comes back."""
     entries: dict[str, dict] = {}
     for _ in range(ROUNDS):
@@ -67,7 +75,8 @@ def build_kb(types: pd.DataFrame, titles: dict[str, list[str]], model) -> list[d
             batch = pending.iloc[start : start + BATCH_SIZE]
             names = list(batch["request_type"])
             listing = "\n".join(
-                _describe(r, titles.get(r.request_type, [])) for r in batch.itertuples()
+                _describe(r, titles.get(r.request_type, []), r.request_type in staff_only)
+                for r in batch.itertuples()
             )
             reply = llm.structured(model, _batch_schema(names)).invoke(
                 [SystemMessage(KB_PROMPT), HumanMessage(listing)]
