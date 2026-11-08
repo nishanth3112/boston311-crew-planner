@@ -54,6 +54,8 @@ Full instructions are coming. Dependencies are managed with [uv](https://docs.as
 uv sync
 ```
 
+Copy `.env.example` to `.env` and add your own free `GROQ_API_KEY` from console.groq.com/keys. The intake endpoint (`/api/intake`) needs it, and returns an error without a key or when Groq's free-tier rate limit is reached.
+
 ## How we work
 
 - `main` is protected: every change goes through a pull request, gets one approving review from a teammate, and is squash-merged.
