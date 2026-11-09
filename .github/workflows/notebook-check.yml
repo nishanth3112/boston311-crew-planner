@@ -1,0 +1,19 @@
+# Check the submission notebook by hand: Actions > Notebook check > Run workflow.
+# It must have run top to bottom on a clean kernel, with no errors, keys, local paths or placeholders.
+name: Notebook check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_notebook_outputs.py notebooks/311_staffing_submission.ipynb

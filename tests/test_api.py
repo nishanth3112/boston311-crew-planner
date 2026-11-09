@@ -5,7 +5,7 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from boston311.api import routes, schemas
+from boston311.api import main, routes, schemas
 from boston311.api.fixtures import load_fixture
 from boston311.api.main import app
 from boston311.config import ROOT
@@ -66,6 +66,55 @@ def test_health_falls_back_to_default_model(monkeypatch):
 def test_committed_openapi_matches_app():
     committed = json.loads((ROOT / "openapi.json").read_text())
     assert committed == app.openapi(), "run: uv run python scripts/export_openapi.py"
+
+
+@pytest.fixture
+def web_dist(tmp_path, monkeypatch):
+    dist = tmp_path / "dist"
+    (dist / "assets").mkdir(parents=True)
+    (dist / "index.html").write_text('<div id="root"></div>')
+    (dist / "assets" / "app.js").write_text("console.log(1)")
+    (tmp_path / "secret.txt").write_text("SECRET")  # next to the build, one level up
+    monkeypatch.setattr(main, "DIST", dist)
+    return dist
+
+
+@pytest.mark.parametrize("path", ["/", "/plan", "/scenarios", "/ask"])
+def test_app_routes_get_the_web_app(web_dist, path):
+    response = client.get(path)
+    assert response.status_code == 200 and '<div id="root">' in response.text
+
+
+def test_built_files_are_served_as_they_are(web_dist):
+    assert client.get("/assets/app.js").text == "console.log(1)"
+
+
+def test_unknown_api_paths_stay_404(web_dist):
+    assert client.get("/api/nope").status_code == 404
+
+
+@pytest.mark.parametrize("path", ["/..%2fsecret.txt", "/assets/..%2f..%2fsecret.txt"])
+def test_paths_outside_the_build_are_never_served(web_dist, path):
+    # secret.txt really exists at these paths, so without the guard it would be served
+    response = client.get(path)
+    assert "SECRET" not in response.text and '<div id="root">' in response.text
+
+
+def test_an_absolute_path_is_never_served(web_dist):
+    # "/%2f..." reaches the route as an absolute path, and root / "/x" is just "/x"
+    secret = web_dist.parent / "secret.txt"
+    response = client.get("/%2f" + str(secret).lstrip("/"))
+    assert "SECRET" not in response.text and '<div id="root">' in response.text
+
+
+@pytest.mark.parametrize("path", ["/%00", "/assets/%00x", "/plan%00.html"])
+def test_a_null_byte_in_the_path_is_404_not_500(web_dist, path):
+    assert client.get(path).status_code == 404
+
+
+def test_without_a_build_the_app_route_is_404(tmp_path, monkeypatch):
+    monkeypatch.setattr(main, "DIST", tmp_path)
+    assert client.get("/plan").status_code == 404
 
 
 BUSY = "The assistant is busy right now. Try again in a minute."
