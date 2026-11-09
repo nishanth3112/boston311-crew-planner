@@ -95,7 +95,8 @@ The agent routes and splits better, but it never asks a follow-up question, and 
 **Planning analyst** (10 development questions, `gpt-oss-120b`):
 - It used the right tools on 10/10 questions and the right arguments on 19/19.
 - 36 of 40 numbers in its answers were verified against tool results. The server flags the rest, and the app underlines them.
-- _The held-out analyst result is added here once the test set is in the eval's format._
+
+**Planning analyst** (15 held-out questions, `gpt-oss-120b`): right tools on 14/15 questions and right arguments on 25/28. 53 of 56 numbers were verified, with 0 errors. That is close to the development results, so the agent wasn't tuned to its own questions.
 
 ## 8. Limitations
 
