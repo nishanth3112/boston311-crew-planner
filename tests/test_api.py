@@ -1,5 +1,7 @@
 import json
 
+import groq
+import httpx
 import pytest
 from fastapi.testclient import TestClient
 
@@ -98,6 +100,13 @@ def test_paths_outside_the_build_are_never_served(web_dist, path):
     assert "SECRET" not in response.text and '<div id="root">' in response.text
 
 
+def test_an_absolute_path_is_never_served(web_dist):
+    # "/%2f..." reaches the route as an absolute path, and root / "/x" is just "/x"
+    secret = web_dist.parent / "secret.txt"
+    response = client.get("/%2f" + str(secret).lstrip("/"))
+    assert "SECRET" not in response.text and '<div id="root">' in response.text
+
+
 @pytest.mark.parametrize("path", ["/%00", "/assets/%00x", "/plan%00.html"])
 def test_a_null_byte_in_the_path_is_404_not_500(web_dist, path):
     assert client.get(path).status_code == 404
@@ -106,3 +115,32 @@ def test_a_null_byte_in_the_path_is_404_not_500(web_dist, path):
 def test_without_a_build_the_app_route_is_404(tmp_path, monkeypatch):
     monkeypatch.setattr(main, "DIST", tmp_path)
     assert client.get("/plan").status_code == 404
+
+
+BUSY = "The assistant is busy right now. Try again in a minute."
+UNAVAILABLE = "The assistant isn't available right now."
+
+
+def _groq_status(cls, code):
+    request = httpx.Request("POST", "https://api.groq.com")
+    return cls("groq", response=httpx.Response(code, request=request), body=None)
+
+
+@pytest.mark.parametrize("path", ["/api/intake", "/api/ask"])
+@pytest.mark.parametrize(
+    ("error", "detail"),
+    [
+        (_groq_status(groq.RateLimitError, 429), BUSY),
+        (_groq_status(groq.AuthenticationError, 401), UNAVAILABLE),
+        (groq.GroqError("The api_key client option must be set"), UNAVAILABLE),
+    ],
+)
+def test_groq_errors_return_friendly_503(path, error, detail, monkeypatch):
+    def fail(messages):
+        raise error
+
+    monkeypatch.setattr(routes, "run_intake", fail)
+    monkeypatch.setattr(routes, "run_ask", fail)
+    response = client.post(path, json=MESSAGES)
+    assert response.status_code == 503
+    assert response.json() == {"detail": detail}

@@ -1,5 +1,6 @@
+import groq
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 from boston311.api.routes import router
 from boston311.config import ROOT
@@ -8,6 +9,17 @@ DIST = ROOT / "web" / "dist"  # built by `npm run build`; in development Vite se
 
 app = FastAPI(title="Boston 311 Crew Planner")
 app.include_router(router)
+
+
+@app.exception_handler(groq.RateLimitError)
+def groq_busy(request, error):
+    return JSONResponse({"detail": "The assistant is busy right now. Try again in a minute."}, 503)
+
+
+# missing key, bad key or no connection: run_intake's fallback already failed too
+@app.exception_handler(groq.GroqError)
+def groq_unavailable(request, error):
+    return JSONResponse({"detail": "The assistant isn't available right now."}, 503)
 
 
 @app.get("/{path:path}", include_in_schema=False)
