@@ -57,7 +57,7 @@ flowchart TB
 | Answer | structured draft, through `ToolStrategy` | plain text |
 | What the LLM picks | the request type only | which tools to call; the wording |
 | What the server fills in | department, queue and typical days, from `request_types.csv` | `trace`, `what_if`, `unverified_numbers` |
-| If it fails | the pipeline answers, and `fallback_used` is set | past the 6-call cap, a clear message; other errors return a 500, which the Ask page explains |
+| If it fails | the pipeline answers, and `fallback_used` is set | past the 6-call cap, a clear message; Groq errors return a 503 with a message the page shows |
 
 ## 3. How a report is routed
 
@@ -149,4 +149,4 @@ The Groq key is passed at run time (`--env-file .env`) and never built into the 
 | Analyst numbers must come from a tool result | The number check flags the rest, and the Ask page underlines them | `genai/analyst_agent.py` `unverified_numbers` |
 | `target_met` is checked per department | The plan-wide rate can pass while departments miss | `genai/analyst_agent.py` `run_what_if` |
 | In-memory vector index, local embeddings | 158 request types need no vector database or embedding API | `genai/retriever.py` |
-| Held-out test sets are never opened by their builders | They stay honest | `data/processed/*_test_set.csv`, `reports/eval/` |
+| Held-out test sets are drafted with AI help, then chosen, edited and labelled by a teammate who didn't build the agents, and the builders never open them | They stay honest; each ran once and was committed as it came out | `data/processed/*_test_set.csv`, `reports/eval/` |

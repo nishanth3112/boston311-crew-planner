@@ -16,14 +16,14 @@ Boston 311 received 306,756 service requests in 2024. Demand is seasonal (Public
 
 ## Departments in scope
 
-| Department | Code | 2024 requests | On time, 2024 | Crew capacity (requests/day) | Annual cost per crew | Crews, Jan 2025 |
+| Department | Code | 2024 requests | On time, 2024 (brief) | Crew capacity (requests/day) | Annual cost per crew | Crews, Jan 2025 |
 |---|---|---|---|---|---|---|
 | Public Works | PWDx | 157,610 | 90% | 12 | $130,000 | 50 |
 | Transportation (parking & traffic) | BTDT | 81,447 | 50% | 15 | $110,000 | 18 |
 | Parks & Recreation | PARK | 18,736 | 93% | 6 | $120,000 | 10 |
 | Inspectional Services | ISD | 18,624 | 72% | 4 | $140,000 | 16 |
 
-Request counts and on-time rates come from the real data. Crew capacities, costs and starting crew levels are planning assumptions set by the hackathon brief.
+Request counts come from the real data and match the brief. The on-time rates are the brief's, which count requests with no target date as on time; leaving those out, as we do, the data gives 87.3%, 48.9%, 93.0% and 72.3%. Crew capacities, costs and starting crew levels are planning assumptions set by the hackathon brief.
 
 ### Planning rules (from the brief)
 
@@ -39,7 +39,7 @@ Request counts and on-time rates come from the real data. Crew capacities, costs
 2. **Staffing optimizer:** a mixed-integer model that sets crews, hires, releases and Parks seasonal crews for each month.
 3. **Queue simulator:** replays a year of requests day by day to measure the on-time rate and overdue cost of any plan.
 4. **Sensitivity analysis:** demand 20% above and below forecast, a snowstorm and a heat wave, each tested with a re-optimized plan and with the base plan held fixed.
-5. **311 intake assistant:** retrieves the closest real request types for a resident's message and returns type, department and queue as structured output, asking a follow-up question when the message is unclear. Accuracy is measured on a hand-written test set.
+5. **311 intake assistant:** retrieves the closest real request types for a resident's message and returns type, department and queue as structured output. It can ask a follow-up question when a message is unclear, though on the held-out set the agent asked on 0 of 8 such messages. Accuracy is measured on a test set drafted with AI help, then chosen, edited and labelled by a teammate who didn't build the agents.
 6. **Web app:** a React + Vite + TypeScript app with four screens (intake, crew plan, scenarios and "ask the plan"), served by a FastAPI backend.
 
 ## The two agents
@@ -81,6 +81,8 @@ Public 311 service requests from [Analyze Boston](https://data.boston.gov/datase
 ## Getting started
 
 You need [uv](https://docs.astral.sh/uv/) and Node 26 with npm. Docker is optional.
+
+On Windows, use WSL and clone into your Linux home folder (`~`), not under `/mnt/c`, where installs and builds are much slower.
 
 ### 1. Configure
 
@@ -132,7 +134,7 @@ uv run python -m boston311.eval.analyst_eval data/processed/analyst_dev_set.csv
 ```
 
 - **Model:** set `LLM_MODEL=openai/gpt-oss-120b` to evaluate with the larger model.
-- **From GitHub:** run the **LLM eval** workflow from the Actions tab. It needs a `GROQ_API_KEY` repository secret.
+- **From GitHub:** run the **LLM eval** workflow from the Actions tab. It runs the dev sets only, since each held-out set ran once and its report is committed in `reports/eval/`. It needs a `GROQ_API_KEY` repository secret.
 - **Notebook check:** the **Notebook check** workflow confirms the submission notebook ran top to bottom with all its outputs.
 
 ### Rebuilding the data (optional)
@@ -149,7 +151,7 @@ uv run python scripts/build_plans.py        # the six named plans in plans.json
 
 ## How we work
 
-- `main` is protected: every change goes through a pull request, gets one approving review from a teammate, and is squash-merged.
+- Every change goes through a pull request and is squash-merged. Every pull request after the initial setup was approved by a teammate.
 - Branch names are short and plain, one per ticket, such as `backend-setup` or `intake-agent`.
 - Raw data, `.env` files and API keys are never committed.
 

@@ -211,12 +211,13 @@
   <rect class="panel" x="380" y="766" width="340" height="218" rx="10"/>
   <text class="t" x="396" y="792">Quality</text>
   <text class="b" x="396" y="818">Held-out sets: 45 intake messages and 15</text>
-  <text class="b" x="396" y="836">analyst questions, written by a person and</text>
-  <text class="b" x="396" y="854">never opened by the people who built the agents</text>
-  <text class="b" x="396" y="880">Number check: every number in an analyst</text>
-  <text class="b" x="396" y="898">answer must come from a tool or the question</text>
-  <text class="b" x="396" y="924">Tests run offline with scripted models, and</text>
-  <text class="b" x="396" y="942">the planner is checked on hand-computed cases</text>
+  <text class="b" x="396" y="836">analyst questions, drafted with AI help, then</text>
+  <text class="b" x="396" y="854">chosen, edited and labelled by a teammate who</text>
+  <text class="b" x="396" y="872">didn't build the agents</text>
+  <text class="b" x="396" y="898">Number check: every number in an analyst</text>
+  <text class="b" x="396" y="916">answer must come from a tool or the question</text>
+  <text class="b" x="396" y="942">Tests run offline with scripted models, and</text>
+  <text class="b" x="396" y="960">the planner is checked on hand-computed cases</text>
 
   <rect class="panel" x="740" y="766" width="340" height="218" rx="10"/>
   <text class="t" x="756" y="792">Request flow</text>
