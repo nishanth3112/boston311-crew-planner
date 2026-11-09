@@ -7,9 +7,9 @@ web/dist
 data/raw
 data/interim
 data/cache
-.env
-.env.*
-!.env.example
+**/.env
+**/.env.*
+!**/.env.example
 .claude
 .handoff
 CLAUDE.md

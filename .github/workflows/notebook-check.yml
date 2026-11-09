@@ -1,9 +1,12 @@
 # Check the submission notebook by hand: Actions > Notebook check > Run workflow.
-# It must have been run top to bottom on a clean kernel, with no errors and no API keys in outputs.
+# It must have run top to bottom on a clean kernel, with no errors, keys, local paths or placeholders.
 name: Notebook check
 
 on:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   check:
