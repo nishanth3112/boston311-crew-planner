@@ -1,5 +1,7 @@
 import json
 
+import groq
+import httpx
 import pytest
 from fastapi.testclient import TestClient
 
@@ -64,3 +66,32 @@ def test_health_falls_back_to_default_model(monkeypatch):
 def test_committed_openapi_matches_app():
     committed = json.loads((ROOT / "openapi.json").read_text())
     assert committed == app.openapi(), "run: uv run python scripts/export_openapi.py"
+
+
+BUSY = "The assistant is busy right now. Try again in a minute."
+UNAVAILABLE = "The assistant isn't available right now."
+
+
+def _groq_status(cls, code):
+    request = httpx.Request("POST", "https://api.groq.com")
+    return cls("groq", response=httpx.Response(code, request=request), body=None)
+
+
+@pytest.mark.parametrize("path", ["/api/intake", "/api/ask"])
+@pytest.mark.parametrize(
+    ("error", "detail"),
+    [
+        (_groq_status(groq.RateLimitError, 429), BUSY),
+        (_groq_status(groq.AuthenticationError, 401), UNAVAILABLE),
+        (groq.GroqError("The api_key client option must be set"), UNAVAILABLE),
+    ],
+)
+def test_groq_errors_return_friendly_503(path, error, detail, monkeypatch):
+    def fail(messages):
+        raise error
+
+    monkeypatch.setattr(routes, "run_intake", fail)
+    monkeypatch.setattr(routes, "run_ask", fail)
+    response = client.post(path, json=MESSAGES)
+    assert response.status_code == 503
+    assert response.json() == {"detail": detail}

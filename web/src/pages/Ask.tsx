@@ -8,10 +8,10 @@ type AskResponse = Schemas['AskResponse']
 
 // questions the tools answer directly, so every number in the answer can be verified
 const SUGGESTIONS = [
-  'What happens to Transportation if demand is 20% higher?',
-  'Which neighborhoods wait longest for pothole repairs?',
+  'How much do overdue requests cost Transportation in the base plan?',
   'In which months does Inspectional Services hire new crews?',
   'How does the 2025 Transportation forecast compare with 2024?',
+  'What share of 2024 requests came in through the BOS:311 app?',
 ]
 
 function scenarioLink({ demand_multiplier, shock, on_time_target }: Schemas['SolveRequest']) {

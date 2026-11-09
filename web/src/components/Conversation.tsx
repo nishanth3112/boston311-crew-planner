@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from 'react'
 import { errorMessage, postJson, type Schemas } from '@/api/client'
 
 type ChatMessage = Schemas['ChatMessage']
@@ -50,6 +50,17 @@ export function Conversation<R>(props: Props<R>) {
     // put the question back in the box, so it can be shortened or sent again
     onError: (_error, messages) => setDraft((d) => d || messages[messages.length - 1].content),
   })
+
+  // the first message after a cold start loads the embedding model, which can take a while
+  const [slow, setSlow] = useState(false)
+  useEffect(() => {
+    if (!mutation.isPending) return
+    const timer = setTimeout(() => setSlow(true), 8000)
+    return () => {
+      clearTimeout(timer)
+      setSlow(false)
+    }
+  }, [mutation.isPending])
 
   function send(question: string) {
     if (mutation.isPending) return
@@ -117,6 +128,7 @@ export function Conversation<R>(props: Props<R>) {
           arrives (the arrival only for screen readers) */}
       <p role="status" className={mutation.isPending ? 'mt-4 text-muted-foreground' : 'sr-only'}>
         {mutation.isPending ? props.pendingText : mutation.isSuccess ? 'Answer received.' : ''}
+        {mutation.isPending && slow && ' Still working. The first message can take a minute while the search index loads.'}
       </p>
       {mutation.isError && (
         <div role="alert" className="mt-4">
