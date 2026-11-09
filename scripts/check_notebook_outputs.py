@@ -54,7 +54,8 @@ def problems(text: str, draft: bool = False) -> list[str]:
         if pattern.search(text):
             found.append(f"the notebook contains {name}")
     if not draft:
-        found += placeholders(text, "the notebook")
+        # cell text only: outputs hold base64 chart images, where "TODO" can appear by chance
+        found += placeholders("".join(_source(c) for c in cells), "the notebook")
     return found
 
 

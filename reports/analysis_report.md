@@ -11,7 +11,7 @@ For 2025 we recommend growing Public Works from 50 to 64 crews, Transportation f
 ## 1. Data and forecast
 
 - We used every 2023-2024 request in the four departments. The 2024 counts match the brief exactly: Public Works 157,610, Transportation 81,447, Parks 18,736, Inspectional Services 18,624.
-- On-time rates leave out requests with no target date, which gives 2024 baselines of 87.3% (Public Works), 48.9% (Transportation), 93.0% (Parks) and 72.3% (Inspectional Services).
+- On-time rates leave out requests with no target date, which gives 2024 baselines of 87.3% (Public Works), 48.9% (Transportation), 93.0% (Parks) and 72.3% (Inspectional Services). The brief's 90%, 50%, 93% and 72% count requests with no target date as on time.
 - **Forecast.** Each department uses the method with the lowest backtest error on July-December 2024: damped ETS for Public Works (3.8% MAPE), seasonal naive scaled by growth for Transportation (4.8%), and seasonal naive for Parks (17.4%) and Inspectional Services (11.9%). The 2025 totals are 157,828, 88,079, 18,736 and 18,624.
 - **The forecast ran high.** Against January-September 2025, actual requests were 84%, 93%, 76% and 95% of the forecast. For Public Works and Parks the drop came with a change in how requests arrived: Public Works phone requests fell to 47% of 2024's level. The data alone doesn't say whether the work itself fell. Transportation's requests held steady; its gap comes from the forecast carrying 2024's growth of about 8% into 2025. The 80% interval is too narrow: it held only 1 of 9 months for Public Works.
 
@@ -31,7 +31,7 @@ Public Works peaks at 66 crews in August and Parks at 12 seasonal crews in June.
 
 ## 3. Decisions and assumptions
 
-1. **Workload is every request in the four departments**, including the 53% logged by city staff.
+1. **Workload is every request in the four departments**, including the 53% logged by city staff (42% Employee Generated plus 11% City Worker App).
 2. **On-time is a target, not a cost.** A crew costs $42.99 (Public Works), $29.10 (Transportation), $79.37 (Parks) and $138.89 (Inspectional Services) per request it can close. That is more than the $20 penalty for a late request in every department, so a plan that only minimized cost would let requests run late. Hiring becomes cheaper only once requests reach 30 days past their target ($120 in penalties), and for Inspectional Services not even then. So each department is held to 90% on time.
 3. **Timing follows the brief:**
    - hires are paid in the month they're made and work from the next
@@ -96,7 +96,7 @@ The agent routes and splits better, but it never asks a follow-up question, and 
 - It used the right tools on 10/10 questions and the right arguments on 19/19.
 - 36 of 40 numbers in its answers were verified against tool results. The server flags the rest, and the app underlines them.
 
-**Planning analyst** (15 held-out questions, `gpt-oss-120b`): right tools on 14/15 questions and right arguments on 25/28. 53 of 56 numbers were verified, with 0 errors. That is close to the development results, so the agent wasn't tuned to its own questions.
+**Planning analyst** (15 held-out questions, `gpt-oss-120b`): right tools on 14/15 questions and right arguments on 25/28. 53 of 56 numbers were verified, with 0 errors. That is close to the development results, so the agent wasn't tuned to its own questions. One of the tool misses is on a question whose label requires two tools, where `run_what_if` alone answers it (the test set's author's note).
 
 ## 8. Limitations
 
@@ -106,6 +106,9 @@ The agent routes and splits better, but it never asks a follow-up question, and 
 - The forecast ran high in 2025, and its interval is too narrow.
 - The intake agent doesn't ask follow-up questions.
 - District-routed request types show a single district queue.
+- The city moved to a new 311 system in fall 2025. We use only the old-system files, whose October-December 2025 counts are partial, so the 2025 comparison stops at September.
+- The 2025-actuals scenario applies one January-September ratio to the whole year, so October-December could differ.
+- The test sets are small (45 intake messages, 15 analyst questions), so differences of a question or two, such as 14/15 against 10/10, aren't meaningful.
 
 ## 9. Recommendations
 

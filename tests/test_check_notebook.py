@@ -83,3 +83,8 @@ def test_placeholders_in_the_report_are_caught():
     assert check["placeholders"](
         "Wording: to be confirmed with the team.", "the analysis report"
     ) == ["the analysis report still has the AI-use note to be confirmed"]
+
+
+def test_placeholder_text_inside_a_chart_image_is_ignored():
+    image = {"output_type": "display_data", "data": {"image/png": "iVBORw0KGgoTODOAAAA"}}
+    assert problems(ran("plot()", 1, image)) == []
