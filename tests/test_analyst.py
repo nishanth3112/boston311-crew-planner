@@ -387,8 +387,9 @@ def test_load_set_rejects_duplicate_ids_and_invalid_values(tmp_path):
     assert "valid arguments" in str(error.value) and "base_plan" not in str(error.value)
 
 
-def test_dev_set_loads():
+def test_question_sets_load():
     assert len(load_set("data/processed/analyst_dev_set.csv")) == 10
+    assert len(load_set("data/processed/analyst_test_set.csv")) == 15
 
 
 # ---------- PR #9 review ----------
