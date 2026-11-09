@@ -1,0 +1,51 @@
+# Run an intake or analyst eval on Groq, by hand: Actions > LLM eval > Run workflow.
+# Needs the GROQ_API_KEY repository secret. The report is uploaded as an artifact and shown in
+# the run summary; committing it to reports/eval/ stays a deliberate, manual step.
+name: LLM eval
+
+on:
+  workflow_dispatch:
+    inputs:
+      eval:
+        description: Which agent
+        type: choice
+        options: [intake, analyst]
+      set:
+        description: Which question set (test is the held-out set)
+        type: choice
+        options: [dev, test]
+      model:
+        description: Groq model
+        type: choice
+        options: [openai/gpt-oss-20b, openai/gpt-oss-120b]
+        default: openai/gpt-oss-20b
+
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    env:
+      EVAL: ${{ inputs.eval }}
+      SET: ${{ inputs.set }}
+      LLM_MODEL: ${{ inputs.model }}
+    steps:
+      - uses: actions/checkout@v4
+      # pinned: this job handles the Groq key, so a third-party action can't change underneath it
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Run the eval
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }} # only this step sees the key
+        run: uv run python -m "boston311.eval.${EVAL}_eval" "data/processed/${EVAL}_${SET}_set.csv" > report.md
+      - name: Show the report
+        if: always()
+        run: cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ inputs.eval }}-${{ inputs.set }}-eval
+          path: report.md
